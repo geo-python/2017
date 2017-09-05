@@ -13,13 +13,8 @@ Course meetings in Period I
 Instructors
 -----------
 
-**Lecturers**:
-
-* David Whipp
-
-  * Office: D430, Exactum
-  * Email: *firstname.lastname@helsinki.fi*
-  * Phone: +358 50 3199336
+Lecturers
+~~~~~~~~~
 
 * Henrikki Tenkanen
 
@@ -27,7 +22,14 @@ Instructors
   * Email: *firstname.lastname@helsinki.fi*
   * Phone: +358 50 4484436
 
-**Course assistants**:
+* David Whipp
+
+  * Office: D430, Exactum
+  * Email: *firstname.lastname@helsinki.fi*
+  * Phone: +358 50 3199336
+
+Course assistants
+~~~~~~~~~~~~~~~~~
 
 * Vuokko Heikinheimo
 
@@ -35,7 +37,19 @@ Instructors
   * Email: *firstname.lastname@helsinki.fi*
   * Phone: +358 2941 50760
 
-* N.N
+* Jorina Schütt
+
+  * Office: D422, Exactum
+  * Email: *firstname.lastname@helsinki.fi*
+  * Phone: +358 45 1865288
+
+* Samuli Massinen
+
+  * Email: *firstname.lastname@helsinki.fi*
+
+* Antti Kallanranta
+
+  * Email: *firstname.lastname@helsinki.fi*
 
 Course websites
 ---------------
@@ -43,11 +57,16 @@ Course websites
 - Course sites for Period I (Introduction to Python programming):
 
   - Main course site: `<https://geo-python.github.io>`_
-  - Pouta Blueprints site: `<https://pb.geo.helsinki.fi>`_
+  - Pebbles (cloud computing) site: `<https://pb.geo.helsinki.fi>`_
+  - Slack (Q&A + chat): `<https://geo-python2017.slack.com>`_
 
 - Automating GIS processes (Period II)
 
   - Course site: `<https://autogis.github.io>`_
+
+- Introduction to Quantitative Geology (Period II)
+
+  - Course site: `<https://introqg.github.io>`_
 
 Textbooks
 ---------
