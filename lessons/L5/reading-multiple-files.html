@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Reading data from multiple files &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Reading data from multiple files</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L5/reading-multiple-files.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reading-data-from-multiple-files">
+<h1>Reading data from multiple files<a class="headerlink" href="#reading-data-from-multiple-files" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<p>This lesson is partially based on the <a class="reference external" href="http://software-carpentry.org/">Software Carpentry
+group&#8217;s</a> lessons on <a class="reference external" href="http://swcarpentry.github.io/python-novice-inflammation/">Programming with
+Python</a>.</p>
+</div>
+<div class="section" id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><a class="reference external" href="#download">Download and extract data</a></li>
+<li><a class="reference external" href="#list-files">Listing files</a></li>
+<li><a class="reference external" href="#read-multiple">Reading data from multiple files</a></li>
+</ol>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Download and extract data</li>
+</ol>
+</div></blockquote>
+<hr class="docutils" />
+<p>During this demo the data is about inflammation in patients who have
+been given a new treatment for arthritis that are stored in multiple
+data files that are stored in comma-separated values (CSV).</p>
+<ol class="arabic simple">
+<li><strong>Download the data</strong> (a zip-file) into the HOME folder of your
+computer instance<ul>
+<li>Note: _Mozilla may automatically donwnload the data into
+&#8220;Downloads&#8221; -folder. If so, move the *.zip package to HOME
+folder._</li>
+</ul>
+</li>
+<li>Extract the data using <code class="docutils literal"><span class="pre">unzip</span></code> command in Terminal window:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">bash</span>&#160;&#160; <span class="pre">$</span> <span class="pre">cd</span>&#160;&#160; <span class="pre">$</span> <span class="pre">unzip</span> <span class="pre">python-novice-inflammation-data.zip</span></code> 3. Now we
+should have &#8220;data&#8221; folder in the HOME directory of our computer instance
+with following files:</p>
+<div class="figure">
+<img alt="lessons\L5\../img/data-folder.PNG:alt:DataFolder" src="lessons\L5\../img/data-folder.PNG:alt:DataFolder" />
+</div>
+<hr class="docutils" />
+<p>Listing and searching for file pathnames from file system can be done
+using a specific module called
+<strong>`glob &lt;https://docs.python.org/3/library/glob.html&gt;`__</strong>.</p>
+<p>The glob library contains a function, also called glob, that finds files
+and directories whose names match a pattern [0]. We provide those
+patterns as strings: the character * matches zero or more characters,
+while ? matches any one character.</p>
+<ol class="arabic simple">
+<li>We can use this to get the names of all files in the data directory
+(&#8216;/home/geo/data&#8217;):</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">import</span> <span class="pre">glob</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(glob.glob('/home/geo/data/*'))</span>&#160;&#160; <span class="pre">['/home/geo/data/inflammation-08.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-10.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-11.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-06.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-12.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/small-03.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/small-02.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-07.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-05.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/small-01.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-03.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-04.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-02.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-01.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-09.csv']</span></code></p>
+<ol class="arabic simple" start="2">
+<li>We can also search for only specific files and file formats. Here, we
+search for files that starts with the word &#8216;small&#8217; and ends with file
+format &#8216;.csv&#8217;:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(glob.glob('/home/geo/data/small*.csv'))</span>&#160;&#160; <span class="pre">['/home/geo/data/small-03.csv',</span> <span class="pre">'/home/geo/data/small-02.csv',</span> <span class="pre">'/home/geo/data/small-01.csv']</span></code></p>
+<blockquote>
+<div><ol class="arabic simple" start="3">
+<li>Reading data from multiple files</li>
+</ol>
+</div></blockquote>
+<hr class="docutils" />
+<p>As the previous examples show, glob.glob’s result is a <strong>list</strong> of file
+and directory paths in arbitrary order. This means we can loop over it
+to do something with each filename in turn. What we want to do next is
+to read the first line of each file and add it to a list called
+<code class="docutils literal"><span class="pre">headers</span></code>.</p>
+<ol class="arabic simple">
+<li>Let&#8217;s create a list of csv-files (called <em>filepaths</em>) that contain
+data about inflammation:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">filepaths</span> <span class="pre">=</span> <span class="pre">glob.glob(&quot;/home/geo/data/inflammation*.csv&quot;)</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(fps)</span>&#160;&#160; <span class="pre">['/home/geo/data/inflammation-08.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-10.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-11.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-06.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-12.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-07.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-05.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-03.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-04.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-02.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-01.csv',</span>&#160;&#160;&#160; <span class="pre">'/home/geo/data/inflammation-09.csv']</span></code></p>
+<ol class="arabic simple" start="2">
+<li>Let&#8217;s create a list for headers and append the first line of each
+file into that list:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">headers</span> <span class="pre">=</span> <span class="pre">[]</span>&#160;&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">for</span> <span class="pre">fp</span> <span class="pre">in</span> <span class="pre">filepaths:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">with</span> <span class="pre">open(fp,</span> <span class="pre">'r')</span> <span class="pre">as</span> <span class="pre">f:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Read</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">line</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">first_line</span> <span class="pre">=</span> <span class="pre">f.readline()</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Append</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">line</span> <span class="pre">into</span> <span class="pre">the</span> <span class="pre">list</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">headers.append(first_line)</span>&#160;&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(headers)</span>&#160;&#160;&#160; <span class="pre">['0,0,0,2,0,4,1,7,2,6,4,7,2,4,10,7,3,13,9,3,0,1,0,15,0,5,12,3,8,6,8,6,4,3,3,2,0,0,0,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,1,0,0,3,2,3,6,7,5,10,9,10,9,5,15,12,14,13,9,15,17,4,4,4,8,5,4,7,10,3,4,4,1,1,3,1,3,0,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,0,2,0,4,1,7,2,6,4,7,2,4,10,7,3,13,9,3,0,1,0,15,0,5,12,3,8,6,8,6,4,3,3,2,0,0,0,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,2,0,3,4,5,7,6,7,8,4,4,6,9,5,10,12,16,8,19,17,16,16,12,12,12,9,8,4,2,8,3,5,6,3,2,2,0,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,2,3,3,1,6,6,3,6,10,6,8,5,5,8,16,12,13,5,13,18,11,12,11,9,10,13,9,4,4,7,7,3,1,5,3,1,1,1\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,1,0,2,2,5,6,2,4,7,2,2,11,5,6,4,4,7,18,17,9,5,7,15,10,4,10,3,3,2,3,4,3,7,3,3,4,1,1,1\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,1,0,2,4,4,5,1,2,5,5,8,10,12,10,9,15,9,7,9,10,7,5,8,9,6,7,5,11,9,3,8,6,7,5,1,3,0,2,1\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,0,2,0,4,1,7,2,6,4,7,2,4,10,7,3,13,9,3,0,1,0,15,0,5,12,3,8,6,8,6,4,3,3,2,0,0,0,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,1,2,2,4,4,2,5,2,4,8,4,10,7,3,13,10,11,7,7,9,17,7,6,12,13,12,6,5,4,8,6,7,3,5,1,1,0,1,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,0,1,3,4,6,5,2,7,7,8,6,11,5,6,10,4,5,9,15,15,14,13,14,12,10,9,8,8,6,6,6,6,5,4,2,1,1,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0\n',</span>&#160;&#160;&#160;&#160; <span class="pre">'0,0,0,2,4,5,5,4,4,6,8,2,3,8,7,13,8,14,17,6,5,15,14,13,8,6,9,9,11,10,3,5,3,1,5,4,4,3,2,1\n']</span></code></p>
+<p>Now we have printed the first lines of each file in the data directory.
+This is a handy way to find out what kind of data we have in the files.
+In this way it is for example possible to see that 1) the separator in
+each file is comma, and 2) each file contains numerical data, and 3)
+there does not exist column names in any of the files. All of this is
+important information to know when starting to do data analysis.</p>
+</div>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>[0]: Similar search patterns can be used when finding files in
+Terminal.</li>
+</ul>
+<p><strong>Next</strong>: <a class="reference external" href="writing-to-file.md">Writing data to a file</a> <strong>Home</strong>:
+<a class="reference external" href="https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing">Lesson 5 main
+page</a><strong>Previous</strong>: <a class="reference external" href="reading-data-from-file.md">Reading data from a file</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

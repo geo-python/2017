@@ -1,0 +1,439 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hints for Exercise 5 &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Hints for Exercise 5</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L5/hints-ex5.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="hints-for-exercise-5">
+<h1>Hints for Exercise 5<a class="headerlink" href="#hints-for-exercise-5" title="Permalink to this headline">¶</a></h1>
+<p>Below are some tips for working on Exercise 5. Each section contains
+some practical tips for the different parts of the exercise, and we have
+included some pseudocode for Parts 1 and 2 to help guide you in writing
+your code. As a reminder, pseudocode is simply an explanation of what
+the code should do in plain English (or your language of choice).</p>
+<div class="section" id="part-1-reading-and-dividing-the-data-file">
+<h2>Part 1 - Reading and dividing the data file<a class="headerlink" href="#part-1-reading-and-dividing-the-data-file" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pseudocode">
+<h3>Pseudocode<a class="headerlink" href="#pseudocode" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Open the <code class="docutils literal"><span class="pre">816295.csv</span></code> data file for reading.</li>
+<li>Read the values into a list where each list entry is one line of the
+file.</li>
+<li>Loop over all lines in the resulting list (excluding the header). For
+each line:</li>
+</ol>
+<ul class="simple">
+<li>Split the line into a list of values using the commas.</li>
+<li>Extract the value for the year using the list item containing the
+date in the split line list above.</li>
+<li>Create a varaible that is contains a character string of the name of
+the output file for that year (e.g., <code class="docutils literal"><span class="pre">&quot;AA-1926.csv&quot;</span></code>).</li>
+<li>Open the file named above for appending.</li>
+<li>Write the entire line to that data file.</li>
+</ul>
+</div>
+<div class="section" id="practical-tips">
+<h3>Practical tips<a class="headerlink" href="#practical-tips" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first"><strong>Extracting the year for each line of the data file</strong>. In order to
+isolate the year when processing the data in the data file for this
+exercise, you need to use a substring, or part of a character string,
+from the values in column 6 of the <code class="docutils literal"><span class="pre">816295.csv</span></code> data file. Those
+values have the form <code class="docutils literal"><span class="pre">YYYYMMDD</span></code> where <code class="docutils literal"><span class="pre">YYYY</span></code> is the year of the
+observation, <code class="docutils literal"><span class="pre">MM</span></code> is the month, and <code class="docutils literal"><span class="pre">DD</span></code> is the day. You want to
+use only the year, and let&#8217;s assume that for each line of the data
+file that is read, you assign the value in column 6 to a variable
+<code class="docutils literal"><span class="pre">date</span></code>. The year part of <code class="docutils literal"><span class="pre">date</span></code> would then just be the first 4
+characters in <code class="docutils literal"><span class="pre">date</span></code>, and since character strings are simply a list
+of characters, you can use the index values to extract a slice (or
+substring) from the variable <code class="docutils literal"><span class="pre">date</span></code>. Since the first number in the
+year in <code class="docutils literal"><span class="pre">date</span></code> would simply be <code class="docutils literal"><span class="pre">date[0]</span></code>, and the last would be
+<code class="docutils literal"><span class="pre">date[3]</span></code>, all we need is a way to use only index values 0-3 in
+date. You can access a range of index values in a string variable or
+list using the colon (<code class="docutils literal"><span class="pre">:</span></code>) character. The example below may help
+make things more clear:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot;Helsinki&quot;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">&#39;H&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="go">&#39;s&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">text</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">3</span><span class="p">]</span>
+<span class="go">&#39;Hel&#39;</span>
+</pre></div>
+</div>
+<p><strong>Note</strong>: Like the <code class="docutils literal"><span class="pre">range()</span></code> function, the last index value given
+in a range of values is not included in the list of indices.</p>
+</li>
+<li><p class="first"><strong>Skipping header lines when looping over file data</strong>. Just a
+reminder that we showed how to skip over a set number of header lines
+when reading a file in <a class="reference external" href="reading-data-from-file.md#headers-of-a-known-number-of-lines">this week&#8217;s
+lesson</a>.</p>
+</li>
+<li><p class="first"><strong>Changing file names for different years</strong>. If you are in a loop in
+which your script is determining the year of a given temperature
+observation, you will likely also want to automatically have the file
+name used for reading or writing change for different years. This is
+fairly simple. Let&#8217;s say you have a variable <code class="docutils literal"><span class="pre">year</span></code> used to store
+the year. If <code class="docutils literal"><span class="pre">year</span></code> is a numerical value, you will need to convert
+it to a character string. We saw how to do this in <a class="reference external" href="https://github.com/Python-for-geo-people/Exercise-3">Exercise
+3</a>, for
+example. Once <code class="docutils literal"><span class="pre">year</span></code> is a character string, you can simply add the
+parts of the file name that come before and after the year together
+using the math operator <code class="docutils literal"><span class="pre">+</span></code> to change the file name.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="part-2-calculating-annual-summer-and-winter-temperatures">
+<h2>Part 2 - Calculating annual summer and winter temperatures<a class="headerlink" href="#part-2-calculating-annual-summer-and-winter-temperatures" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Pseudocode<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li>Create a list of names of all of the files generated in Part 1.</li>
+<li>Loop over that list. For each file:</li>
+</ol>
+<ul class="simple">
+<li>Open the file for reading.</li>
+<li>Create two empty lists for storing the daily temperatures for summer
+and winter.</li>
+<li>Loop over every line in each file. For each line:<ul>
+<li>Split the line into a list of values using the commas.</li>
+<li>Extract the value for the month using the list item containing the
+date in the split line list above.</li>
+<li>Check to see if the month is a summer or winter month. If so,
+append the temperature to the corresponding temperature list.</li>
+</ul>
+</li>
+<li>After checking all lines, calculate the average summer and winter
+temperatures.</li>
+<li>Open the summer and winter average temperature files for appending.</li>
+<li>Append the year and average temperature.</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Practical tips<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic">
+<li><p class="first"><strong>Calculating the average value of list values</strong>. It is fairly easy
+to calculate the average value of a set of numbers in a list,
+provided the values are in fact stored as data type <code class="docutils literal"><span class="pre">float</span></code> or
+<code class="docutils literal"><span class="pre">int</span></code>, and not stored as type <code class="docutils literal"><span class="pre">str</span></code>. If the values in the list
+are character string values (type <code class="docutils literal"><span class="pre">str</span></code>), they will need to be
+converted to <code class="docutils literal"><span class="pre">float</span></code> values first, using the <code class="docutils literal"><span class="pre">float()</span></code> function.
+You can check <code class="docutils literal"><span class="pre">help(float)</span></code> for how it works. Once the list values
+are of type <code class="docutils literal"><span class="pre">float</span></code>, they can be summed using the <code class="docutils literal"><span class="pre">sum()</span></code>
+function and dividing the sum by the length of the list will give the
+average value.</p>
+</li>
+<li><p class="first"><strong>Limiting the number of decimal places written to numerical values
+in a file</strong>. When you write floating point values to a file it is
+often nice to specify the number of decimal places for the
+representation of the values. This can be done using the
+<code class="docutils literal"><span class="pre">.format()</span></code> method for character strings. It is perhaps easiest to
+see how this works with an example:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">number</span> <span class="o">=</span> <span class="mf">1.234556789</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="go">1.234556789</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;</span><span class="si">{0:.3f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">1.235</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;</span><span class="si">{0:.1f}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">1.2</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span> <span class="s2">&quot;The rounded value of number is </span><span class="si">{0:.4f}</span><span class="s2"> when rounded to 4 decimal places&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">number</span><span class="p">)</span> <span class="p">)</span>
+<span class="go">The rounded value of number is 1.2346 when rounded to 4 decimal places</span>
+</pre></div>
+</div>
+<p>OK, so what does this all mean? Well, there&#8217;s a few things we can
+say.</p>
+</li>
+</ol>
+<ul class="simple">
+<li>The <code class="docutils literal"><span class="pre">.format()</span></code> method must be used on a character string, and the
+variable (or variables) within the parentheses is the value that will
+be formatted (<code class="docutils literal"><span class="pre">number</span></code> in this case).</li>
+<li>The stuff in the curly brackets <code class="docutils literal"><span class="pre">{</span></code> and <code class="docutils literal"><span class="pre">}</span></code> is used to indicate a
+value that should be modified by the <code class="docutils literal"><span class="pre">.format()</span></code> method. Keep in
+mind that those curly brackets should be in a character string (i.e.,
+enclosed in quotation marks <code class="docutils literal"><span class="pre">'</span></code> or <code class="docutils literal"><span class="pre">&quot;</span></code>.</li>
+<li>The <code class="docutils literal"><span class="pre">0</span></code> is used to indicate which item in the list of variables
+should be formatted, like an index value. If there was a second value
+given in the <code class="docutils literal"><span class="pre">.format()</span></code> method&#8217;s list of arguments, its index
+would be <code class="docutils literal"><span class="pre">1</span></code>.</li>
+<li>The <code class="docutils literal"><span class="pre">:f</span></code> is used to specify that the value in the <code class="docutils literal"><span class="pre">.format()</span></code>
+method&#8217;s parentheses should be formatted as a floating point value.</li>
+<li>The <code class="docutils literal"><span class="pre">.3</span></code>, <code class="docutils literal"><span class="pre">.1</span></code>, and <code class="docutils literal"><span class="pre">.4</span></code> are the number of decimal places. This
+should hopefully help when you write out your average summer and
+winter temperature values.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="part-3-saving-your-seasonal-average-files-to-github">
+<h2>Part 3 - Saving your seasonal average files to GitHub<a class="headerlink" href="#part-3-saving-your-seasonal-average-files-to-github" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id3">
+<h3>Practical tips<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<ol class="arabic simple">
+<li><strong>Check your files before uploading them to GitHub</strong>. Just a
+suggestion here. You should take a look at the values in your data
+files before you upload them to make sure the values look reasonable.
+The temperature values are in Fahrenheit. Feel free to convert them
+to Celsius, but make a note that the temperatures are in Celsius when
+you commit the files.</li>
+</ol>
+<p><strong>Home</strong>: <a class="reference external" href="https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing">Lesson 5 main
+page</a><strong>Previous</strong>: <a class="reference external" href="https://classroom.github.com/assignment-invitations/17f0f2ee87873cb1bcb2c6a9ec228c42">Exercise 5: Analysing NOAA climate
+data</a></p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,543 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Plotting in Python &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Plotting in Python</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L7/python-plotting.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="plotting-in-python">
+<h1>Plotting in Python<a class="headerlink" href="#plotting-in-python" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><a class="reference external" href="#overview-of-useful-modules-for-plotting-in-Python">Overview of useful modules for plotting in
+Python</a></li>
+</ol>
+<ul class="simple">
+<li><a class="reference external" href="#task1">Task 1: Learn about the Python plotting options</a></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><a class="reference external" href="#anatomy-of-a-plot">Anatomy of a plot</a></li>
+<li><a class="reference external" href="#plotting-in-python-with-matplotlib">Plotting in Python with
+Matplotlib</a></li>
+</ol>
+<ul class="simple">
+<li><a class="reference external" href="#task-2-plotting-like-the-pros">Task 2: Plotting like the &#8220;pros&#8221;</a></li>
+<li><a class="reference external" href="#task-3-plotting-only-part-of-a-dataset">Task 3: Plotting only part of a
+dataset</a></li>
+</ul>
+<div class="section" id="overview-of-useful-modules-for-plotting-in-python">
+<h3>Overview of useful modules for plotting in Python<a class="headerlink" href="#overview-of-useful-modules-for-plotting-in-python" title="Permalink to this headline">¶</a></h3>
+<p>Python has many nice and useful modules that can be used for plotting,
+such as:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://matplotlib.org/">**Matplotlib**</a> - <em>&#8220;the grand old man of
+Python plotting&#8221;</em> (<a class="reference external" href="http://matplotlib.org/gallery.html">see
+gallery</a>)<ul>
+<li><a class="reference external" href="http://matplotlib.org/basemap/index.html">**Matplotlib
+Basemap**</a> -
+Matplotlib plugin for visualizing maps in Python <a class="reference external" href="http://matplotlib.org/basemap/users/examples.html">(see
+gallery)</a></li>
+<li><a class="reference external" href="https://seaborn.github.io/">**Seaborn**</a> - High-level
+interface for drawing attractive statistical graphics that is
+built on top of Matplotlib (<a class="reference external" href="https://seaborn.github.io/examples/index.html">see
+gallery</a>)</li>
+</ul>
+</li>
+<li><a class="reference external" href="http://bokeh.pydata.org/en/latest/">**Bokeh**</a> - Modern plotting
+library for static / interactive web-based plots such as graphs,
+maps, charts etc. (<a class="reference external" href="http://bokeh.pydata.org/en/latest/docs/gallery.html">see
+gallery</a>)</li>
+<li><a class="reference external" href="https://plot.ly/python/">**Plotly**</a> - Modern plotting library
+for static / interactive web-based plots such as graphs, maps, charts
+etc. Some features are commercial. (<a class="reference external" href="https://plot.ly/python/#basic-charts">see
+gallery</a>)</li>
+<li><a class="reference external" href="https://github.com/yhat/ggplot">**ggplot**</a> - Familiar with doing
+plots in R using ggplot2? You can use ggplot in Python too! <a class="reference external" href="https://github.com/yhat/ggplot/blob/master/docs/Gallery.ipynb">(see
+examples)</a></li>
+<li><a class="reference external" href="http://holoviews.org/">**HoloViews**</a> and
+<a class="reference external" href="http://geo.holoviews.org/">**GeoViews**</a> - New! Let the data
+visualize itself. (see this <a class="reference external" href="https://www.youtube.com/watch?v=hNsR2H7Lrg0">introductory
+video</a>)<ul>
+<li>Modern and powerful visualization libraries built on top of
+<strong>Matplotlib</strong> and <strong>Bokeh</strong> that makes exploring and visualizing
+your data quicker than ever before.</li>
+<li><strong>HoloViews</strong> is designed for basic plotting (<a class="reference external" href="http://holoviews.org/Tutorials/index.html">see
+tutorial</a> and
+<a class="reference external" href="http://holoviews.org/Examples/index.html">examples</a>)</li>
+<li><strong>GeoViews</strong> is designed for creating nice and interactive maps
+(<a class="reference external" href="https://www.continuum.io/blog/developer-blog/introducing-geoviews">see
+gallery</a>).</li>
+</ul>
+</li>
+</ul>
+<p><strong>Task 1</strong>: <em>Explore the galleries and examples of different
+visualization libraries to learn what&#8217;s possible to do in Python.</em></p>
+<p>As you can see from the examples, the plotting possibilities in Python
+are numerous and rich. Do you need to know them all? Of course not. Not
+even us do. It is not even rational for trying to use them all, instead
+you should start by learning to use one of them that suits your needs
+and then later extend your knowledge and skills to other visualizing
+libraries when necessary. In our courses, we will be start our plotting
+experiments with Matplotlib and Plotly that makes it possible to store
+and show our interactive plots in the web.</p>
+<p><em>Later, in the Automating GIS processes -course, we will be learning a
+little bit of Bokeh as well.</em></p>
+<p><strong>Pro -tip</strong>: for doing interactive visualizations in Python, it can be
+extremely useful to use a specific software called
+<strong>`Jupyter &lt;https://jupyter.readthedocs.io/en/latest/index.html#&gt;`__</strong>
+that is extensively used nowadays for documenting, presenting and
+visualizing interactive plots in Python using specific
+<a class="reference external" href="https://tmp58.tmpnb.org/user/JfCwgSeJpZUg/notebooks/Welcome%20to%20Python.ipynb">Notebooks</a>.
+Jupyter Notebook is also installed in our computer instance.</p>
+</div>
+<div class="section" id="anatomy-of-a-plot">
+<h3>Anatomy of a plot<a class="headerlink" href="#anatomy-of-a-plot" title="Permalink to this headline">¶</a></h3>
+<p>Before starting to do plotting it is useful if we take a look and try to
+understand <strong>what actually is a plot?</strong> We won&#8217;t go too deep into the
+details of different plots (as it is not the purpose of this lesson) but
+we rather give a short introduction to different plots that can be done
+with Python, and what kind of (typical) elements a plot has.</p>
+<p>There are a variety of different kinds of plot (also known as graphs or
+charts or diagrams etc. - Our dear child has many names) available that
+have been designed to represent visually the characteristics of a
+dataset. Here is a list of few different types of plots that can be used
+to visualize different kinds of datasets:</p>
+<ul class="simple">
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Bar_chart">Bar chart</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Histogram">Histogram</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Scatter_plot">Scatter plot</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Line_chart">Line chart</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Pie_chart">Pie chart</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Box_plot">Box plot</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Violin_plot">Violin plot</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Dendrogram">Dendrogram</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Chord_diagram">Chord diagram</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Treemap">Treemap</a></li>
+<li><a class="reference external" href="https://en.wikipedia.org/wiki/Network_chart">Network chart</a></li>
+</ul>
+<p>There are certain elements that are common in most of the plots (not
+all). It is useful to know at least the basic terminology since it makes
+it easier to find help and information from the internet when you start
+doing or modifying your own plot.</p>
+<p>Following figure illustrates different elements of a basic line chart:</p>
+</div>
+</div>
+<div class="section" id="common-terms-when-doing-plotting">
+<h2>Common terms when doing plotting<a class="headerlink" href="#common-terms-when-doing-plotting" title="Permalink to this headline">¶</a></h2>
+<p>Note: these terms may vary a little bit depending on the plotting
+library that you use. These are few typical terms used when doing
+plotting in Matplotlib.</p>
+<ul class="simple">
+<li><strong>axis</strong> - Axis of the graph that are typically x, y and z (for 3D
+plots)</li>
+<li><strong>title</strong> - Title of the whole plot.</li>
+<li><strong>label</strong> - Name for to the whole axis.</li>
+<li><strong>legend</strong> - Legend for the plot.</li>
+<li><strong>tick label</strong> - Refers to the text or values that are represented on
+the axis.</li>
+<li><strong>symbol</strong> - Symbol for data point(s) (on a scatter plot) that can be
+presented with different symbols.</li>
+<li><strong>size</strong> - Size of e.g. a point on a scatter plot, also used for
+referring to the text sizes on a plot.</li>
+<li><strong>linestyle</strong> - The style how the line should be drawn. Can be e.g.
+solid or dashed.</li>
+<li><strong>linewidth</strong> - The width of a line in a plot.</li>
+<li><strong>alpha</strong> - Transparency level of a filled element in a plot (values
+between 0.0 (fully transparent) to 1.0 (no trasnparency)).</li>
+<li><strong>tick(s)</strong> - Refers to the tick marks on a plot.</li>
+<li><strong>annotation</strong> - Refers to the added text on a plot.</li>
+<li><strong>padding</strong> - The distance between a (axis/tick) label and the axis.</li>
+</ul>
+<div class="section" id="plotting-in-python-with-matplotlib">
+<h3>Plotting in Python with matplotlib<a class="headerlink" href="#plotting-in-python-with-matplotlib" title="Permalink to this headline">¶</a></h3>
+<p>Though there are many options for plotting data in Python, we will be
+using <a class="reference external" href="http://matplotlib.org/">matplotlib</a>. In particular, we will be
+using the pyplot module in matplotlib, which provides MATLAB-like
+plotting. The reason for this is simple: Matplotlib is the most common
+module used for plotting in Python and many examples of plotting you may
+find online will be using matplotlib.</p>
+<ol class="arabic">
+<li><p class="first">To start, we will need to import both pyplot and NumPy.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</pre></div>
+</div>
+<p>Note again that we are renaming the modules when we import them.
+Perhaps now it is more clear why you might want to rename a module on
+import. Having to type <code class="docutils literal"><span class="pre">matplotlib.pyplot</span></code> every time you use one
+of its methods would be a pain.</p>
+</li>
+<li><p class="first">With our modules imported, we now can quickly define a few variables
+to make our first plot.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="mi">20</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>We haven&#8217;t seen <code class="docutils literal"><span class="pre">np.linspace()</span></code> previously. It simply creates a
+NumPy array starting from the first parameter value given, ending
+with the second, and using the third for the total number of values
+to include in the array. Values between the start and end are equally
+spaced, or linearly interpolated (hence the name <code class="docutils literal"><span class="pre">linspace</span></code> -
+linear space). Those in the Introduction to Quantitative Geology
+course will see <code class="docutils literal"><span class="pre">np.linspace()</span></code> again. As you might guess,
+<code class="docutils literal"><span class="pre">np.sin()</span></code> simply calculates the value of the sine function for
+each value of <code class="docutils literal"><span class="pre">x</span></code>.</p>
+</li>
+<li><p class="first">Now we&#8217;re ready for our first plot.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="go">[&lt;matplotlib.lines.Line2D at 0x109e25898&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This should produce a plot like the one below.</p>
+<p><img alt="Sine curve from zero to two pi" src="lessons\L7\../img/sine-curve.png" /> OK, so what happened here? First,
+it should be pretty obvious that <code class="docutils literal"><span class="pre">plt.plot()</span></code> is a function in
+pyplot that produces a simple x-y plot. However, just like most
+variables in Python, creating the plot simply stores the information
+about the plot in memory. The plot is not displayed on the screen
+until you type <code class="docutils literal"><span class="pre">plt.show()</span></code>.</p>
+</li>
+<li><p class="first">We can make our plot look a bit nicer and provide more information by
+using a few additional pyplot options.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="s1">&#39;ro--&#39;</span><span class="p">)</span>
+<span class="go">[&lt;matplotlib.lines.Line2D at 0x10bd249e8&gt;]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Sine curve&#39;</span><span class="p">)</span>
+<span class="go">&lt;matplotlib.text.Text at 0x10b0af320&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;x-axis&#39;</span><span class="p">);</span> <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;y-axis&#39;</span><span class="p">)</span>
+<span class="go">&lt;matplotlib.text.Text at 0x10b08df98&gt;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>This should produce the plot below.</p>
+<p><img alt="Fancy sine curve" src="lessons\L7\../img/sine-curve-improved.png" /> Now we see our sine curve as a red dashed line
+with circles showing the points along the line. This comes from the
+additional <code class="docutils literal"><span class="pre">ro--</span></code> used with <code class="docutils literal"><span class="pre">plt.plot()</span></code>. In this case, <code class="docutils literal"><span class="pre">r</span></code>
+tells the <code class="docutils literal"><span class="pre">plt.plot()</span></code> function to use red color, <code class="docutils literal"><span class="pre">o</span></code> tells it to
+show circles at the points, and <code class="docutils literal"><span class="pre">--</span></code> says to use a dashed line. You
+can use <code class="docutils literal"><span class="pre">help(plt.plot)</span></code> to find out more about formatting plots.
+Better yet, check out the <cite>documentation for ``plt.plot()`</cite>
+online &lt;<a class="reference external" href="http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot">http://matplotlib.org/api/pyplot_api.html#matplotlib.pyplot.plot</a>&gt;`__.
+We have also added a title and axis labels, but their use is
+straightforward.</p>
+</li>
+<li><p class="first">Adding text to plots can be done using <code class="docutils literal"><span class="pre">plt.text()</span></code>.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="s1">&#39;Here is some text&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>This will display the text &#8220;Here is some text&#8221; at the location <em>x</em> =
+0.5, <em>y</em> = 0.5 on the plot. You would need to type <code class="docutils literal"><span class="pre">plt.show()</span></code>
+again to display the plot.</p>
+</li>
+<li><p class="first">Changing the plot axes can be done using the <code class="docutils literal"><span class="pre">plt.axis()</span></code> function.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>The format for <code class="docutils literal"><span class="pre">plt.axis()</span></code> is <code class="docutils literal"><span class="pre">[xmin,</span> <span class="pre">xmax,</span> <span class="pre">ymin,</span> <span class="pre">ymax]</span></code>
+enclosed in square brackets (i.e., a Python list). Here, the <em>x</em>
+range would be changed to 0-π and the <em>y</em> range would be 0-1.</p>
+</li>
+<li><p class="first">Saving plots created using matplotlib done several ways, but the
+easiest is simply to click on the disk icon on the pyplot window when
+a plot is displayed, as shown below.</p>
+<p><img alt="Saving a plot" src="lessons\L7\../img/saving-plot.png" /> This brings up a familiar file saving window.
+Matplotlib plots can be saved in a number of useful file formats,
+including JPEG, PNG, PDF, and EPS, as you can see below.</p>
+<p><img alt="Plot file types" src="lessons\L7\../img/plot-file-types.png" /> PNG is a nice format for raster images, and EPS
+is probably easiest to use for vector graphics.</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="section" id="task-2-plotting-like-the-pros">
+<h2>Task 2: Plotting like the &#8220;pros&#8221;<a class="headerlink" href="#task-2-plotting-like-the-pros" title="Permalink to this headline">¶</a></h2>
+<p>We&#8217;re only introducing a tiny amount of what can be done with pyplot. In
+most cases, when we would like to create some more complicated type of
+plot, we would search using <a class="reference external" href="https://www.google.fi">Google</a> or visit
+the <a class="reference external" href="http://matplotlib.org/gallery.html">Matplotlib plot gallery</a>.
+The great thing about the <a class="reference external" href="http://matplotlib.org/gallery.html">Matplotlib plot
+gallery</a> is that not only can you
+find example plots there, but you can also find the Python commands used
+to create the plots. This makes it easy to take a working example from
+the gallery and modify it for your use.</p>
+<p><img alt="The matplotlib gallery" src="lessons\L7\../img/matplotlib-gallery.png" /> <em>The matplotlib plot gallery</em></p>
+<p>Your job in this task is to:</p>
+<ol class="arabic simple">
+<li>Visit the <a class="reference external" href="http://matplotlib.org/gallery.html">Matplotlib plot
+gallery</a></li>
+<li>Find an interesting plot and click on it</li>
+<li>Copy the code you find listed beneath the plot on the page that loads</li>
+<li>Paste that into an IPython window or the IPython console in
+<strong>Spyder</strong> to reproduce the plot.</li>
+</ol>
+<p>After you have reproduced the plot, you are welcome to try to make a
+small change to the plot commands and see what happens. For this, it may
+be easiest to save a copy of the commands in a <code class="docutils literal"><span class="pre">.py</span></code> script file that
+you can edit and run.</p>
+</div>
+<div class="section" id="task-3-plotting-only-part-of-a-dataset">
+<h2>Task 3: Plotting only part of a dataset<a class="headerlink" href="#task-3-plotting-only-part-of-a-dataset" title="Permalink to this headline">¶</a></h2>
+<p>For this task, you should use the values for arrays <code class="docutils literal"><span class="pre">x</span></code> and <code class="docutils literal"><span class="pre">y</span></code>
+calculated earlier in this part of the lesson, and use <code class="docutils literal"><span class="pre">plt.axis()</span></code> to
+limit the plot to the following <em>x</em> and <em>y</em> ranges: <em>x</em> = 0 to π, <em>y</em> =
+0.0 to 1.0. - What do you expect to see in this case? - <strong>Note</strong>: In
+order to get the plot to display properly, you will need to first type
+in the <code class="docutils literal"><span class="pre">plt.plot()</span></code> command, then <code class="docutils literal"><span class="pre">plt.axis()</span></code>, and finally
+<code class="docutils literal"><span class="pre">plt.show()</span></code>.</p>
+<p><strong>Next</strong>: <a class="reference external" href="using-plotly.md">Connecting Matplotlib with plotly</a><strong>Home</strong>: <a class="reference external" href="https://github.com/Python-for-geo-people/Lesson-7-Plotting">Lesson 7 main
+page</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

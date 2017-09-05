@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Anaconda, our Python distribution &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Anaconda, our Python distribution</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L2/Anaconda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="anaconda-our-python-distribution">
+<h1>Anaconda, our Python distribution<a class="headerlink" href="#anaconda-our-python-distribution" title="Permalink to this headline">¶</a></h1>
+<p>For the exercises in this course we&#8217;ll be using the Anaconda Python
+distribution. There are several different Python distributions available
+that include various Python tools and libraries, but Anaconda is easy to
+install, free and up to date. Feel free to install a copy on your
+personal computer to use Python wherever you please.</p>
+<div class="section" id="downloading-and-installing-anaconda-on-windows">
+<h2>Downloading and installing Anaconda on Windows<a class="headerlink" href="#downloading-and-installing-anaconda-on-windows" title="Permalink to this headline">¶</a></h2>
+<p>TODO.</p>
+</div>
+<div class="section" id="downloading-and-installing-anaconda-on-mac-linux">
+<h2>Downloading and installing Anaconda on Mac / Linux<a class="headerlink" href="#downloading-and-installing-anaconda-on-mac-linux" title="Permalink to this headline">¶</a></h2>
+<p>The Anaconda installation process on the laboratory computers will need
+to be done once for the course, but it is quite slow.</p>
+<ol class="arabic">
+<li><p class="first">If you don&#8217;t still have the download, you can start by <a class="reference external" href="http://repo.continuum.io/archive/Anaconda3-2.5.0-Linux-x86_64.sh">downloading
+Anaconda</a>.
+This is the 64-bit version based on Python 3.5.</p>
+</li>
+<li><p class="first">After the download completes, open a new Terminal window by clicking
+on the Dash Home icon at the top left corner of the screen, typing
+<code class="docutils literal"><span class="pre">terminal</span></code> into the search box, and clicking on the Terminal icon.</p>
+</li>
+<li><p class="first">You can now start the installation process</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>$ cd ~/Downloads
+$ bash Anaconda3-2.5.0-Linux-x86_64.sh
+</pre></div>
+</div>
+<p>Note the <code class="docutils literal"><span class="pre">$</span></code> symbol represents the command prompt in the Terminal
+window.</p>
+</li>
+<li><p class="first">You will be first asked to agree to the license agreement. Press
+<strong>Enter</strong> to review the license. You can press space several times to
+get to the bottom of the agreement and then type in <code class="docutils literal"><span class="pre">yes</span></code> and press
+<strong>Enter</strong>.</p>
+</li>
+<li><p class="first">Next, you are asked about the installation location. Simply press
+<strong>Enter</strong> to install in the default location.</p>
+</li>
+<li><p class="first">Installation may take 30-45 minutes (!), so we can leave the
+installation running in the background. NOTE: You can safely ignore
+any error messages about not being able to create links.</p>
+</li>
+<li><p class="first">Once the installation has completed, you will be asked a final
+question about the installation PATH. Type <code class="docutils literal"><span class="pre">yes</span></code> and press
+<strong>Enter</strong>.</p>
+</li>
+</ol>
+</div>
+<div class="section" id="what-if-it-fails">
+<h2>What if it fails?<a class="headerlink" href="#what-if-it-fails" title="Permalink to this headline">¶</a></h2>
+<p>If your Anaconda install fails, please type the following in your
+terminal window.</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>$ cd
+$ rm -rf anaconda3
+</pre></div>
+</div>
+<p>You can then return to step 3 above and try to install again.</p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,446 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>for loops &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li><code class="docutils literal"><span class="pre">for</span></code> loops</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L3/for-loops.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="for-loops">
+<h1><code class="docutils literal"><span class="pre">for</span></code> loops<a class="headerlink" href="#for-loops" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="sources">
+<h2>Sources<a class="headerlink" href="#sources" title="Permalink to this headline">¶</a></h2>
+<p>This lesson is based on the <a class="reference external" href="http://software-carpentry.org/">Software Carpentry
+group&#8217;s</a> lessons on <a class="reference external" href="http://swcarpentry.github.io/python-novice-inflammation/">Programming with
+Python</a>.</p>
+</div>
+<div class="section" id="basics-of-for-loops">
+<h2>Basics of <code class="docutils literal"><span class="pre">for</span></code> loops<a class="headerlink" href="#basics-of-for-loops" title="Permalink to this headline">¶</a></h2>
+<p>Loops allow parts of code to be repeated over some number of times.</p>
+<ol class="arabic">
+<li><p class="first">Let&#8217;s consider an example. Suppose we want to take a word and print
+out each letter of the word separately. We could do the following:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;rock&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">r</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">o</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">c</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="go">k</span>
+</pre></div>
+</div>
+<p>But this is a bad idea. Why? Well there are two reasons. First, it
+does not scale nicely for long strings, and will take forever to type
+in. Second, it won&#8217;t work if the word is not 4 characters long.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;ore&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="go">o</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="go">r</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<span class="go">e</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="mi">3</span><span class="p">])</span>
+<span class="go">---------------------------------------------------------------------------</span>
+<span class="go">IndexError                                Traceback (most recent call last)</span>
+<span class="go">&lt;ipython-input-14-e3303df6f566&gt; in &lt;module&gt;()</span>
+<span class="go">----&gt; 1 print(word[3])</span>
+
+<span class="go">IndexError: string index out of range</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">We could do a much better job by using a <code class="docutils literal"><span class="pre">for</span></code> loop.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;rock&#39;</span>
+<span class="go">&gt;&gt;&gt;</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<dl class="docutils">
+<dt>for char in word:</dt>
+<dd><blockquote class="first">
+<div>...    print(char)
+...
+r
+o
+c
+k</div></blockquote>
+<p class="last">Note here that the <code class="docutils literal"><span class="pre">...</span></code> is displayed in the IPython window when
+entering code in a loop and you do not need to type in the <code class="docutils literal"><span class="pre">...</span></code>.
+Not only is this shorter, but it is also more flexible. Try out a
+different word such as <code class="docutils literal"><span class="pre">granite</span></code>. Still works, right?</p>
+</dd>
+</dl>
+<ol class="arabic" start="3">
+<li><p class="first"><code class="docutils literal"><span class="pre">for</span></code> loops in Python have the general form below.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">collection</span><span class="p">:</span>
+    <span class="n">do</span> <span class="n">things</span> <span class="k">with</span> <span class="n">variable</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal"><span class="pre">variable</span></code> can be any name you like, and the statement of the
+<code class="docutils literal"><span class="pre">for</span></code> loop must end with a <code class="docutils literal"><span class="pre">:</span></code>. The code that should be executed
+as part of the loop must be indented beneath the <code class="docutils literal"><span class="pre">for</span></code> loop, and
+the typical indentation is 4 spaces. There is not additional special
+word needed to end the loop, just change the indentation back to
+normal.</p>
+</li>
+<li><p class="first">Let&#8217;s consider another example.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;earthquake&#39;</span><span class="p">:</span>
+<span class="gp">... </span>   <span class="n">length</span> <span class="o">=</span> <span class="n">length</span> <span class="o">+</span> <span class="mi">1</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;There are&#39;</span><span class="p">,</span> <span class="n">length</span><span class="p">,</span> <span class="s1">&#39;letters&#39;</span><span class="p">)</span>
+<span class="go">There are 10 letters</span>
+</pre></div>
+</div>
+<p>Can you follow what happens in this loop?</p>
+</li>
+<li><p class="first">Note that the variable used in the loop, <code class="docutils literal"><span class="pre">letter</span></code> in the case above
+is just a normal variable and still exists after the loop has
+completed with the final value given to letter.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">letter</span> <span class="o">=</span> <span class="s1">&#39;x&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">letter</span> <span class="ow">in</span> <span class="s1">&#39;fault&#39;</span><span class="p">:</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">letter</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">f</span>
+<span class="go">a</span>
+<span class="go">u</span>
+<span class="go">l</span>
+<span class="go">t</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;After the loop, letter is&#39;</span><span class="p">,</span> <span class="n">letter</span><span class="p">)</span>
+<span class="go">t</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">A loop can be used to iterate over any list of values in Python. So
+far we have considered only character strings, but we could also
+write a loop that performs a calculation a specified number of times.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">number</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+<span class="gp">...</span>
+<span class="go">0</span>
+<span class="go">1</span>
+<span class="go">2</span>
+<span class="go">3</span>
+<span class="go">4</span>
+</pre></div>
+</div>
+<p>What happens here? Well, in this case, we use a special function
+called <code class="docutils literal"><span class="pre">range()</span></code> to give us a list of 5 numbers <code class="docutils literal"><span class="pre">[0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4]</span></code>
+and then print each number in the list to the screen. When given a
+integer (whole number) as an argument, <code class="docutils literal"><span class="pre">range()</span></code> will produce a
+list of numbers with a length equal to the specified number. The list
+starts at zero and ends with number-1. You can learn a bit more about
+range by typing</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">help</span><span class="p">(</span><span class="nb">range</span><span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p class="first">Often when you use <code class="docutils literal"><span class="pre">for</span></code> loops, you are looping over the values in
+a list and either calculating a new value or modifying the existing
+values. Let&#8217;s consider an example.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">,</span> <span class="mf">2.0</span><span class="p">,</span> <span class="mf">3.0</span><span class="p">,</span> <span class="mf">4.0</span><span class="p">,</span> <span class="mf">5.0</span><span class="p">]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="go">[0.0, 1.0, 2.0, 3.0, 4.0, 5.0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
+<span class="gp">... </span>    <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="go">[0.0, 2.0, 4.0, 6.0, 8.0, 10.0]</span>
+</pre></div>
+</div>
+<p>So, what happened? We first create a list of 6 numbers. Then, we loop
+over 6 values using the <code class="docutils literal"><span class="pre">range()</span></code> function and add each value to
+the existing location in <code class="docutils literal"><span class="pre">mylist</span></code>. What would happen if we ran this
+for loop a second time?</p>
+</li>
+<li><p class="first">One of the drawbacks in the example above is that we need to know the
+length of the list before running that <code class="docutils literal"><span class="pre">for</span></code> loop example. However,
+we already know how to find the length of a list using the <code class="docutils literal"><span class="pre">len()</span></code>
+function, and we can take advantage of this knowledge to make our
+<code class="docutils literal"><span class="pre">for</span></code> loop more flexible.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">)):</span>
+<span class="gp">... </span>    <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="go">[0.0, 3.0, 6.0, 9.0, 12.0, 15.0]</span>
+</pre></div>
+</div>
+<p>We&#8217;ve done exactly what we had done in the previous example, but
+replaced the known length of the list <code class="docutils literal"><span class="pre">6</span></code> with use of the <code class="docutils literal"><span class="pre">len()</span></code>
+function to provide the list length. Now if we add or remove values
+in <code class="docutils literal"><span class="pre">mylist</span></code>, our code will still work as expected.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">18.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">mylist</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mf">21.0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="go">[0.0, 3.0, 6.0, 9.0, 12.0, 15.0, 18.0, 21.0]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">mylist</span><span class="p">)):</span>
+<span class="gp">... </span>    <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">mylist</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">+</span> <span class="n">i</span>
+<span class="gp">...</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">mylist</span><span class="p">)</span>
+<span class="go">[0.0, 4.0, 8.0, 12.0, 16.0, 20.0, 24.0, 28.0]</span>
+</pre></div>
+</div>
+<p>Using the <code class="docutils literal"><span class="pre">len()</span></code> function with <code class="docutils literal"><span class="pre">range()</span></code> to perform calcluations
+using list or array values is an <em>extremely</em> common operation in
+Python.</p>
+</li>
+</ol>
+<p><strong>Next</strong>: <a class="reference external" href="conditional-statements.md">Conditional statements</a><strong>Home</strong>: <a class="reference external" href="https://github.com/Python-for-geo-people/Lesson-3-Loops-Conditional-Statements">Lesson 3 main
+page</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

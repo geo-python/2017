@@ -1,0 +1,451 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Introduction to NumPy &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Introduction to NumPy</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L6/intro-to-numpy.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction-to-numpy">
+<h1>Introduction to NumPy<a class="headerlink" href="#introduction-to-numpy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="contents">
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><a class="reference external" href="#downloading-and-extracting-the-data">Downloading and extracting this week&#8217;s lesson
+data</a></li>
+<li><a class="reference external" href="#import">Overview of NumPy and how it is imported</a></li>
+<li><a class="reference external" href="#load-file">Reading data file with NumPy</a></li>
+<li><a class="reference external" href="#data-types">NumPy data types &amp; type conversions</a></li>
+<li><a class="reference external" href="#index">Indices and selecting data using index slicing</a></li>
+</ol>
+<ul class="simple">
+<li><a class="reference external" href="#task1">Task: Iterate columns and change data type</a></li>
+</ul>
+<ol class="arabic simple" start="6">
+<li><a class="reference external" href="#functions">Useful NumPy functions</a></li>
+</ol>
+</div>
+<div class="section" id="downloading-and-extracting-the-data">
+<h2>Downloading and extracting the data<a class="headerlink" href="#downloading-and-extracting-the-data" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>You can start by downloading <a class="reference external" href="../Data/volcano-data.zip">this week&#8217;s volcano data zip
+file</a>, which we will be using for this
+lesson.</li>
+</ol>
+<ul class="simple">
+<li>The Firefox browser will likely download the file to the
+<code class="docutils literal"><span class="pre">Downloads</span></code> directory in the home directory of your computer
+instance. If so, you should move the file into the home directory
+using the file browser.</li>
+</ul>
+<ol class="arabic" start="2">
+<li><p class="first">Once you have moved the <code class="docutils literal"><span class="pre">volcano-data.zip</span></code> file into your home
+directory, you can unzip the file using the <code class="docutils literal"><span class="pre">unzip</span></code> command in the
+Terminal window.</p>
+<div class="code bash highlight-default"><div class="highlight"><pre><span></span>$ cd $HOME
+$ unzip volcano-data.zip
+$ ls volcano-data
+GVP-Volcano-Lat-Lon-Elev.csv GVP-Volcano-List.csv GVP_Volcano_List.xls
+</pre></div>
+</div>
+<p>You should now have a directory titled <code class="docutils literal"><span class="pre">volcano-data</span></code> in your home
+directory. It contains three files from <a class="reference external" href="http://volcano.si.edu/list_volcano_holocene.cfm">version 4.5.1 of the
+Smithsonian Institution&#8217;s Holocene volcano database (updated
+23.9.2016)</a>.
+<strong>Note</strong>: These files have the same names, but differ slightly from
+those used last week in that no data has been removed from the files.
+The three files are:</p>
+</li>
+</ol>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">GVP-Volcano-List.csv</span></code>: The complete Holocene volcano database file
+in <code class="docutils literal"><span class="pre">.csv</span></code> format and with header lines. <strong>Note</strong>: Values are
+separated by semicolons (<code class="docutils literal"><span class="pre">;</span></code>) in this version of the file rather
+than the commas (<code class="docutils literal"><span class="pre">,</span></code>).</li>
+<li><code class="docutils literal"><span class="pre">GVP-Volcano-List.xls</span></code>: The Excel version of the complete Holocene
+volcano database.</li>
+<li><code class="docutils literal"><span class="pre">GVP-Volcano-Lat-Lon-Elev.csv</span></code>: The volcano ID, latitude, longitude
+and elevation for all volcanoes in the Holocene volcano database.
+There is no header in this file and values are separated by commas
+(<code class="docutils literal"><span class="pre">,</span></code>).</li>
+</ul>
+</div>
+<div class="section" id="introducing-numpy">
+<h2>Introducing NumPy<a class="headerlink" href="#introducing-numpy" title="Permalink to this headline">¶</a></h2>
+<p>NumPy is a library for Python designed for efficient scientific
+(numerical) computing. It is an essential library in Python that is used
+under the hood in many other modules. Here, we willl get a sense of a
+few things NumPy can do.</p>
+<ol class="arabic simple">
+<li>To start using the NumPy library we will need to <code class="docutils literal"><span class="pre">import</span></code> it.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">import</span> <span class="pre">numpy</span> <span class="pre">as</span> <span class="pre">np</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span></code> Note that we&#8217;ve imported NumPy
+a bit differently this time. The <code class="docutils literal"><span class="pre">import</span> <span class="pre">library</span> <span class="pre">as</span></code> syntax can be
+used to give the library a different name in memory. Since we may want
+to use NumPy many time, shortening <code class="docutils literal"><span class="pre">numpy</span></code> to <code class="docutils literal"><span class="pre">np</span></code> is helpful.</p>
+<ol class="arabic simple" start="2">
+<li>Now we&#8217;ll import an example data file.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">data</span> <span class="pre">=</span> <span class="pre">np.loadtxt(fname='GVP-Volcano-Lat-Lon-Elev.csv',</span> <span class="pre">delimiter=',')</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(data)</span>&#160;&#160; <span class="pre">[[</span>&#160; <span class="pre">2.10010000e+05</span>&#160;&#160; <span class="pre">5.01700000e+01</span>&#160;&#160; <span class="pre">6.85000000e+00</span>&#160;&#160; <span class="pre">6.00000000e+02]</span>&#160;&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">2.10020000e+05</span>&#160;&#160; <span class="pre">4.57750000e+01</span>&#160;&#160; <span class="pre">2.97000000e+00</span>&#160;&#160; <span class="pre">1.46400000e+03]</span>&#160;&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">2.10030000e+05</span>&#160;&#160; <span class="pre">4.21700000e+01</span>&#160;&#160; <span class="pre">2.53000000e+00</span>&#160;&#160; <span class="pre">8.93000000e+02]</span>&#160;&#160;&#160; <span class="pre">...,</span>&#160;&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">3.90829000e+05</span>&#160; <span class="pre">-6.41500000e+01</span>&#160; <span class="pre">-5.77500000e+01</span>&#160;&#160; <span class="pre">1.63000000e+03]</span>&#160;&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">3.90847000e+05</span>&#160; <span class="pre">-6.20200000e+01</span>&#160; <span class="pre">-5.76700000e+01</span>&#160;&#160; <span class="pre">5.49000000e+02]</span>&#160;&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">6.00000000e+05</span>&#160;&#160; <span class="pre">0.00000000e+00</span>&#160;&#160; <span class="pre">0.00000000e+00</span>&#160;&#160; <span class="pre">0.00000000e+00]]</span></code>
+Again, the data above is probably not very clear at this point, but is
+an example of data from the Smithsonian Institution&#8217;s Global Volcanism
+Program. Here, we have the ID number, latitude, longitude, and elevation
+of Holocene volcanoes in the database. Let&#8217;s see what we can do with
+this information.</p>
+<ol class="arabic simple" start="3">
+<li>First off, you may notice we&#8217;ve used NumPy to read in the data. What
+does that mean for us?</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">type(data)</span>&#160;&#160; <span class="pre">numpy.ndarray</span></code> OK, so we have something new
+here. NumPy has its own data types that are part of the module. In this
+case, our data is stored in an NumPy <em>n</em>-dimensional array.</p>
+<ol class="arabic simple" start="4">
+<li>How much data do we have in our <code class="docutils literal"><span class="pre">data</span></code> variable?</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(data.shape)</span>&#160;&#160; <span class="pre">(1520,</span> <span class="pre">4)</span></code> 1520 rows of data, 4
+columns. <code class="docutils literal"><span class="pre">shape</span></code> is a <em>member</em> or <em>attribute</em> of <code class="docutils literal"><span class="pre">data</span></code>, and is part
+of any NumPy <code class="docutils literal"><span class="pre">ndarray</span></code>. Printing <code class="docutils literal"><span class="pre">data.shape</span></code> tells us the size of
+the array.</p>
+<ol class="arabic simple" start="5">
+<li>We can also check the data type of our data-columns by calling
+<code class="docutils literal"><span class="pre">data.dtype</span></code></li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(data.dtype)</span>&#160;&#160; <span class="pre">float64</span></code> Okey, so it seems that all
+the data in our file is float data type, i.e., decimal numbers (stored
+with a precision of 64 bytes).</p>
+<ol class="arabic simple" start="6">
+<li>It is also possible to change the data type of the data which can be
+useful sometimes. Let&#8217;s take a copy of our data and convert our
+dataset into integer numbers</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">#</span> <span class="pre">Take</span> <span class="pre">a</span> <span class="pre">copy</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">copy</span> <span class="pre">=</span> <span class="pre">data.copy()</span>&#160;&#160; <span class="pre">#</span> <span class="pre">Lets</span> <span class="pre">convert</span> <span class="pre">the</span> <span class="pre">data</span> <span class="pre">into</span> <span class="pre">integer</span> <span class="pre">numbers</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">copy</span> <span class="pre">=</span> <span class="pre">copy.astype(int)</span>&#160;&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(copy)</span>&#160;&#160; <span class="pre">[[210010</span>&#160;&#160;&#160;&#160; <span class="pre">50</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">6</span>&#160;&#160;&#160; <span class="pre">600]</span>&#160;&#160;&#160; <span class="pre">[210020</span>&#160;&#160;&#160;&#160; <span class="pre">45</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">2</span>&#160;&#160; <span class="pre">1464]</span>&#160;&#160;&#160; <span class="pre">[210030</span>&#160;&#160;&#160;&#160; <span class="pre">42</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">2</span>&#160;&#160;&#160; <span class="pre">893]</span>&#160;&#160;&#160; <span class="pre">...,</span>&#160;&#160;&#160; <span class="pre">[390829</span>&#160;&#160;&#160; <span class="pre">-64</span>&#160;&#160;&#160; <span class="pre">-57</span>&#160;&#160; <span class="pre">1630]</span>&#160;&#160;&#160; <span class="pre">[390847</span>&#160;&#160;&#160; <span class="pre">-62</span>&#160;&#160;&#160; <span class="pre">-57</span>&#160;&#160;&#160; <span class="pre">549]</span>&#160;&#160;&#160; <span class="pre">[600000</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">0</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">0</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">0]]</span></code></p>
+<ol class="arabic simple" start="7">
+<li>Within the array, we can find any value by using it&#8217;s <em>indices</em>.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">data[0,0]</span>&#160;&#160; <span class="pre">210010.0</span></code> This gives us the value stored in
+the first row and first column of <code class="docutils literal"><span class="pre">data</span></code>. Note that to refer to a
+location in an array you use the square brackets <code class="docutils literal"><span class="pre">[</span> <span class="pre">]</span></code> just like for
+lists. Remember, index values <strong>start at zero, not one</strong>, and the first
+row and column refers to the top left value in the array. What will
+happen if we try to find <code class="docutils literal"><span class="pre">data[1520,0]</span></code>? Try it!</p>
+<ol class="arabic simple" start="7">
+<li>1520 volcanoes is quite a few to deal with at the same time. We can
+explore our data more easily by using <em>index slicing</em> to extract part
+of the array. Let&#8217;s start with just the latitude and longitude for
+the first five rows.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">data[0:5,</span> <span class="pre">1:3]</span>&#160;&#160; <span class="pre">array([[</span> <span class="pre">50.17</span> <span class="pre">,</span>&#160;&#160; <span class="pre">6.85</span> <span class="pre">],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[</span> <span class="pre">45.775,</span>&#160;&#160; <span class="pre">2.97</span> <span class="pre">],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[</span> <span class="pre">42.17</span> <span class="pre">,</span>&#160;&#160; <span class="pre">2.53</span> <span class="pre">],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[</span> <span class="pre">38.87</span> <span class="pre">,</span>&#160; <span class="pre">-4.02</span> <span class="pre">],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[</span> <span class="pre">43.25</span> <span class="pre">,</span>&#160; <span class="pre">10.87</span> <span class="pre">]])</span></code>
+Nice! Note that in this case, the range of index values for the first 5
+rows is 0-5. The data extracted will start at <code class="docutils literal"><span class="pre">0</span></code> and go up to, but
+not include <code class="docutils literal"><span class="pre">5</span></code>. Be careful with this. We can also extract data for
+all columns without listing any index range at all.</p>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">data[0:2,</span> <span class="pre">:]</span>&#160;&#160; <span class="pre">array([[</span>&#160; <span class="pre">2.10010000e+05,</span>&#160;&#160; <span class="pre">5.01700000e+01,</span>&#160;&#160; <span class="pre">6.85000000e+00,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">6.00000000e+02],</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">2.10020000e+05,</span>&#160;&#160; <span class="pre">4.57750000e+01,</span>&#160;&#160; <span class="pre">2.97000000e+00,</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">1.46400000e+03]])</span></code>
+Obviously, this can be useful.</p>
+<ol class="arabic simple" start="8">
+<li>We can also use <em>index slicing</em> to separate our data into different
+variables to make it easier to work with.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">Latitude</span> <span class="pre">=</span> <span class="pre">data[:,1]</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(Latitude)</span>&#160;&#160; <span class="pre">[</span> <span class="pre">50.17</span>&#160;&#160; <span class="pre">45.775</span>&#160; <span class="pre">42.17</span>&#160; <span class="pre">...,</span> <span class="pre">-64.15</span>&#160; <span class="pre">-62.02</span>&#160;&#160;&#160; <span class="pre">0.</span>&#160;&#160; <span class="pre">]</span></code>
+For many data files, this is a nice way to interact with only the data
+of your own interest.</p>
+</div>
+<div class="section" id="task-1">
+<h2>Task 1:<a class="headerlink" href="#task-1" title="Permalink to this headline">¶</a></h2>
+<p>Create a list called <code class="docutils literal"><span class="pre">dataStr</span></code> where you append all of our <code class="docutils literal"><span class="pre">data</span></code>
+array columns one by one in string (<code class="docutils literal"><span class="pre">str</span></code>) format. Use a <code class="docutils literal"><span class="pre">for</span></code> loop
+for iterating over the columns.</p>
+</div>
+<div class="section" id="useful-functions">
+<h2>Useful functions<a class="headerlink" href="#useful-functions" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>It is common to need to create your own arrays not from a data file,
+but to make a variable that has a range from one value to another. If
+we wanted to calculate the <code class="docutils literal"><span class="pre">sin()</span></code> of a variable <code class="docutils literal"><span class="pre">x</span></code> at 10 points
+from zero to 2 * pi, we could do the following.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">x</span> <span class="pre">=</span> <span class="pre">np.linspace(0.,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">np.pi,</span> <span class="pre">10)</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(x)</span>&#160;&#160; <span class="pre">[</span> <span class="pre">0.</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">0.6981317</span>&#160;&#160; <span class="pre">1.3962634</span>&#160;&#160; <span class="pre">2.0943951</span>&#160;&#160; <span class="pre">2.7925268</span>&#160;&#160; <span class="pre">3.4906585</span>&#160;&#160;&#160;&#160; <span class="pre">4.1887902</span>&#160;&#160; <span class="pre">4.88692191</span>&#160; <span class="pre">5.58505361</span>&#160; <span class="pre">6.28318531]</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">y</span> <span class="pre">=</span> <span class="pre">np.sin(x)</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(y)</span>&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">0.00000000e+00</span>&#160;&#160; <span class="pre">6.42787610e-01</span>&#160;&#160; <span class="pre">9.84807753e-01</span>&#160;&#160; <span class="pre">8.66025404e-01</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">3.42020143e-01</span>&#160; <span class="pre">-3.42020143e-01</span>&#160; <span class="pre">-8.66025404e-01</span>&#160; <span class="pre">-9.84807753e-01</span>&#160;&#160;&#160;&#160; <span class="pre">-6.42787610e-01</span>&#160; <span class="pre">-2.44929360e-16]</span></code>
+In this case, <code class="docutils literal"><span class="pre">x</span></code> starts at zero and goes to 2 * pi in 10 increments.
+Alternatively, if we wanted to specify the size of the increments for a
+new variable <code class="docutils literal"><span class="pre">x2</span></code>, we could use the <code class="docutils literal"><span class="pre">np.arange()</span></code> function.</p>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">x2</span> <span class="pre">=</span> <span class="pre">np.arange(0.0,</span> <span class="pre">2</span> <span class="pre">*</span> <span class="pre">np.pi,</span> <span class="pre">0.5)</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(x2)</span>&#160;&#160; <span class="pre">[</span> <span class="pre">0.</span>&#160;&#160; <span class="pre">0.5</span>&#160; <span class="pre">1.</span>&#160;&#160; <span class="pre">1.5</span>&#160; <span class="pre">2.</span>&#160;&#160; <span class="pre">2.5</span>&#160; <span class="pre">3.</span>&#160;&#160; <span class="pre">3.5</span>&#160; <span class="pre">4.</span>&#160;&#160; <span class="pre">4.5</span>&#160; <span class="pre">5.</span>&#160;&#160; <span class="pre">5.5</span>&#160; <span class="pre">6.</span> <span class="pre">]</span></code>
+In this case, <code class="docutils literal"><span class="pre">x2</span></code> starts at zero and goes to the largest value that
+is smaller than 2 * pi by increments of 0.5. Both of these types of
+array options are useful in different situations.</p>
+<ol class="arabic simple" start="10">
+<li>Like normal variables, array variables can also be used for various
+mathematical operations.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">doublex</span> <span class="pre">=</span> <span class="pre">x</span> <span class="pre">*</span> <span class="pre">2.0</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(doublex)</span>&#160;&#160; <span class="pre">[</span>&#160; <span class="pre">0.</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">1.3962634</span>&#160;&#160;&#160; <span class="pre">2.7925268</span>&#160;&#160;&#160; <span class="pre">4.1887902</span>&#160;&#160;&#160; <span class="pre">5.58505361</span>&#160;&#160;&#160;&#160;&#160; <span class="pre">6.98131701</span>&#160;&#160; <span class="pre">8.37758041</span>&#160;&#160; <span class="pre">9.77384381</span>&#160; <span class="pre">11.17010721</span>&#160; <span class="pre">12.56637061]</span></code></p>
+<ol class="arabic simple" start="11">
+<li>In addition to the <em>attributes</em> we saw prevously for NumPy
+<code class="docutils literal"><span class="pre">ndarray</span></code> variables, there are also many <em>methods</em> that are part
+of the <code class="docutils literal"><span class="pre">ndarray</span></code> data type.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(x.mean())</span>&#160;&#160; <span class="pre">3.14159265359</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(doublex.mean())</span>&#160;&#160; <span class="pre">6.28318530718</span></code>
+No surprises here. If we think of <em>variables</em> as nouns, <em>methods</em> are
+verbs, actions for the variable values. <strong>NOTE</strong>: When using methods,
+you always include the parentheses <code class="docutils literal"><span class="pre">()</span></code> to be clear we are referring
+to a <em>method</em> and not an <em>attribute</em>. There are many other useful
+<code class="docutils literal"><span class="pre">ndarray</span></code> methods, such as <code class="docutils literal"><span class="pre">x.min()</span></code>, <code class="docutils literal"><span class="pre">x.max()</span></code>, and <code class="docutils literal"><span class="pre">x.std()</span></code>
+(standard deviation).</p>
+<ol class="arabic simple" start="12">
+<li><em>Methods</em> can also act on part of an array.</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(x[0:5].mean())</span>&#160;&#160; <span class="pre">1.3962634016</span></code></p>
+<p><strong>Next</strong>: <a class="reference external" href="https://classroom.github.com/assignment-invitations/91b6f2cfe199617bd94a971f467457be">Exercise 6: Analysing data using
+NumPy</a><strong>Home</strong>: <a class="reference external" href="https://github.com/Python-for-geo-people/Lesson-6-Intro-to-NumPy">Lesson 6 main
+page</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,450 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Writing data to a file &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture materials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Writing data to a file</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L5/writing-to-file.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="writing-data-to-a-file">
+<h1>Writing data to a file<a class="headerlink" href="#writing-data-to-a-file" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="topics">
+<h2>Topics<a class="headerlink" href="#topics" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><a class="reference external" href="#Writing-to-a-new-file">Writing to a new file</a></li>
+<li><a class="reference external" href="#append">Appending to a file</a></li>
+<li><a class="reference external" href="#overwrite">(Not) overwriting data files</a></li>
+<li><a class="reference external" href="#useful-functions">Useful functions related to filepaths</a></li>
+<li><a class="reference external" href="#copying-files">Copying contents from a file into another</a></li>
+</ul>
+</div>
+<div class="section" id="writing-to-a-new-file">
+<h2>Writing to a new file<a class="headerlink" href="#writing-to-a-new-file" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="reading-multiple-files.md">Previous materials</a> focused on reading
+data from file(s) but for sure it is as important to know how to write
+contents into a file. Writing data into a file uses the same <code class="docutils literal"><span class="pre">open</span></code>
+-function that we used for reading the data but when writing we use the
+<code class="docutils literal"><span class="pre">w</span></code> -mode.</p>
+<ol class="arabic simple">
+<li>When filepath is opened in write mode (<code class="docutils literal"><span class="pre">mode=w</span></code>), Python will
+create a file into that location. Let&#8217;s create a file called
+<code class="docutils literal"><span class="pre">test.txt</span></code> into our home -folder:</li>
+</ol>
+<p>```python # Let&#8217;s store the filepath of the new file into a variable
+&gt;&gt;&gt; out_file = &#8216;/home/geo/test.txt&#8217;</p>
+<p># This will open the file in write -mode and create it at the same time
+&gt;&gt;&gt; w = open(out_file, &#8216;w&#8217;) ```</p>
+<p>Now the test.txt -file has appeared into our home -folder:</p>
+<div class="figure" id="id1">
+<img alt="New file was created" src="lessons\L5\../img/new-file-writing.PNG" />
+<p class="caption"><span class="caption-text">New file was created</span></p>
+</div>
+<ol class="arabic simple" start="2">
+<li>We can of course write content into that file using <code class="docutils literal"><span class="pre">.write()</span></code>
+-function. Let&#8217;s write a single line of text into our test file, and
+let&#8217;s use the <code class="docutils literal"><span class="pre">with</span></code> -statement for opening the file [0].</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">#</span> <span class="pre">Open</span> <span class="pre">the</span> <span class="pre">file</span> <span class="pre">in</span> <span class="pre">write</span> <span class="pre">-mode</span>&#160;&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">with</span> <span class="pre">open(out_file,</span> <span class="pre">'w')</span> <span class="pre">as</span> <span class="pre">w:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Write</span> <span class="pre">a</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">into</span> <span class="pre">that</span> <span class="pre">file</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">my_line</span> <span class="pre">=</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">my</span> <span class="pre">first</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">written</span> <span class="pre">in</span> <span class="pre">Python!&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">w.write(my_line)</span></code></p>
+<p>Now our test.txt file contains the line of text that we just wrote:</p>
+<div class="figure" id="id2">
+<img alt="First line of text" src="lessons\L5\../img/first-line-of-text.PNG" />
+<p class="caption"><span class="caption-text">First line of text</span></p>
+</div>
+<p>3. We can also add stuff to already existing file using append -mode
+(<code class="docutils literal"><span class="pre">a</span></code>) in the open statement:</p>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">#</span> <span class="pre">Open</span> <span class="pre">the</span> <span class="pre">file</span> <span class="pre">in</span> <span class="pre">append</span> <span class="pre">-mode</span>&#160;&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">with</span> <span class="pre">open(out_file,</span> <span class="pre">'a')</span> <span class="pre">as</span> <span class="pre">w:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Write</span> <span class="pre">a</span> <span class="pre">second</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">into</span> <span class="pre">our</span> <span class="pre">file</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">second_line</span> <span class="pre">=</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">my</span> <span class="pre">SECOND</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">written</span> <span class="pre">in</span> <span class="pre">Python!&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">w.write(second_line)</span></code></p>
+<p>Now our test.txt file contains the following:</p>
+<div class="figure" id="id3">
+<img alt="Second line of text" src="lessons\L5\../img/second-line-of-text.PNG" />
+<p class="caption"><span class="caption-text">Second line of text</span></p>
+</div>
+<p>Hey, but wait a second. The text that we just added did not go to a new
+line! This happens because we did not say to the computer to add a new
+line after our write -statement. For doing that we need to add the
+<code class="docutils literal"><span class="pre">\n</span></code> -newline character at the end of each line that we write. Let&#8217;s
+fix this.</p>
+<p>4. We can overwrite the old contents of a file by opening it again in
+write -mode. <strong>Notice:</strong> this really does delete all the earlier
+contents of the file, so be careful! Let&#8217;s write those two lines now
+with adding the new-line character at the end:</p>
+<p><code class="docutils literal"><span class="pre">python</span>&#160;&#160; <span class="pre">#</span> <span class="pre">This</span> <span class="pre">will</span> <span class="pre">now</span> <span class="pre">overwrite</span> <span class="pre">the</span> <span class="pre">old</span> <span class="pre">contents</span> <span class="pre">of</span> <span class="pre">the</span> <span class="pre">existing</span> <span class="pre">test.txt</span> <span class="pre">-file</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">with</span> <span class="pre">open(out_file,</span> <span class="pre">'w')</span> <span class="pre">as</span> <span class="pre">w:</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Write</span> <span class="pre">the</span> <span class="pre">first</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">but</span> <span class="pre">now</span> <span class="pre">with</span> <span class="pre">new-line</span> <span class="pre">character</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">end</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">my_line</span> <span class="pre">=</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">my</span> <span class="pre">first</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">written</span> <span class="pre">in</span> <span class="pre">Python!\n&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">w.write(my_line)</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">Write</span> <span class="pre">the</span> <span class="pre">SECOND</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">but</span> <span class="pre">now</span> <span class="pre">with</span> <span class="pre">new-line</span> <span class="pre">character</span> <span class="pre">at</span> <span class="pre">the</span> <span class="pre">end</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">second_line</span> <span class="pre">=</span> <span class="pre">&quot;This</span> <span class="pre">is</span> <span class="pre">my</span> <span class="pre">SECOND</span> <span class="pre">line</span> <span class="pre">of</span> <span class="pre">text</span> <span class="pre">written</span> <span class="pre">in</span> <span class="pre">Python!\n&quot;</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">w.write(second_line)</span></code></p>
+<p>Now our test.txt file looks correct:</p>
+<div class="figure" id="id4">
+<img alt="Second line of text, correct" src="lessons\L5\../img/second-line-of-text-fixed.PNG" />
+<p class="caption"><span class="caption-text">Second line of text, correct</span></p>
+</div>
+<p>Now the each sentence are correctly written in separate lines.</p>
+<p>5. There is also another function called <code class="docutils literal"><span class="pre">.writelines()</span></code> that writes a
+list of texts into a file where each list item will be written into the
+output file. Let&#8217;s add another two lines at once into our test.txt -file
+using writelines -function:</p>
+<p>```python # Open the file in append -mode &gt;&gt;&gt; with open(out_file,
+&#8216;a&#8217;) as w: # Third and fourth lines of texts third_line = &#8220;This is my
+THIRD line of text written in Python!:raw-latex:<cite>n</cite>&#8221; fourth_line =
+&#8220;This is my FOURTH line of text written in Python!:raw-latex:<cite>n</cite>&#8220;</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Write both of those lines at once</span>
+<span class="n">w</span><span class="o">.</span><span class="n">writelines</span><span class="p">([</span><span class="n">third_line</span><span class="p">,</span> <span class="n">fourth_line</span><span class="p">])</span>
+</pre></div>
+</div>
+<p>```</p>
+<p>Now we have four lines in our test.txt file:</p>
+<div class="figure">
+<img alt="lessons\L5\../img/third-line-of-text.PNG:alt:3-4lines" src="lessons\L5\../img/third-line-of-text.PNG:alt:3-4lines" />
+</div>
+<hr class="docutils" />
+<p>When dealing with file paths in Python there are several useful
+functions available in a sub-module called
+<strong>`os.path &lt;https://docs.python.org/3/library/os.path.html&gt;`__</strong>.</p>
+<p>For instance when creating output filepaths it is common that you have a
+common folder where all the output files will be created. In such cases,
+you need to combine the path to the folder and the output filename for
+each output file that you produce, os-module can help with such an
+operation.</p>
+<ol class="arabic simple">
+<li>It is possible to parse the filename of a file (without folder
+information):</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">import</span> <span class="pre">os</span>&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">filename</span> <span class="pre">=</span> <span class="pre">os.path.basename(&quot;/home/geo/data/test.txt&quot;)</span>&#160;&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(filename)</span>&#160; <span class="pre">test.txt</span></code></p>
+<ol class="arabic simple" start="2">
+<li>One typical example that you might need to do sometime is to copy a
+part of file into a new file in another folder. Let&#8217;s create a new
+folder called <strong>*Results*</strong> to the home -folder of our computer
+instance using specific command called <code class="docutils literal"><span class="pre">os.makedirs()</span></code> but ONLY if
+it does not exist already (we can take advantage of
+<code class="docutils literal"><span class="pre">os.path.exists()</span></code> -function):</li>
+</ol>
+<p>```python &gt;&gt;&gt; import os &gt;&gt;&gt; result_dir = &#8220;/home/geo/Results&#8221;</p>
+<p># Check if folder does NOT exist &gt;&gt;&gt; if not os.path.exists(result_dir):
+# If folder didn&#8217;t exist create one os.makedirs(result_dir) ```</p>
+<p>Now we have a new folder called Results in our home folder:</p>
+<div class="figure" id="id5">
+<img alt="New folder created" src="lessons\L5\../img/result-folder.PNG" />
+<p class="caption"><span class="caption-text">New folder created</span></p>
+</div>
+<ol class="arabic simple" start="3">
+<li>Now we can combine the filename (test.txt) and our new folder using
+<code class="docutils literal"><span class="pre">os.path.join()</span></code> -function:</li>
+</ol>
+<p><code class="docutils literal"><span class="pre">python</span>&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">new_output_file</span> <span class="pre">=</span> <span class="pre">os.path.join(result_dir,</span> <span class="pre">filename)</span>&#160; <span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(new_output_file)</span>&#160; <span class="pre">/home/geo/Results/test.txt</span></code></p>
+<blockquote>
+<div>Copying selected lines of (multiple) files into a new location</div></blockquote>
+<hr class="docutils" />
+<ol class="arabic simple">
+<li>Let&#8217;s take our previous exercise (reading multiple files) as a
+starting point and copy the first line of each inflammation csv-file
+and save them into new files using the same filenames but located
+into our new Results folder. We will use <code class="docutils literal"><span class="pre">os.path.basename()</span></code>
+-function to find out the filename of the input files and
+<code class="docutils literal"><span class="pre">os.path.join()</span></code> -function to create the new output filepaths that
+will be saved into the new Results folder:</li>
+</ol>
+<div class="line-block">
+<div class="line">```python &gt;&gt;&gt; import glob # List inflammation data files from the
+source directory</div>
+<div class="line">&gt;&gt;&gt; source_dir = &#8220;/home/geo/data&#8221; &gt;&gt;&gt; inflammation_paths =
+glob.glob(source_dir + &#8220;/inflammation*.csv&#8221;)</div>
+</div>
+<p># As a reminder our result directory &gt;&gt;&gt; result_dir =
+&#8220;/home/geo/Results&#8221;</p>
+<p># Iterate over the files &gt;&gt;&gt; for fp in inflammation_paths: # Parse the
+filename of the input file and print it as information for the user
+filename = os.path.basename(fp) print(filename)</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Open the source file in read mode</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+    <span class="c1"># Parse the output file name, combine the result_dir folder-path and the filename of the input file</span>
+    <span class="n">output_fp</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">result_dir</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+    <span class="c1"># Open and create the output file in write mode</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_fp</span><span class="p">,</span> <span class="s1">&#39;w&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">w</span><span class="p">:</span>
+
+       <span class="c1"># Read the first line of the source file</span>
+       <span class="n">first_line</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+
+       <span class="c1"># Write it to the output file</span>
+       <span class="n">w</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">first_line</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>```</p>
+<p>Now we have copied the inflammation files in our Results -folder:</p>
+<div class="figure" id="id6">
+<img alt="Results" src="lessons\L5\../img/copy-files-1-line.PNG" />
+<p class="caption"><span class="caption-text">Results</span></p>
+</div>
+<p>And each of those files have the first line as content:</p>
+<div class="figure" id="id7">
+<img alt="Results" src="lessons\L5\../img/copy-files-1-line-content.PNG" />
+<p class="caption"><span class="caption-text">Results</span></p>
+</div>
+</div>
+<div class="section" id="footnotes">
+<h2>Footnotes<a class="headerlink" href="#footnotes" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>[0]: When reading / writing in Python, it is best to use the <code class="docutils literal"><span class="pre">with</span></code>
+-statement as it takes care of closing your file after you have
+read/written something into your file. <em>Closing</em> the file takes care
+of saving the data into that file. If the file is not closed after
+writing something into it, the contents won&#8217;t be saved into that
+file. It is similar idea than when thinking of writing something into
+a Word template document but without saving it anywhere. You can find
+more info about how to write data without <code class="docutils literal"><span class="pre">with</span></code> -statement, and
+how to close files from
+<strong>`here &lt;https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files&gt;`__</strong>.</li>
+</ul>
+<p><strong>Next</strong>: <a class="reference external" href="https://classroom.github.com/assignment-invitations/17f0f2ee87873cb1bcb2c6a9ec228c42">Exercise 5: Analysing NOAA climate
+data</a><strong>Home</strong>: <a class="reference external" href="https://github.com/Python-for-geo-people/Lesson-5-Reading-Writing">Lesson 5 main
+page</a><strong>Previous</strong>: <a class="reference external" href="reading-multiple-files.md">Reading multiple data
+files</a></p>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Sep 05, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
