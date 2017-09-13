@@ -115,6 +115,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/python-vocabulary.html">Vocabulary - Basic terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
 </ul>
 <p class="caption"><span class="caption-text">Lesson 1</span></p>
@@ -133,6 +135,18 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="exercise-1.html">Exercise 1</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L2/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/intro-to-GitHub.html">Introduction to Version Control and GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/GitHub-classroom.html">Using Classroom for Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/working-on-assignment.html">Working on the assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/python-basic-elements.html">Basic elements of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/writing-scripts.html">Writing your own Python scripts</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://classroom.github.com/a/AgzvDCtR">Exercise 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/exercise-2-hints.html">Exercise 2 hints</a></li>
 </ul>
 
             
@@ -209,8 +223,7 @@ We&#8217;ll learn more about how <strong>Spyder</strong> works later in the cour
 In the IPython console you can type in Python commands and press <strong>Enter</strong> to execute them.</p>
 <ol class="arabic">
 <li><p class="first">We can start by launching <strong>Spyder</strong>.</p>
-<blockquote>
-<div><ul class="simple">
+<ul class="simple">
 <li>In Windows, this can be done by clicking on Programs -&gt; Anaconda -&gt; <strong>Spyder</strong> in the start menu.</li>
 <li>On a Mac or in Linux, <strong>Spyder</strong> can be launched from a terminal by typing <code class="docutils literal"><span class="pre">spyder</span></code>.</li>
 </ul>
@@ -218,17 +231,15 @@ In the IPython console you can type in Python commands and press <strong>Enter</
 <a class="reference internal image-reference" href="../../_images/Spyder-terminal.png"><img alt="Launching Spyder from a terminal" src="../../_images/Spyder-terminal.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-text">Launching Spyder from a terminal</span></p>
 </div>
-</div></blockquote>
 </li>
-</ol>
-<p>2. The <strong>Spyder</strong> window should appear after a moment and it will look something like the one below.
+<li><p class="first">The <strong>Spyder</strong> window should appear after a moment and it will look something like the one below.
 For now, we are only interested in using the IPython console in the lower right panel (outlined in red).</p>
-<blockquote>
-<div><div class="figure align-center" id="id2">
+<div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/Spyder.png"><img alt="The Spyder IDE window" src="../../_images/Spyder.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-text">The Spyder IDE window. The IPython console is highlighted in the red box.</span></p>
 </div>
-</div></blockquote>
+</li>
+</ol>
 <p>Now we are ready to start.
 In the lesson that follows, simply enter the commands into the IPython console and press <strong>Enter</strong> to execute them.</p>
 </div>
@@ -238,22 +249,19 @@ In the lesson that follows, simply enter the commands into the IPython console a
 operations you can perform using Python.</p>
 <ol class="arabic">
 <li><p class="first">Python can be used as a simple calculator.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="mi">1</span> <span class="o">+</span> <span class="mi">1</span>
 <span class="gh">Out[1]: </span><span class="go">2</span>
 
 <span class="gp">In [2]: </span><span class="mi">5</span> <span class="o">*</span> <span class="mi">7</span>
 <span class="go">          Out[2]: 35</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">You can use Python for more advanced math by using <em>functions</em>.
 Functions are pieces of code that perform a single action such as
 printing information to the screen (e.g., the <code class="docutils literal"><span class="pre">print()</span></code> function).
 Functions exist for a huge number of operations in Python.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">sin</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
 <span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
 <span class="nn">&lt;ipython-input-3-eb391534dd1e&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
@@ -270,14 +278,11 @@ Functions exist for a huge number of operations in Python.</p>
 <span class="go">NameError: name &#39;sqrt&#39; is not defined</span>
 </pre></div>
 </div>
-</div></blockquote>
 <p>Wait, what? Python can&#8217;t calculate square roots or do basic
 trigonometry? Of course it can, but we need one more step.</p>
 </li>
-<li><p class="first">The list of basic arithmetic operations that can be done by default
-in Python is in the table below.</p>
-<blockquote>
-<div><table border="1" class="docutils">
+<li><p class="first">The list of basic arithmetic operations that can be done by default in Python is in the table below.</p>
+<table border="1" class="docutils">
 <colgroup>
 <col width="29%" />
 <col width="14%" />
@@ -341,22 +346,18 @@ Modules may also contain constants such as <code class="docutils literal"><span 
 <span class="go">                          Out[9]: 1.2246467991473532e-16</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">Functions can also be combined.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="k">print</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 <span class="go">2.0</span>
 
 <span class="gp">In [11]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;The square root of 4 is&#39;</span><span class="p">,</span><span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">4</span><span class="p">))</span>
 <span class="go">    The square root of 4 is 2.0</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first"><em>Variables</em> can be used to store values calculated in expressions and used for other calculations.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">temp_celsius</span> <span class="o">=</span> <span class="mf">10.0</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [12]: </span><span class="n">temp_celsius</span> <span class="o">=</span> <span class="mf">10.0</span>
 
 <span class="gp">In [13]: </span><span class="k">print</span><span class="p">(</span><span class="n">temp_celsius</span><span class="p">)</span>
 <span class="go">10.0</span>
@@ -368,11 +369,9 @@ Modules may also contain constants such as <code class="docutils literal"><span 
 <p>Above, we also see one common format for <em>good</em> variable naming, separation of words by underscores <code class="docutils literal"><span class="pre">_</span></code> (e.g., <code class="docutils literal"><span class="pre">temp_celsius</span></code>).
 This is called pothole_case_naming.
 We&#8217;ll see another below.</p>
-</div></blockquote>
 </li>
 <li><p class="first">Values stored in <em>variables</em> can also be updated.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="n">temp_celsius</span> <span class="o">=</span> <span class="mf">15.0</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="n">temp_celsius</span> <span class="o">=</span> <span class="mf">15.0</span>
 
 <span class="gp">In [16]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;temperature in Celsius is now:&#39;</span><span class="p">,</span> <span class="n">temp_celsius</span><span class="p">)</span>
 <span class="go">temperature in Celsius is now: 15.0</span>
@@ -387,21 +386,17 @@ We&#8217;ll see another below.</p>
 This is called camelCaseNaming.
 Both options are easy to read and help you use <em>good</em> variable names.
 After all, <em>people</em> should be able to easily understand what different variables contain.</p>
-</div></blockquote>
 </li>
 <li><p class="first">Note that changing the values of a variable does not affect those of other variables.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [19]: </span><span class="n">temp_celsius</span> <span class="o">=</span> <span class="mf">20.0</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [19]: </span><span class="n">temp_celsius</span> <span class="o">=</span> <span class="mf">20.0</span>
 
 <span class="gp">In [20]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;temperature in Celsius is now:&#39;</span><span class="p">,</span> <span class="n">temp_celsius</span><span class="p">,</span> <span class="s1">&#39;and temperature in Fahrenheit is still:&#39;</span><span class="p">,</span> <span class="n">temperatureInFahrenheit</span><span class="p">)</span>
 <span class="go">temperature in Celsius is now: 20.0 and temperature in Fahrenheit is still: 59.0</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">One of the nice options in IPython is that you can see which variables are in memory by typing <code class="docutils literal"><span class="pre">%whos</span></code>.</p>
-<blockquote>
-<div><div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="o">%</span><span class="k">whos</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="o">%</span><span class="k">whos</span>
 <span class="go">Variable                  Type      Data/Info</span>
 <span class="gt">---------------------------------------------</span>
 <span class="n">math</span>                      <span class="n">module</span>    <span class="o">&lt;</span><span class="n">module</span> <span class="s1">&#39;math&#39;</span> <span class="p">(</span><span class="n">built</span><span class="o">-</span><span class="ow">in</span><span class="p">)</span><span class="o">&gt;</span>
@@ -417,11 +412,9 @@ In addition, you can view this same information using the Variable explorer pane
 <a class="reference internal image-reference" href="../../_images/Spyder-variables.png"><img alt="The Spyder variable explorer panel" src="../../_images/Spyder-variables.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-text">The Spyder variable explorer panel (red box).</span></p>
 </div>
-</div></blockquote>
 </li>
 <li><p class="first">There are 4 basic <em>data types</em> in Python as shown in the table below.</p>
-<blockquote>
-<div><table border="1" class="docutils">
+<table border="1" class="docutils">
 <colgroup>
 <col width="32%" />
 <col width="44%" />
@@ -471,7 +464,6 @@ As you will see, the data types are important because some are not compatible wi
 <span class="go">TypeError: can&#39;t multiply sequence by non-int of type &#39;float&#39;</span>
 </pre></div>
 </div>
-</div></blockquote>
 </li>
 </ol>
 </div>
@@ -506,7 +498,7 @@ In the coming weeks we will explore each of these items, and many more, in great
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
-      Last updated on Sep 07, 2017.
+      Last updated on Sep 13, 2017.
 
     </p>
   </div>
