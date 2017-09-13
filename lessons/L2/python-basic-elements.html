@@ -24,6 +24,8 @@
 
   
   
+  
+  
 
   
 
@@ -60,6 +62,7 @@
 
 <body class="wy-body-for-nav" role="document">
 
+   
   <div class="wy-grid-for-nav">
 
     
@@ -103,7 +106,10 @@
           
             
             
-                <p class="caption"><span class="caption-text">Course information</span></p>
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
@@ -153,8 +159,10 @@
 
       
       <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
-        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-        <a href="../../index.html">Geo-Python</a>
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
       </nav>
 
 
@@ -163,23 +171,40 @@
         <div class="rst-content">
           
 
- 
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 <div role="navigation" aria-label="breadcrumbs navigation">
+
   <ul class="wy-breadcrumbs">
-    <li><a href="../../index.html">Docs</a> &raquo;</li>
-      
-    <li>Basic elements of Python</li>
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Basic elements of Python</li>
+    
+    
       <li class="wy-breadcrumbs-aside">
         
-          
-            <a href="../../_sources/lessons/L2/python-basic-elements.txt" rel="nofollow"> View page source</a>
+            
+            <a href="../../_sources/lessons/L2/python-basic-elements.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
+    
   </ul>
+
+  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
@@ -236,7 +261,7 @@ Each variable has a unique name and they can store different types of data.</p>
 <span class="nn">&lt;ipython-input-9-cfc3e9af21bb&gt;</span> in <span class="ni">&lt;module&gt;</span><span class="nt">()</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">stationName</span> <span class="o">+</span> <span class="n">stationID</span>
 
-<span class="ne">TypeError</span>: Can&#39;t convert &#39;int&#39; object to str implicitly
+<span class="ne">TypeError</span>: must be str, not int
 </pre></div>
 </div>
 <p>Here we get a <code class="docutils literal"><span class="pre">TypeError</span></code> because Python does not know how we are expected to combine a string of characters (<code class="docutils literal"><span class="pre">stationName</span></code>) with an integer value (<code class="docutils literal"><span class="pre">stationID</span></code>).</p>
@@ -508,15 +533,18 @@ This is because alphabetical sorting in Python places capital letters before low
 
 
            </div>
+           <div class="articleComments">
+            
+           </div>
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="writing-scripts.html" class="btn btn-neutral float-right" title="Writing your own Python scripts" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="writing-scripts.html" class="btn btn-neutral float-right" title="Writing your own Python scripts" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="working-on-assignment.html" class="btn btn-neutral" title="Working on the assignments" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="working-on-assignment.html" class="btn btn-neutral" title="Working on the assignments" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -554,7 +582,8 @@ This is because alphabetical sorting in Python places capital letters before low
             VERSION:'2017 Autumn',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
         };
     </script>
       <script type="text/javascript" src="../../_static/jquery.js"></script>
