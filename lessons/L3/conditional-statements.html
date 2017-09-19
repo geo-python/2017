@@ -49,6 +49,8 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+        <link rel="next" title="Exercise 3" href="ex-3.html"/>
+        <link rel="prev" title="for loops" href="for-loops.html"/>
     <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
      
 
@@ -140,6 +142,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../L2/ex-2.html">Exercise 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/exercise-2-hints.html">Exercise 2 hints</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Lesson 3</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for-loops.html"><code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Conditional statements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sources">Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basics-of-conditional-statements">Basics of conditional statements</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="ex-3.html">Exercise 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise-3-hints.html">Exercise 3 hints</a></li>
+</ul>
 
             
           
@@ -213,14 +228,14 @@
 <p>Conditional statements can change the code behaviour based on meeting certain conditions.</p>
 <ol class="arabic">
 <li><p class="first">Let&#8217;s take a simple example.</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">17</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">17</span>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;it is hot&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span> <span class="k">else</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;it is not hot&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span>
-<span class="n">it</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">hot</span>
+<span class="gp">In [2]: </span><span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;it is hot&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;it is not hot&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span>
+<span class="go">it is not hot</span>
 </pre></div>
 </div>
 <p>What did we do here?
@@ -231,32 +246,52 @@ The <code class="docutils literal"><span class="pre">if</span></code> test check
 If so, &#8216;it is hot&#8217; would be written to the screen.
 Since 17 is smaller than 25, the code beneath the <code class="docutils literal"><span class="pre">else</span></code> is executed.
 The <code class="docutils literal"><span class="pre">else</span></code> statement code will run whenever the <code class="docutils literal"><span class="pre">if</span></code> test is false.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>As it turns out, we all use logic similar to <code class="docutils literal"><span class="pre">if</span></code> and <code class="docutils literal"><span class="pre">else</span></code> conditional statements daily.
+Imagine you&#8217;re getting ready to leave your home for the day and want to decide what to wear.
+You might look outside to check the weather conditions.
+If it is raining, you will wear a rain jacket.
+Otherwise, you will not.
+In Python we could say:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">weather</span> <span class="o">=</span> <span class="s1">&#39;Rain&#39;</span>
+
+<span class="gp">In [4]: </span><span class="k">if</span> <span class="n">weather</span> <span class="o">==</span> <span class="s1">&#39;Rain&#39;</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Wear a raincoat&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;No raincoat needed&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span>
+<span class="go">Wear a raincoat</span>
+</pre></div>
+</div>
+<p class="last">Note here that we use the <code class="docutils literal"><span class="pre">==</span></code> to test if a value is exactly equal to another.</p>
+</div>
 </li>
 <li><p class="first">The combination of <code class="docutils literal"><span class="pre">if</span></code> and <code class="docutils literal"><span class="pre">else</span></code> is very common, but both are not strictly required.</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="n">temperature</span> <span class="o">=</span> <span class="mi">13</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">13</span>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">4</span><span class="p">]:</span> <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;13 is greater than 25&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span>
+<span class="gp">In [6]: </span><span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">25</span><span class="p">:</span>
+<span class="gp">   ...: </span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;13 is greater than 25&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span>
 </pre></div>
 </div>
 <p>Note that here we use only the <code class="docutils literal"><span class="pre">if</span></code> statement, and because 13 is not greater than 25, nothing is printed to the screen.</p>
 </li>
 <li><p class="first">We can also have a second test for an <code class="docutils literal"><span class="pre">if</span></code> statment by using the <code class="docutils literal"><span class="pre">elif</span></code> (else-if) statement.</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">5</span><span class="p">]:</span> <span class="n">temperature</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [7]: </span><span class="n">temperature</span> <span class="o">=</span> <span class="o">-</span><span class="mi">3</span>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">6</span><span class="p">]:</span> <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="s1">&#39;is above freezing&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span> <span class="k">elif</span> <span class="n">temperature</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="s1">&#39;is freezing&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span> <span class="k">else</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="s1">&#39;is below freezing&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span>
-<span class="o">-</span><span class="mi">3</span> <span class="ow">is</span> <span class="n">below</span> <span class="n">freezing</span>
+<span class="gp">In [8]: </span><span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="s1">&#39;is above freezing&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">elif</span> <span class="n">temperature</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="s1">&#39;is freezing&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="s1">&#39;is below freezing&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span>
+<span class="go">-3 is below freezing</span>
 </pre></div>
 </div>
 <p>Makes sense, right?
-Note here that we use the <code class="docutils literal"><span class="pre">==</span></code> to test if a value is exactly equal to another.
+Note here that we again use the <code class="docutils literal"><span class="pre">==</span></code> to test if a value is exactly equal to another.
 The complete list of these comparison operators is given in the table below.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -289,22 +324,68 @@ The complete list of these comparison operators is given in the table below.</p>
 </tr>
 </tbody>
 </table>
-</li>
-<li><p class="first">We can also use <code class="docutils literal"><span class="pre">and</span></code> and <code class="docutils literal"><span class="pre">or</span></code> to have multiple conditions.</p>
-<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">7</span><span class="p">]:</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Both parts are true&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span> <span class="k">else</span><span class="p">:</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;One part is not true&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span>
-<span class="n">One</span> <span class="n">part</span> <span class="ow">is</span> <span class="ow">not</span> <span class="n">true</span>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>Time to check your understanding.
+Let&#8217;s assume that yesterday it was 14°C, it is 10°C outside today, and tomorrow it will be 13°C.
+The following code compares these temperatures and prints something to the screen based on the comparison.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">yesterday</span> <span class="o">=</span> <span class="mi">14</span>
+<span class="n">today</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">tomorrow</span> <span class="o">=</span> <span class="mi">13</span>
 
-<span class="n">In</span> <span class="p">[</span><span class="mi">8</span><span class="p">]:</span> <span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
-   <span class="o">...</span><span class="p">:</span>     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;At least one test is true&#39;</span><span class="p">)</span>
-   <span class="o">...</span><span class="p">:</span>
-<span class="n">At</span> <span class="n">least</span> <span class="n">one</span> <span class="n">test</span> <span class="ow">is</span> <span class="n">true</span>
+<span class="k">if</span> <span class="n">yesterday</span> <span class="o">&lt;=</span> <span class="n">today</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">today</span> <span class="o">!=</span> <span class="n">tomorrow</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;B&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">yesterday</span> <span class="o">&gt;</span> <span class="n">tomorrow</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">today</span> <span class="o">==</span> <span class="n">today</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;D&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This is just a simple example, but a concept that can be quite handy.</p>
+<p class="last">Which of the letters <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">B</span></code>, <code class="docutils literal"><span class="pre">C</span></code>, and <code class="docutils literal"><span class="pre">D</span></code> would be printed to the screen?
+Select your answer from the poll options at <a class="reference external" href="https://geo-python.github.io/poll/">https://geo-python.github.io/poll/</a>.</p>
+</div>
+</li>
+<li><p class="first">We can also use <code class="docutils literal"><span class="pre">and</span></code> and <code class="docutils literal"><span class="pre">or</span></code> to have multiple conditions.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [9]: </span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">):</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Both parts are true&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;One part is not true&#39;</span><span class="p">)</span>
+<span class="gp">   ...: </span>
+<span class="go">One part is not true</span>
+</pre></div>
+</div>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [10]: </span><span class="k">if</span> <span class="p">(</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span> <span class="o">&lt;</span> <span class="mi">0</span><span class="p">):</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;At least one test is true&#39;</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">At least one test is true</span>
+</pre></div>
+</div>
+<p>These are just simple examples, but concepts that can be quite handy.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Again, making decisions based on multiple conditions is something we regularly do.
+Imagine that we consider not only the rain, but also whether or not it is windy.
+If it is windy and raining, we&#8217;ll just stay home.
+Otherwise, we need appropriate clothing to go out.
+We can again handle this kind of decision with Python.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">weather</span> <span class="o">=</span> <span class="s1">&#39;Rain&#39;</span>
+
+<span class="gp">In [12]: </span><span class="n">wind</span> <span class="o">=</span> <span class="s1">&#39;Windy&#39;</span>
+
+<span class="gp">In [13]: </span><span class="k">if</span> <span class="p">(</span><span class="n">weather</span> <span class="o">==</span> <span class="s1">&#39;Rain&#39;</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">wind</span> <span class="o">==</span> <span class="s1">&#39;Windy&#39;</span><span class="p">):</span>
+<span class="gp">   ....: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Just stay home&#39;</span><span class="p">)</span>
+<span class="gp">   ....: </span><span class="k">elif</span> <span class="n">weather</span> <span class="o">==</span> <span class="s1">&#39;Rain&#39;</span><span class="p">:</span>
+<span class="gp">   ....: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Wear a raincoat&#39;</span><span class="p">)</span>
+<span class="gp">   ....: </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">   ....: </span>     <span class="k">print</span><span class="p">(</span><span class="s1">&#39;No raincoat needed&#39;</span><span class="p">)</span>
+<span class="gp">   ....: </span>
+<span class="go">Just stay home</span>
+</pre></div>
+</div>
+<p class="last">As you can see, we better just stay home if it is windy and raining.</p>
+</div>
 </li>
 </ol>
 </div>
@@ -318,13 +399,22 @@ The complete list of these comparison operators is given in the table below.</p>
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="ex-3.html" class="btn btn-neutral float-right" title="Exercise 3" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="for-loops.html" class="btn btn-neutral" title="for loops" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
-      Last updated on Sep 17, 2017.
+      Last updated on Sep 19, 2017.
 
     </p>
   </div>

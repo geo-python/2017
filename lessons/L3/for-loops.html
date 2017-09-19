@@ -49,6 +49,8 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+        <link rel="next" title="Conditional statements" href="conditional-statements.html"/>
+        <link rel="prev" title="Lecture" href="lesson-video.html"/>
     <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
      
 
@@ -139,6 +141,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../L2/writing-scripts.html">Writing your own Python scripts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/ex-2.html">Exercise 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/exercise-2-hints.html">Exercise 2 hints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 3</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson-video.html">Lecture</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#"><code class="docutils literal"><span class="pre">for</span></code> loops</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#sources">Sources</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#basics-of-for-loops">Basics of <code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="conditional-statements.html">Conditional statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-3.html">Exercise 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise-3-hints.html">Exercise 3 hints</a></li>
 </ul>
 
             
@@ -280,7 +295,27 @@ Still works, right?</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">variable</span></code> can be any name you like, and the statement of the <code class="docutils literal"><span class="pre">for</span></code> loop must end with a <code class="docutils literal"><span class="pre">:</span></code>.
 The code that should be executed as part of the loop must be indented beneath the <code class="docutils literal"><span class="pre">for</span></code> loop, and the typical indentation is 4 spaces.
-There is not additional special word needed to end the loop, just change the indentation back to normal.</p>
+There is not additional special word needed to end the loop, just change the indentation back to normal.
+<code class="docutils literal"><span class="pre">for</span></code> loops are useful to repeat some part of the code a <em>definite</em> number of times.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Like many other programming concepts, the idea of looping through actions is something that is already perhaps more familiar to you than you think.
+Consider your actions during a given day.
+Many people have certain routines they follow each day, such as waking up, taking a shower, eating breakfast and brushing their teeth.
+In Python code, we might represent such actions as follows:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">day</span> <span class="ow">in</span> <span class="n">my_life</span><span class="p">:</span>
+    <span class="n">wake_up</span><span class="p">()</span>
+    <span class="n">take_shower</span><span class="p">()</span>
+    <span class="n">eat_breakfast</span><span class="p">()</span>
+    <span class="n">brush_teeth</span><span class="p">()</span>
+    <span class="o">...</span>
+</pre></div>
+</div>
+<p>Note that <code class="docutils literal"><span class="pre">my_life</span></code> would be a list of the days of your life, and the actions you take are represented as functions, such as <code class="docutils literal"><span class="pre">wake_up()</span></code>.
+Furthermore, by following this kind of list of repeating actions we&#8217;re able to start the day effectively even before the first cup of coffee :).</p>
+<p class="last">Need to repeat some part of a program?
+Consider using a <code class="docutils literal"><span class="pre">for</span></code> loop!</p>
+</div>
 </li>
 <li><p class="first">Let&#8217;s consider another example.</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">length</span> <span class="o">=</span> <span class="mi">0</span>
@@ -409,6 +444,21 @@ You can learn a bit more about range by typing</p>
 <span class="go"> |  stop</span>
 </pre></div>
 </div>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>The program below will print numbers to the screen using the <code class="docutils literal"><span class="pre">range()</span></code> function.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">...</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Using the documentation that is produced when you run <code class="docutils literal"><span class="pre">help(range)</span></code>, what values would you replace the <code class="docutils literal"><span class="pre">...</span></code> in the parentheses of the <code class="docutils literal"><span class="pre">range()</span></code> function with to have the following output printed to the screen?</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="mi">2</span>
+<span class="mi">5</span>
+<span class="mi">8</span>
+</pre></div>
+</div>
+<p class="last">Select your answer from the poll options at <a class="reference external" href="https://geo-python.github.io/poll/">https://geo-python.github.io/poll/</a>.</p>
+</div>
 </li>
 <li><p class="first">Often when you use <code class="docutils literal"><span class="pre">for</span></code> loops, you are looping over the values in a list and either calculating a new value or modifying the existing values.
 Let&#8217;s consider an example.</p>
@@ -458,6 +508,16 @@ Now if we add or remove values in <code class="docutils literal"><span class="pr
 </pre></div>
 </div>
 <p>Using the <code class="docutils literal"><span class="pre">len()</span></code> function with <code class="docutils literal"><span class="pre">range()</span></code> to perform calcluations using list or array values is an <em>extremely</em> common operation in Python.</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>What output would the following program produce?</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">word</span> <span class="o">=</span> <span class="s1">&#39;ice pellets&#39;</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">word</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">word</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="last">Select your answer from the poll options at <a class="reference external" href="https://geo-python.github.io/poll/">https://geo-python.github.io/poll/</a>.</p>
+</div>
 </li>
 </ol>
 </div>
@@ -471,13 +531,22 @@ Now if we add or remove values in <code class="docutils literal"><span class="pr
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="conditional-statements.html" class="btn btn-neutral float-right" title="Conditional statements" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="lesson-video.html" class="btn btn-neutral" title="Lecture" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
-      Last updated on Sep 17, 2017.
+      Last updated on Sep 19, 2017.
 
     </p>
   </div>

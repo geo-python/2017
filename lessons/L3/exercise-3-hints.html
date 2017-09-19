@@ -49,6 +49,7 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+        <link rel="prev" title="Exercise 3" href="ex-3.html"/>
     <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
      
 
@@ -140,6 +141,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../L2/ex-2.html">Exercise 2</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../L2/exercise-2-hints.html">Exercise 2 hints</a></li>
 </ul>
+<p class="caption"><span class="caption-text">Lesson 3</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="for-loops.html"><code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="conditional-statements.html">Conditional statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-3.html">Exercise 3</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Exercise 3 hints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-tips">General tips</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#combining-strings">Combining strings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#nested-if-statements">Nested if statements</a></li>
+</ul>
+</li>
+</ul>
 
             
           
@@ -205,6 +220,56 @@
   <div class="section" id="exercise-3-hints">
 <h1>Exercise 3 hints<a class="headerlink" href="#exercise-3-hints" title="Permalink to this headline">¶</a></h1>
 <p>Here are a few things that may be helpful in completing Exercise 3.</p>
+<div class="section" id="general-tips">
+<h2>General tips<a class="headerlink" href="#general-tips" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Create a general template for your new script files and commit it to GitHub right when you start working on your script(s).</li>
+</ol>
+<p>2. Your scripts should also follow the format described earlier in the course with a block comment at the start of the file,
+inline comments describing how it works and good use of blank lines to make the code easy to read.
+3. Look carefully at the requirements for each exercise and be sure to follow them.</p>
+</div>
+<div class="section" id="combining-strings">
+<h2>Combining strings<a class="headerlink" href="#combining-strings" title="Permalink to this headline">¶</a></h2>
+<p>In case you have forgotten, string variables can be added together. For example,</p>
+<blockquote>
+<div><code class="docutils literal"><span class="pre">`python</span>
+<span class="pre">&gt;&gt;&gt;</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">&quot;Taco</span> <span class="pre">&quot;</span>
+<span class="pre">&gt;&gt;&gt;</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">&quot;time&quot;</span>
+<span class="pre">&gt;&gt;&gt;</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span>
+<span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(c)</span>
+<span class="pre">Taco</span> <span class="pre">time</span>
+<span class="pre">`</span></code></div></blockquote>
+</div>
+<div class="section" id="nested-if-statements">
+<h2>Nested if statements<a class="headerlink" href="#nested-if-statements" title="Permalink to this headline">¶</a></h2>
+<p>In some cases it might be useful to have nested if statements, meaning that you have another layer of
+conditions after the first condition resolves to True.</p>
+<p>Take a look of following example:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">season</span> <span class="o">=</span> <span class="s2">&quot;Winter&quot;</span>
+
+<span class="gp">In [2]: </span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="gp">In [3]: </span><span class="k">if</span> <span class="n">season</span> <span class="o">==</span> <span class="s2">&quot;Winter&quot;</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">:</span>
+<span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;No need for winter jacket!&quot;</span><span class="p">)</span>
+<span class="gp">   ...: </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;It might be cold! Wear a proper jacket!&quot;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">elif</span> <span class="n">season</span> <span class="o">==</span> <span class="s2">&quot;Summer&quot;</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
+<span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s warm! Time to wear shorts!&quot;</span><span class="p">)</span>
+<span class="gp">   ...: </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Well this is Finland, better wear long trousers!&quot;</span><span class="p">)</span>
+<span class="gp">   ...: </span><span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Check the weather forecast!&quot;</span><span class="p">)</span>
+<span class="gp">   ...: </span>
+<span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-3-091fce102f02&gt;&quot;</span><span class="gt">, line </span><span class="mi">4</span>
+    <span class="k">else</span><span class="p">:</span>
+         <span class="o">^</span>
+<span class="ne">IndentationError</span>: unindent does not match any outer indentation level
+</pre></div>
+</div>
+</div>
 </div>
 
 
@@ -215,13 +280,20 @@
           </div>
           <footer>
   
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="ex-3.html" class="btn btn-neutral" title="Exercise 3" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
 
   <hr/>
 
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
-      Last updated on Sep 17, 2017.
+      Last updated on Sep 19, 2017.
 
     </p>
   </div>
