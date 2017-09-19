@@ -232,41 +232,40 @@ inline comments describing how it works and good use of blank lines to make the 
 <div class="section" id="combining-strings">
 <h2>Combining strings<a class="headerlink" href="#combining-strings" title="Permalink to this headline">¶</a></h2>
 <p>In case you have forgotten, string variables can be added together. For example,</p>
-<blockquote>
-<div><code class="docutils literal"><span class="pre">`python</span>
-<span class="pre">&gt;&gt;&gt;</span> <span class="pre">a</span> <span class="pre">=</span> <span class="pre">&quot;Taco</span> <span class="pre">&quot;</span>
-<span class="pre">&gt;&gt;&gt;</span> <span class="pre">b</span> <span class="pre">=</span> <span class="pre">&quot;time&quot;</span>
-<span class="pre">&gt;&gt;&gt;</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span>
-<span class="pre">&gt;&gt;&gt;</span> <span class="pre">print(c)</span>
-<span class="pre">Taco</span> <span class="pre">time</span>
-<span class="pre">`</span></code></div></blockquote>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">a</span> <span class="o">=</span> <span class="s2">&quot;Taco &quot;</span>
+
+<span class="gp">In [2]: </span><span class="n">b</span> <span class="o">=</span> <span class="s2">&quot;time&quot;</span>
+
+<span class="gp">In [3]: </span><span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+
+<span class="gp">In [4]: </span><span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="go">Taco time</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="nested-if-statements">
 <h2>Nested if statements<a class="headerlink" href="#nested-if-statements" title="Permalink to this headline">¶</a></h2>
 <p>In some cases it might be useful to have nested if statements, meaning that you have another layer of
 conditions after the first condition resolves to True.</p>
 <p>Take a look of following example:</p>
-<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">season</span> <span class="o">=</span> <span class="s2">&quot;Winter&quot;</span>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [5]: </span><span class="n">season</span> <span class="o">=</span> <span class="s2">&quot;Winter&quot;</span>
 
-<span class="gp">In [2]: </span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="gp">In [6]: </span><span class="n">temperature</span> <span class="o">=</span> <span class="mi">10</span>
 
-<span class="gp">In [3]: </span><span class="k">if</span> <span class="n">season</span> <span class="o">==</span> <span class="s2">&quot;Winter&quot;</span><span class="p">:</span>
+<span class="gp">In [7]: </span><span class="k">if</span> <span class="n">season</span> <span class="o">==</span> <span class="s2">&quot;Winter&quot;</span><span class="p">:</span>
 <span class="gp">   ...: </span>     <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">7</span><span class="p">:</span>
 <span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;No need for winter jacket!&quot;</span><span class="p">)</span>
-<span class="gp">   ...: </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">else</span><span class="p">:</span>
 <span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;It might be cold! Wear a proper jacket!&quot;</span><span class="p">)</span>
 <span class="gp">   ...: </span><span class="k">elif</span> <span class="n">season</span> <span class="o">==</span> <span class="s2">&quot;Summer&quot;</span><span class="p">:</span>
 <span class="gp">   ...: </span>     <span class="k">if</span> <span class="n">temperature</span> <span class="o">&gt;</span> <span class="mi">20</span><span class="p">:</span>
 <span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;It&#39;s warm! Time to wear shorts!&quot;</span><span class="p">)</span>
-<span class="gp">   ...: </span>    <span class="k">else</span><span class="p">:</span>
+<span class="gp">   ...: </span>     <span class="k">else</span><span class="p">:</span>
 <span class="gp">   ...: </span>         <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Well this is Finland, better wear long trousers!&quot;</span><span class="p">)</span>
 <span class="gp">   ...: </span><span class="k">else</span><span class="p">:</span>
 <span class="gp">   ...: </span>     <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Check the weather forecast!&quot;</span><span class="p">)</span>
 <span class="gp">   ...: </span>
-<span class="gt">  File</span><span class="nn"> &quot;&lt;ipython-input-3-091fce102f02&gt;&quot;</span><span class="gt">, line </span><span class="mi">4</span>
-    <span class="k">else</span><span class="p">:</span>
-         <span class="o">^</span>
-<span class="ne">IndentationError</span>: unindent does not match any outer indentation level
+<span class="go">No need for winter jacket!</span>
 </pre></div>
 </div>
 </div>
