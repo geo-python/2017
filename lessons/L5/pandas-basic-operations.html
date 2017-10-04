@@ -446,8 +446,15 @@ In Pandas there are different ways of doing this.</p>
 <span class="go">Name: 8, dtype: float64</span>
 </pre></div>
 </div>
-<p><code class="docutils literal"><span class="pre">.loc[]</span></code> indexing returns the values from that position as a <code class="docutils literal"><span class="pre">pd.Series</span></code> where the indices are actually the column names of those variables. Hence, you can access the value of an individual column
-by referring to its index using following format (both should work):</p>
+<div class="admonition attention">
+<p class="first admonition-title">Attention</p>
+<p>Based on what we know about Python lists, what would you expect to see output from the following code?</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">13</span><span class="p">]:</span> <span class="nb">print</span><span class="p">(</span><span class="n">dataFrame</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+</pre></div>
+</div>
+<p class="last">Select your answer from the poll options at <a class="reference external" href="https://geo-python.github.io/poll/">https://geo-python.github.io/poll/</a>.</p>
+</div>
+<p><code class="docutils literal"><span class="pre">.loc[]</span></code> indexing returns the values from that position as a <code class="docutils literal"><span class="pre">pd.Series</span></code> where the indices are actually the column names of those variables. Hence, you can access the value of an individual column by referring to its index using following format (both should work):</p>
 <div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="k">print</span><span class="p">(</span><span class="n">row8</span><span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">])</span>
 <span class="go">49.4</span>
 
