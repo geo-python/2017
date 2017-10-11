@@ -1,0 +1,1250 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-105019106-1']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Advanced data processing with Pandas &mdash; Geo-Python 2017 Autumn documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/GeoPython_favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  
+
+  
+    <link rel="stylesheet" href="../../_static/geo-python.css" type="text/css" />
+  
+
+  
+        <link rel="index" title="Index"
+              href="../../genindex.html"/>
+        <link rel="search" title="Search" href="../../search.html"/>
+    <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
+        <link rel="next" title="Reading multiple data files" href="using-glob.html"/>
+        <link rel="prev" title="Lesson overview" href="overview.html"/>
+    <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
+     
+
+
+  
+  <script src="../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Geo-Python
+          
+
+          
+            
+            <img src="../../_static/logo_hy_geo_135.png" class="logo" />
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2017 Autumn
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Course information</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/course-info.html">General info</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/learning-goals.html">Learning goals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/grading.html">Grading</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/installing-anacondas.html">Installing Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/python-vocabulary.html">Vocabulary - Basic terms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/resources.html">Resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../course-info/licensing.html">License and terms of usage</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 1</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L1/motivation.html">Motivation for the course</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/course-environment-components.html">Course environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/intro-to-cloud-environment.html">Using the cloud computing environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/slack-usage.html">Communicating with Slack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/A-taste-of-Python.html">A taste of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L1/exercise-1.html">Exercise 1</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 2</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L2/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/intro-to-GitHub.html">Introduction to Version Control and GitHub</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/GitHub-classroom.html">Using Classroom for Github</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/working-on-assignment.html">Working on the assignments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/python-basic-elements.html">Basic elements of Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/writing-scripts.html">Writing your own Python scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/ex-2.html">Exercise 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L2/exercise-2-hints.html">Exercise 2 hints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 3</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L3/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/for-loops.html"><code class="docutils literal"><span class="pre">for</span></code> loops</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/conditional-statements.html">Conditional statements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/ex-3.html">Exercise 3</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L3/exercise-3-hints.html">Exercise 3 hints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 4</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L4/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/functions.html">Functions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/modules.html">Loading and using modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/ex-4.html">Exercise 4</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L4/exercise-4-hints.html">Exercise 4 hints</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 5</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../L5/overview.html">Lesson overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/lesson-video.html">Lecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/pandas-overview.html">What is Pandas?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/pandas-basics.html">Exploring data using Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/pandas-basic-operations.html">Processing data with Pandas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/ex-5.html">Exercise 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../L5/exercise-5-hints.html">Hints for Exercise 5</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Lesson 6</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Lesson overview</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Advanced data processing with Pandas</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#downloading-and-reading-the-data">Downloading and reading the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#exploring-data-and-renaming-columns">Exploring data and renaming columns</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#iterating-rows-and-using-self-made-functions-in-pandas">Iterating rows and using self-made functions in Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#string-manipulation-in-pandas">String manipulation in Pandas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#aggregating-data-in-pandas-by-grouping">Aggregating data in Pandas by grouping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#finding-outliers-from-the-data">Finding outliers from the data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#repeating-the-data-analysis-with-larger-dataset">Repeating the data analysis with larger dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using-glob.html">Reading multiple data files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="interpreting-errors.html">Dealing with errors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debugging-scripts.html">Debugging Python scripts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ex-6.html">Exercise 6</a></li>
+<li class="toctree-l1"><a class="reference internal" href="exercise-6-hints.html">Hints for Exercise 6</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Geo-Python</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+      <li>Advanced data processing with Pandas</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/lessons/L6/pandas-analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="advanced-data-processing-with-pandas">
+<h1>Advanced data processing with Pandas<a class="headerlink" href="#advanced-data-processing-with-pandas" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="downloading-and-reading-the-data">
+<h2>Downloading and reading the data<a class="headerlink" href="#downloading-and-reading-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Notice that this time, we will read the <strong>actual</strong> data obtained from NOAA
+without any modifications to the actual data by us.</p>
+<p>Start by downloading the data file <code class="docutils literal"><span class="pre">6591337447542dat_sample.txt</span></code> from <a class="reference external" href="../../_static/data/L6/6591337447542dat_sample.txt">this link</a>.</p>
+<p>The first rows of the data looks like following:</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span>  <span class="n">USAF</span>  <span class="n">WBAN</span> <span class="n">YR</span><span class="o">--</span><span class="n">MODAHRMN</span> <span class="n">DIR</span> <span class="n">SPD</span> <span class="n">GUS</span> <span class="n">CLG</span> <span class="n">SKC</span> <span class="n">L</span> <span class="n">M</span> <span class="n">H</span>  <span class="n">VSB</span> <span class="n">MW</span> <span class="n">MW</span> <span class="n">MW</span> <span class="n">MW</span> <span class="n">AW</span> <span class="n">AW</span> <span class="n">AW</span> <span class="n">AW</span> <span class="n">W</span> <span class="n">TEMP</span> <span class="n">DEWP</span>    <span class="n">SLP</span>   <span class="n">ALT</span>    <span class="n">STP</span> <span class="n">MAX</span> <span class="n">MIN</span> <span class="n">PCP01</span> <span class="n">PCP06</span> <span class="n">PCP24</span> <span class="n">PCPXX</span> <span class="n">SD</span>
+<span class="mi">029740</span> <span class="mi">99999</span> <span class="mi">201708040000</span> <span class="mi">114</span>   <span class="mi">6</span> <span class="o">***</span> <span class="o">***</span> <span class="n">BKN</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="mf">25.0</span> <span class="mi">03</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="mi">2</span>   <span class="mi">58</span>   <span class="mi">56</span> <span class="mf">1005.6</span> <span class="o">*****</span>  <span class="mf">999.2</span> <span class="o">***</span> <span class="o">***</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span>  <span class="mi">0</span>
+<span class="mi">029740</span> <span class="mi">99999</span> <span class="mi">201708040020</span> <span class="mi">100</span>   <span class="mi">6</span> <span class="o">***</span>  <span class="mi">75</span> <span class="o">***</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>  <span class="mf">6.2</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">*</span>   <span class="mi">59</span>   <span class="mi">57</span> <span class="o">******</span> <span class="mf">29.68</span> <span class="o">******</span> <span class="o">***</span> <span class="o">***</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">**</span>
+<span class="mi">029740</span> <span class="mi">99999</span> <span class="mi">201708040050</span> <span class="mi">100</span>   <span class="mi">5</span> <span class="o">***</span>  <span class="mi">60</span> <span class="o">***</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>  <span class="mf">6.2</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">*</span>   <span class="mi">59</span>   <span class="mi">57</span> <span class="o">******</span> <span class="mf">29.65</span> <span class="o">******</span> <span class="o">***</span> <span class="o">***</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">**</span>
+<span class="mi">029740</span> <span class="mi">99999</span> <span class="mi">201708040100</span> <span class="mi">123</span>   <span class="mi">8</span> <span class="o">***</span>  <span class="mi">63</span> <span class="n">OVC</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span> <span class="mf">10.0</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="mi">23</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">*</span>   <span class="mi">59</span>   <span class="mi">58</span> <span class="mf">1004.7</span> <span class="o">*****</span>  <span class="mf">998.4</span> <span class="o">***</span> <span class="o">***</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span>  <span class="mi">0</span>
+<span class="mi">029740</span> <span class="mi">99999</span> <span class="mi">201708040120</span> <span class="mi">110</span>   <span class="mi">7</span> <span class="o">***</span>  <span class="mi">70</span> <span class="o">***</span> <span class="o">*</span> <span class="o">*</span> <span class="o">*</span>  <span class="mf">6.2</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">**</span> <span class="o">*</span>   <span class="mi">59</span>   <span class="mi">59</span> <span class="o">******</span> <span class="mf">29.65</span> <span class="o">******</span> <span class="o">***</span> <span class="o">***</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">*****</span> <span class="o">**</span>
+</pre></div>
+</div>
+<p>Notice from above that our data is separated with varying amount of spaces (fixed width).</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Write the codes of this lesson into a separate script called <code class="docutils literal"><span class="pre">weather_analysis.py</span></code> because we will re-use the codes we write here again later.</p>
+</div>
+<p>Let&#8217;s start by importing pandas and specifying the filepath to the file that we want to read.</p>
+<p>As the data was separated with varying amount of spaces, we need to tell Pandas to read it like that
+with <code class="docutils literal"><span class="pre">sep</span></code> parameter that says following things about it:</p>
+<div class="figure">
+<a class="reference internal image-reference" href="../../_images/read-csv-varying-spaces.PNG"><img alt="../../_images/read-csv-varying-spaces.PNG" src="../../_images/read-csv-varying-spaces.PNG" style="width: 400px;" /></a>
+</div>
+<p>Hence, we can separate the columns by varying number spaces of spaces with <code class="docutils literal"><span class="pre">sep='\s+'</span></code> -parameter.
+Our data also included No Data values with varying number of <code class="docutils literal"><span class="pre">*</span></code> -characters. Hence, we need to take also those
+into account when reading the data. We can tell Pandas to consider those characters as NaNs by specifying <code class="docutils literal"><span class="pre">na_values=['*',</span> <span class="pre">'**',</span> <span class="pre">'***',</span> <span class="pre">'****',</span> <span class="pre">'*****',</span> <span class="pre">'******']</span></code>.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="n">na_values</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;*&#39;</span><span class="p">,</span> <span class="s1">&#39;**&#39;</span><span class="p">,</span> <span class="s1">&#39;***&#39;</span><span class="p">,</span> <span class="s1">&#39;****&#39;</span><span class="p">,</span> <span class="s1">&#39;*****&#39;</span><span class="p">,</span> <span class="s1">&#39;******&#39;</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="exploring-data-and-renaming-columns">
+<h2>Exploring data and renaming columns<a class="headerlink" href="#exploring-data-and-renaming-columns" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s see how the data looks by printing the first five rows with <code class="docutils literal"><span class="pre">head()</span></code> function</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [2]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[2]: </span><span class="go"></span>
+<span class="go">   index   USAF   WBAN  YR--MODAHRMN    DIR  SPD  GUS   CLG  SKC   L ...   \</span>
+<span class="go">0    216  29740  99999  201708040000  114.0  6.0  NaN   NaN  BKN NaN ...    </span>
+<span class="go">1    217  29740  99999  201708040020  100.0  6.0  NaN  75.0  NaN NaN ...    </span>
+<span class="go">2    218  29740  99999  201708040050  100.0  5.0  NaN  60.0  NaN NaN ...    </span>
+<span class="go">3    219  29740  99999  201708040100  123.0  8.0  NaN  63.0  OVC NaN ...    </span>
+<span class="go">4    220  29740  99999  201708040120  110.0  7.0  NaN  70.0  NaN NaN ...    </span>
+
+<span class="go">      SLP    ALT    STP  MAX  MIN  PCP01  PCP06  PCP24  PCPXX   SD  </span>
+<span class="go">0  1005.6    NaN  999.2  NaN  NaN    NaN    NaN    NaN    NaN  0.0  </span>
+<span class="go">1     NaN  29.68    NaN  NaN  NaN    NaN    NaN    NaN    NaN  NaN  </span>
+<span class="go">2     NaN  29.65    NaN  NaN  NaN    NaN    NaN    NaN    NaN  NaN  </span>
+<span class="go">3  1004.7    NaN  998.4  NaN  NaN    NaN    NaN    NaN    NaN  0.0  </span>
+<span class="go">4     NaN  29.65    NaN  NaN  NaN    NaN    NaN    NaN    NaN  NaN  </span>
+
+<span class="go">[5 rows x 34 columns]</span>
+</pre></div>
+</div>
+<p>Let&#8217;s continue and check what columns do we have.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [3]: </span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+<span class="gh">Out[3]: </span><span class="go"></span>
+<span class="go">Index([&#39;index&#39;, &#39;USAF&#39;, &#39;WBAN&#39;, &#39;YR--MODAHRMN&#39;, &#39;DIR&#39;, &#39;SPD&#39;, &#39;GUS&#39;, &#39;CLG&#39;,</span>
+<span class="go">       &#39;SKC&#39;, &#39;L&#39;, &#39;M&#39;, &#39;H&#39;, &#39;VSB&#39;, &#39;MW&#39;, &#39;MW.1&#39;, &#39;MW.2&#39;, &#39;MW.3&#39;, &#39;AW&#39;, &#39;AW.1&#39;,</span>
+<span class="go">       &#39;AW.2&#39;, &#39;AW.3&#39;, &#39;W&#39;, &#39;TEMP&#39;, &#39;DEWP&#39;, &#39;SLP&#39;, &#39;ALT&#39;, &#39;STP&#39;, &#39;MAX&#39;, &#39;MIN&#39;,</span>
+<span class="go">       &#39;PCP01&#39;, &#39;PCP06&#39;, &#39;PCP24&#39;, &#39;PCPXX&#39;, &#39;SD&#39;],</span>
+<span class="go">      dtype=&#39;object&#39;)</span>
+</pre></div>
+</div>
+<p>Okey there are quite many columns and we are not interested to use all of them.
+Let&#8217;s select only columns that might be used to detect unexceptional weather conditions, i.e. YR&#8211;MODAHRMN, DIR, SPD, GUS, TEMP, MAX, and MIN.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">select_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;YR--MODAHRMN&#39;</span><span class="p">,</span> <span class="s1">&#39;DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;SPD&#39;</span><span class="p">,</span> <span class="s1">&#39;GUS&#39;</span><span class="p">,</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;MAX&#39;</span><span class="p">,</span> <span class="s1">&#39;MIN&#39;</span><span class="p">]</span>
+
+<span class="gp">In [5]: </span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">select_cols</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see what our data looks like now by printing <strong>last</strong> 5 rows and the datatypes.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [6]: </span><span class="n">data</span><span class="o">.</span><span class="n">tail</span><span class="p">()</span>
+<span class="gh">Out[6]: </span><span class="go"></span>
+<span class="go">    YR--MODAHRMN    DIR   SPD   GUS  TEMP  MAX  MIN</span>
+<span class="go">67  201708042220  180.0  11.0   NaN  61.0  NaN  NaN</span>
+<span class="go">68  201708042250  190.0   8.0   NaN  59.0  NaN  NaN</span>
+<span class="go">69  201708042300  200.0   9.0  11.0  60.0  NaN  NaN</span>
+<span class="go">70  201708042320  190.0   8.0   NaN  59.0  NaN  NaN</span>
+<span class="go">71  201708042350  190.0   8.0   NaN  59.0  NaN  NaN</span>
+
+<span class="gp">In [7]: </span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="go">                                                                                                                                                                                                                                                                                                                                 Out[7]: </span>
+<span class="go">YR--MODAHRMN      int64</span>
+<span class="go">DIR             float64</span>
+<span class="go">SPD             float64</span>
+<span class="go">GUS             float64</span>
+<span class="go">TEMP            float64</span>
+<span class="go">MAX             float64</span>
+<span class="go">MIN             float64</span>
+<span class="go">dtype: object</span>
+</pre></div>
+</div>
+<p>The column names that we have are somewhat ackward. Let&#8217;s change them into more intuitive. This can be done easily with <code class="docutils literal"><span class="pre">rename()</span></code> -function.
+We can define the new column names by using a specific data type in Python called <a class="reference external" href="https://www.tutorialspoint.com/python/python_dictionary.htm">dictionary</a> where we can determine the original column name (the one which will be replaced), and the new column name.
+Let&#8217;s change <code class="docutils literal"><span class="pre">YR--MODAHRMN</span></code> column into <code class="docutils literal"><span class="pre">TIME</span></code>, <code class="docutils literal"><span class="pre">SPD</span></code> into <code class="docutils literal"><span class="pre">SPEED</span></code>, and <code class="docutils literal"><span class="pre">GUS</span></code> into <code class="docutils literal"><span class="pre">GUST</span></code></p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [8]: </span><span class="n">name_conversion_dict</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;YR--MODAHRMN&#39;</span><span class="p">:</span> <span class="s1">&#39;TIME&#39;</span><span class="p">,</span> <span class="s1">&#39;SPD&#39;</span><span class="p">:</span> <span class="s1">&#39;SPEED&#39;</span><span class="p">,</span> <span class="s1">&#39;GUS&#39;</span><span class="p">:</span> <span class="s1">&#39;GUST&#39;</span><span class="p">}</span>
+
+<span class="gp">In [9]: </span><span class="k">print</span><span class="p">(</span><span class="n">name_conversion_dict</span><span class="p">)</span>
+<span class="go">{&#39;YR--MODAHRMN&#39;: &#39;TIME&#39;, &#39;SPD&#39;: &#39;SPEED&#39;, &#39;GUS&#39;: &#39;GUST&#39;}</span>
+
+<span class="gp">In [10]: </span><span class="nb">type</span><span class="p">(</span><span class="n">name_conversion_dict</span><span class="p">)</span>
+<span class="go">                                                        Out[10]: dict</span>
+</pre></div>
+</div>
+<p>Now we can change the column names by passing that dictionary into parameter <code class="docutils literal"><span class="pre">columns</span></code> in <code class="docutils literal"><span class="pre">rename()</span></code> -function.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [11]: </span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="n">name_conversion_dict</span><span class="p">)</span>
+
+<span class="gp">In [12]: </span><span class="n">data</span><span class="o">.</span><span class="n">columns</span>
+<span class="gh">Out[12]: </span><span class="go">Index([&#39;TIME&#39;, &#39;DIR&#39;, &#39;SPEED&#39;, &#39;GUST&#39;, &#39;TEMP&#39;, &#39;MAX&#39;, &#39;MIN&#39;], dtype=&#39;object&#39;)</span>
+</pre></div>
+</div>
+<p>Perfect, now our column names are more easy to understand and use.
+Let&#8217;s check some basic statistics to understand our data better.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [13]: </span><span class="n">data</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span>
+<span class="gh">Out[13]: </span><span class="go"></span>
+<span class="go">               TIME         DIR      SPEED       GUST       TEMP        MAX  \</span>
+<span class="go">count  7.200000e+01   72.000000  72.000000  20.000000  72.000000   2.000000   </span>
+<span class="go">mean   2.017080e+11  229.555556  11.527778  17.700000  61.513889  66.500000   </span>
+<span class="go">std    6.973834e+02  215.759248   3.756580   5.068998   3.175580   3.535534   </span>
+<span class="go">min    2.017080e+11   80.000000   5.000000  11.000000  58.000000  64.000000   </span>
+<span class="go">25%    2.017080e+11  117.750000   9.000000  13.000000  59.000000  65.250000   </span>
+<span class="go">50%    2.017080e+11  200.000000  11.000000  16.000000  61.000000  66.500000   </span>
+<span class="go">75%    2.017080e+11  220.000000  15.000000  22.250000  64.000000  67.750000   </span>
+<span class="go">max    2.017080e+11  990.000000  20.000000  29.000000  69.000000  69.000000   </span>
+
+<span class="go">             MIN  </span>
+<span class="go">count   2.000000  </span>
+<span class="go">mean   57.000000  </span>
+<span class="go">std     1.414214  </span>
+<span class="go">min    56.000000  </span>
+<span class="go">25%    56.500000  </span>
+<span class="go">50%    57.000000  </span>
+<span class="go">75%    57.500000  </span>
+<span class="go">max    58.000000  </span>
+</pre></div>
+</div>
+<p>Okey so from here we can see that there are varying number of observations per column (see the <code class="docutils literal"><span class="pre">count</span></code> -information). For example <code class="docutils literal"><span class="pre">SPD</span></code> and <code class="docutils literal"><span class="pre">TEMP</span></code> column has 72 observations
+whereas <code class="docutils literal"><span class="pre">GUS</span></code> has only 20 observations and <code class="docutils literal"><span class="pre">MAX</span></code> and <code class="docutils literal"><span class="pre">MIN</span></code> has only 2 observations.
+From here we can already guess that <cite>MAX`</cite> and <code class="docutils literal"><span class="pre">MIN</span></code> attributes are most probably not going to be useful for us .
+However, <code class="docutils literal"><span class="pre">GUS</span></code> might be.</p>
+<p>Let&#8217;s explore further our data by checking the first 30 rows of it.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [14]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="gh">Out[14]: </span><span class="go"></span>
+<span class="go">            TIME    DIR  SPEED  GUST  TEMP   MAX   MIN</span>
+<span class="go">0   201708040000  114.0    6.0   NaN  58.0   NaN   NaN</span>
+<span class="go">1   201708040020  100.0    6.0   NaN  59.0   NaN   NaN</span>
+<span class="go">2   201708040050  100.0    5.0   NaN  59.0   NaN   NaN</span>
+<span class="go">3   201708040100  123.0    8.0   NaN  59.0   NaN   NaN</span>
+<span class="go">4   201708040120  110.0    7.0   NaN  59.0   NaN   NaN</span>
+<span class="go">5   201708040150  100.0    6.0   NaN  61.0   NaN   NaN</span>
+<span class="go">6   201708040200  138.0   10.0  13.0  59.0   NaN   NaN</span>
+<span class="go">7   201708040220  120.0   10.0   NaN  59.0   NaN   NaN</span>
+<span class="go">8   201708040250  100.0    9.0   NaN  59.0   NaN   NaN</span>
+<span class="go">9   201708040300  108.0    9.0  12.0  59.0   NaN   NaN</span>
+<span class="go">10  201708040320   90.0    8.0   NaN  59.0   NaN   NaN</span>
+<span class="go">11  201708040350   80.0    9.0   NaN  59.0   NaN   NaN</span>
+<span class="go">12  201708040400  102.0   11.0  15.0  58.0   NaN   NaN</span>
+<span class="go">13  201708040420   80.0   10.0   NaN  59.0   NaN   NaN</span>
+<span class="go">14  201708040450   80.0   10.0   NaN  59.0   NaN   NaN</span>
+<span class="go">15  201708040500  119.0   12.0  17.0  58.0   NaN   NaN</span>
+<span class="go">16  201708040520  990.0   11.0   NaN  59.0   NaN   NaN</span>
+<span class="go">17  201708040550  100.0   13.0   NaN  59.0   NaN   NaN</span>
+<span class="go">18  201708040600  121.0   16.0  23.0  58.0  64.0  56.0</span>
+<span class="go">19  201708040620  110.0   15.0   NaN  59.0   NaN   NaN</span>
+<span class="go">20  201708040650  100.0   15.0   NaN  59.0   NaN   NaN</span>
+<span class="go">21  201708040700  119.0   14.0  22.0  58.0   NaN   NaN</span>
+<span class="go">22  201708040720  990.0   14.0   NaN  59.0   NaN   NaN</span>
+<span class="go">23  201708040750  100.0   13.0   NaN  59.0   NaN   NaN</span>
+<span class="go">24  201708040800  125.0   10.0  15.0  58.0   NaN   NaN</span>
+<span class="go">25  201708040820  990.0    9.0   NaN  59.0   NaN   NaN</span>
+<span class="go">26  201708040850  100.0    7.0   NaN  59.0   NaN   NaN</span>
+<span class="go">27  201708040900  107.0    8.0   NaN  59.0   NaN   NaN</span>
+<span class="go">28  201708040920  990.0    7.0   NaN  59.0   NaN   NaN</span>
+<span class="go">29  201708040950  990.0    6.0   NaN  61.0   NaN   NaN</span>
+</pre></div>
+</div>
+<p>Okey, so from here we can actually see that the <code class="docutils literal"><span class="pre">GUST</span></code> column contains information only on an hourly level. That might be useful! Let&#8217;s keep this in mind.</p>
+</div>
+<div class="section" id="iterating-rows-and-using-self-made-functions-in-pandas">
+<h2>Iterating rows and using self-made functions in Pandas<a class="headerlink" href="#iterating-rows-and-using-self-made-functions-in-pandas" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s do the same thing as many times before and convert our Fahrenheit temperatures into Celsius.
+In this time, however, we will use our self-made function to do the conversion.</p>
+<p>Here I provide you the function that you can copy and paste into your own script.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrToCelsius</span><span class="p">(</span><span class="n">temp_fahrenheit</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Function to convert Fahrenheit temperature into Celsius.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    temp_fahrenheit: int | float</span>
+<span class="sd">        Input temperature in Fahrenheit (should be a number)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># Convert the Fahrenheit into Celsius and return it</span>
+    <span class="n">converted_temp</span> <span class="o">=</span> <span class="p">(</span><span class="n">temp_fahrenheit</span> <span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1.8</span>
+    <span class="k">return</span> <span class="n">converted_temp</span>
+</pre></div>
+</div>
+<p>Let&#8217;s do the conversion by iterating our data line by line and updating a column called <code class="docutils literal"><span class="pre">CELSIUS</span></code> that we will create.
+We can iterate over the rows of Pandas DataFrame by using <code class="docutils literal"><span class="pre">iterrows()</span></code> -function.
+When iterating over the rows in our <code class="docutils literal"><span class="pre">DataFrame</span></code> it is noteworthy to understand that the Pandas actually keeps track on the <code class="docutils literal"><span class="pre">index</span></code> value as well.
+Hence, the contents of a single row actually contains not only the values, but also the <code class="docutils literal"><span class="pre">index</span></code> of that row.</p>
+<p>Let&#8217;s see how it works. Here, we will use a specific <a class="reference external" href="https://www.tutorialspoint.com/python/python_break_statement.htm">Python command</a> called <code class="docutils literal"><span class="pre">break</span></code> can be used to stop the iteration right after the first loop.
+This can be useful as we don&#8217;t want to fill our console by printing all the values and indices in our DataFrame, but to just see if the function works as we want.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [15]: </span><span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="s1">&#39;Index:&#39;</span><span class="p">,</span> <span class="n">idx</span><span class="p">)</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="gp">   ....: </span>    <span class="k">break</span>
+<span class="gp">   ....: </span>
+<span class="go">Index: 0</span>
+<span class="go">TIME     2.017080e+11</span>
+<span class="go">DIR      1.140000e+02</span>
+<span class="go">SPEED    6.000000e+00</span>
+<span class="go">GUST              NaN</span>
+<span class="go">TEMP     5.800000e+01</span>
+<span class="go">MAX               NaN</span>
+<span class="go">MIN               NaN</span>
+<span class="go">Name: 0, dtype: float64</span>
+
+<span class="gp">In [16]: </span><span class="nb">type</span><span class="p">(</span><span class="n">row</span><span class="p">)</span>
+<span class="go">                                                                                                                                                                                           Out[16]: pandas.core.series.Series</span>
+</pre></div>
+</div>
+<p>Okey, so here we can see that the <code class="docutils literal"><span class="pre">idx</span></code> variable indeed contains the index value at position 0 (the first row) and the <code class="docutils literal"><span class="pre">row</span></code> variable contains all the data from that given row stored as a <code class="docutils literal"><span class="pre">pd.Series</span></code>.</p>
+<p>Let&#8217;s now create an empty column for the Celsius temperatures and update the values into that column by using our function. Here is the whole procedure:</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Create an empty column for the data</span>
+<span class="n">col_name</span> <span class="o">=</span> <span class="s1">&#39;Celsius&#39;</span>
+<span class="n">data</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Iterate ove rows</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+  <span class="c1"># Convert the Fahrenheit temperature of the row into Celsius</span>
+  <span class="n">celsius</span> <span class="o">=</span> <span class="n">fahrToCelsius</span><span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="s1">&#39;TEMP&#39;</span><span class="p">])</span>
+  <span class="c1"># Add that value into &#39;Celsius&#39; column using the index of the row</span>
+  <span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="n">col_name</span><span class="p">]</span> <span class="o">=</span> <span class="n">celsius</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see what we have now.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [17]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[17]: </span><span class="go"></span>
+<span class="go">           TIME    DIR  SPEED  GUST  TEMP  MAX  MIN  Celsius</span>
+<span class="go">0  201708040000  114.0    6.0   NaN  58.0  NaN  NaN  14.4444</span>
+<span class="go">1  201708040020  100.0    6.0   NaN  59.0  NaN  NaN       15</span>
+<span class="go">2  201708040050  100.0    5.0   NaN  59.0  NaN  NaN       15</span>
+<span class="go">3  201708040100  123.0    8.0   NaN  59.0  NaN  NaN       15</span>
+<span class="go">4  201708040120  110.0    7.0   NaN  59.0  NaN  NaN       15</span>
+</pre></div>
+</div>
+<p>Great! Now we have converted our temperatures into Celsius by using the function that we created ourselves.
+Knowing how to use your own function in Pandas can be really useful when doing your own analyses. There is also another more powerful way of using functions in Pandas, see <a class="footnote-reference" href="#f1" id="id1">[1]</a>.</p>
+<p>Let&#8217;s also convert the wind speeds into meters per second values (m/s) as they are more familiar to us in Finland. This can be done with a formula <code class="docutils literal"><span class="pre">m/s</span> <span class="pre">=</span> <span class="pre">mph</span> <span class="pre">x</span> <span class="pre">0.44704</span></code></p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [18]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">0.44704</span>
+
+<span class="gp">In [19]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;GUST&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;GUST&#39;</span><span class="p">]</span><span class="o">*</span><span class="mf">0.44704</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see the result by printing the first 30 rows.</p>
+</div>
+<div class="section" id="string-manipulation-in-pandas">
+<h2>String manipulation in Pandas<a class="headerlink" href="#string-manipulation-in-pandas" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [20]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
+<span class="gh">Out[20]: </span><span class="go"></span>
+<span class="go">            TIME    DIR    SPEED      GUST  TEMP   MAX   MIN  Celsius</span>
+<span class="go">0   201708040000  114.0  2.68224       NaN  58.0   NaN   NaN  14.4444</span>
+<span class="go">1   201708040020  100.0  2.68224       NaN  59.0   NaN   NaN       15</span>
+<span class="go">2   201708040050  100.0  2.23520       NaN  59.0   NaN   NaN       15</span>
+<span class="go">3   201708040100  123.0  3.57632       NaN  59.0   NaN   NaN       15</span>
+<span class="go">4   201708040120  110.0  3.12928       NaN  59.0   NaN   NaN       15</span>
+<span class="go">5   201708040150  100.0  2.68224       NaN  61.0   NaN   NaN  16.1111</span>
+<span class="go">6   201708040200  138.0  4.47040   5.81152  59.0   NaN   NaN       15</span>
+<span class="go">7   201708040220  120.0  4.47040       NaN  59.0   NaN   NaN       15</span>
+<span class="go">8   201708040250  100.0  4.02336       NaN  59.0   NaN   NaN       15</span>
+<span class="go">9   201708040300  108.0  4.02336   5.36448  59.0   NaN   NaN       15</span>
+<span class="go">10  201708040320   90.0  3.57632       NaN  59.0   NaN   NaN       15</span>
+<span class="go">11  201708040350   80.0  4.02336       NaN  59.0   NaN   NaN       15</span>
+<span class="go">12  201708040400  102.0  4.91744   6.70560  58.0   NaN   NaN  14.4444</span>
+<span class="go">13  201708040420   80.0  4.47040       NaN  59.0   NaN   NaN       15</span>
+<span class="go">14  201708040450   80.0  4.47040       NaN  59.0   NaN   NaN       15</span>
+<span class="go">15  201708040500  119.0  5.36448   7.59968  58.0   NaN   NaN  14.4444</span>
+<span class="go">16  201708040520  990.0  4.91744       NaN  59.0   NaN   NaN       15</span>
+<span class="go">17  201708040550  100.0  5.81152       NaN  59.0   NaN   NaN       15</span>
+<span class="go">18  201708040600  121.0  7.15264  10.28192  58.0  64.0  56.0  14.4444</span>
+<span class="go">19  201708040620  110.0  6.70560       NaN  59.0   NaN   NaN       15</span>
+<span class="go">20  201708040650  100.0  6.70560       NaN  59.0   NaN   NaN       15</span>
+<span class="go">21  201708040700  119.0  6.25856   9.83488  58.0   NaN   NaN  14.4444</span>
+<span class="go">22  201708040720  990.0  6.25856       NaN  59.0   NaN   NaN       15</span>
+<span class="go">23  201708040750  100.0  5.81152       NaN  59.0   NaN   NaN       15</span>
+<span class="go">24  201708040800  125.0  4.47040   6.70560  58.0   NaN   NaN  14.4444</span>
+<span class="go">25  201708040820  990.0  4.02336       NaN  59.0   NaN   NaN       15</span>
+<span class="go">26  201708040850  100.0  3.12928       NaN  59.0   NaN   NaN       15</span>
+<span class="go">27  201708040900  107.0  3.57632       NaN  59.0   NaN   NaN       15</span>
+<span class="go">28  201708040920  990.0  3.12928       NaN  59.0   NaN   NaN       15</span>
+<span class="go">29  201708040950  990.0  2.68224       NaN  61.0   NaN   NaN  16.1111</span>
+</pre></div>
+</div>
+<p>When looking the data more carefully, we can see something interesting:
+<code class="docutils literal"><span class="pre">GUST</span></code> seems to be measured only once an hour, whereas <code class="docutils literal"><span class="pre">SPD</span></code> (wind speed), and our temperatures seem to be measured approximately every 20 minutes (at minutes XX:00, XX:20 and XX:50).</p>
+<p>That might be a problem as we might not be able to compare e.g. the average wind speeds and the speeds during the gust together as they are measured with different intervals.
+This kind of mismatch between sampling rates of measurements is actually quite typical when working with real data.</p>
+<p>How we can solve this kind of problem is to aggregate the wind speeds into hourly level data as well so the attributes become comparable.
+First we need to be able to group the values by hour. This can be done e.g. by slicing the date+hour time from the <code class="docutils literal"><span class="pre">TIME</span></code> column (i.e. removing the minutes from the end of the value)</p>
+<dl class="docutils">
+<dt>Doing this requires two steps:</dt>
+<dd><ol class="first last arabic simple">
+<li>Convert the <code class="docutils literal"><span class="pre">TIME</span></code> column from <code class="docutils literal"><span class="pre">int</span></code> into <code class="docutils literal"><span class="pre">str</span></code> datatype.</li>
+<li>Include only numbers up to hourly accuracy (exclude minutes) by slicing texts</li>
+</ol>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">There are also more advanced functions in Pandas to do time series manipulations by utilizing <code class="docutils literal"><span class="pre">datetime</span></code> datatype and <code class="docutils literal"><span class="pre">resample()</span></code> -function, but we won&#8217;t cover those here. Read more information about creating <a class="reference external" href="http://pandas.pydata.org/pandas-docs/version/0.20/generated/pandas.to_datetime.html">datetime index</a> and aggregating data by time with resampling from <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/timeseries.html#resampling">here</a> if you are interested.</p>
+</div>
+<p>Let&#8217;s convert the time into string. And check that the data type changes.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [21]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_str&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+
+<span class="gp">In [22]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[22]: </span><span class="go"></span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN  Celsius      TIME_str</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.4444  201708040000</span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN       15  201708040020</span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN       15  201708040050</span>
+<span class="go">3  201708040100  123.0  3.57632   NaN  59.0  NaN  NaN       15  201708040100</span>
+<span class="go">4  201708040120  110.0  3.12928   NaN  59.0  NaN  NaN       15  201708040120</span>
+
+<span class="gp">In [23]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_str&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Out[23]: dtype(&#39;O&#39;)</span>
+
+<span class="gp">In [24]: </span><span class="nb">type</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;TIME_str&#39;</span><span class="p">])</span>
+<span class="go">                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            Out[24]: str</span>
+</pre></div>
+</div>
+<p>Okey it seems that now we indeed have the <code class="docutils literal"><span class="pre">TIME</span></code> as <code class="docutils literal"><span class="pre">str</span></code> datatype as well.
+Now we can slice them into hourly level by including only 10 first characters from the text (i.e. excluding the minute-level information).</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [25]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_dh&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_str&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="gp">In [26]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[26]: </span><span class="go"></span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN  Celsius      TIME_str  \</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.4444  201708040000   </span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN       15  201708040020   </span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN       15  201708040050   </span>
+<span class="go">3  201708040100  123.0  3.57632   NaN  59.0  NaN  NaN       15  201708040100   </span>
+<span class="go">4  201708040120  110.0  3.12928   NaN  59.0  NaN  NaN       15  201708040120   </span>
+
+<span class="go">      TIME_dh  </span>
+<span class="go">0  2017080400  </span>
+<span class="go">1  2017080400  </span>
+<span class="go">2  2017080400  </span>
+<span class="go">3  2017080401  </span>
+<span class="go">4  2017080401  </span>
+</pre></div>
+</div>
+<p>Nice! Now we have information about time on an hourly basis including the date as well.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notice that all the typical <code class="docutils literal"><span class="pre">str</span></code> functionalities can be applied to Series of text data with syntax <code class="docutils literal"><span class="pre">data['mySeries'].str.&lt;functionToUse&gt;()</span></code>.</p>
+</div>
+<p>Let&#8217;s also slice only the hour of the day (excluding information about the date) and convert it back to integer (we will be using this information later)</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [27]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_h&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_str&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">slice</span><span class="p">(</span><span class="n">start</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span> <span class="n">stop</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="gp">In [28]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_h&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;TIME_h&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="gp">In [29]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[29]: </span><span class="go"></span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN  Celsius      TIME_str  \</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.4444  201708040000   </span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN       15  201708040020   </span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN       15  201708040050   </span>
+<span class="go">3  201708040100  123.0  3.57632   NaN  59.0  NaN  NaN       15  201708040100   </span>
+<span class="go">4  201708040120  110.0  3.12928   NaN  59.0  NaN  NaN       15  201708040120   </span>
+
+<span class="go">      TIME_dh  TIME_h  </span>
+<span class="go">0  2017080400       0  </span>
+<span class="go">1  2017080400       0  </span>
+<span class="go">2  2017080400       0  </span>
+<span class="go">3  2017080401       1  </span>
+<span class="go">4  2017080401       1  </span>
+</pre></div>
+</div>
+<p>Wunderbar, now we have also a separate column for only the hour of the day.</p>
+</div>
+<div class="section" id="aggregating-data-in-pandas-by-grouping">
+<h2>Aggregating data in Pandas by grouping<a class="headerlink" href="#aggregating-data-in-pandas-by-grouping" title="Permalink to this headline">¶</a></h2>
+<p>Next we want to calculate the average temperatures, wind speeds, etc. on an hourly basis to enable us
+to compare all of them to each other.</p>
+<p>This can be done by aggregating the data, i.e.:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><strong>grouping the data</strong> based on hourly values</li>
+<li>Iterating over those groups and calculating the average values of our attributes</li>
+<li>Inserting those values into a new DataFrame where we store the aggregated data</li>
+</ol>
+</div></blockquote>
+<p>Let&#8217;s first create a new <strong>empty</strong> DataFrame where we will store our aggregated data</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [30]: </span><span class="n">aggr_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Let&#8217;s then group our data based on <code class="docutils literal"><span class="pre">TIME_h</span></code> attribute that contains the information about the date + hour.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [31]: </span><span class="n">grouped</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;TIME_dh&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see what we have now.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [32]: </span><span class="nb">type</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+<span class="gh">Out[32]: </span><span class="go">pandas.core.groupby.DataFrameGroupBy</span>
+
+<span class="gp">In [33]: </span><span class="nb">len</span><span class="p">(</span><span class="n">grouped</span><span class="p">)</span>
+<span class="go">                                              Out[33]: 24</span>
+</pre></div>
+</div>
+<p>Okey, interesting. Now we have a new object with type <code class="docutils literal"><span class="pre">DataFrameGroupBy</span></code>. And it seems that we have 24 individual groups in our data, i.e. one group for each hour of the day.
+Let&#8217;s see what we can do with this <code class="docutils literal"><span class="pre">grouped</span></code> -variable.</p>
+<p>As you might have noticed earlier, the first hour in hour data is <code class="docutils literal"><span class="pre">2017080400</span></code> (midnight at 4th of August in 2017).
+Let&#8217;s now see what we have on hour <code class="docutils literal"><span class="pre">grouped</span></code> variable e.g. on the first hour <code class="docutils literal"><span class="pre">2017080400</span></code>.
+We can get the values of that hour from <code class="docutils literal"><span class="pre">DataFrameGroupBy</span></code> -object with <code class="docutils literal"><span class="pre">get_group()</span></code> -function.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [34]: </span><span class="n">time1</span> <span class="o">=</span> <span class="s1">&#39;2017080400&#39;</span>
+
+<span class="gp">In [35]: </span><span class="n">group1</span> <span class="o">=</span> <span class="n">grouped</span><span class="o">.</span><span class="n">get_group</span><span class="p">(</span><span class="n">time1</span><span class="p">)</span>
+
+<span class="gp">In [36]: </span><span class="n">group1</span>
+<span class="gh">Out[36]: </span><span class="go"></span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN  Celsius      TIME_str  \</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.4444  201708040000   </span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN       15  201708040020   </span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN       15  201708040050   </span>
+
+<span class="go">      TIME_dh  TIME_h  </span>
+<span class="go">0  2017080400       0  </span>
+<span class="go">1  2017080400       0  </span>
+<span class="go">2  2017080400       0  </span>
+</pre></div>
+</div>
+<p>Ahaa! As we can see, a single group contains a <strong>DataFrame</strong> with values only for that specific hour.
+This is really useful, because now we can calculate e.g. the average values for all weather measurements (+ hour) that we have (you can use any of the statistical functions that we have seen already, e.g. mean, std, min, max, median, etc.).</p>
+<p>We can do that by using the <code class="docutils literal"><span class="pre">mean()</span></code> -function that we already used during the Lesson 5.
+Let&#8217;s calculate the mean for following attributes: <code class="docutils literal"><span class="pre">DIR</span></code>, <code class="docutils literal"><span class="pre">SPEED</span></code>, <code class="docutils literal"><span class="pre">GUST</span></code>, <code class="docutils literal"><span class="pre">TEMP</span></code>, and <code class="docutils literal"><span class="pre">Celsius</span></code>.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [37]: </span><span class="n">mean_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;SPEED&#39;</span><span class="p">,</span> <span class="s1">&#39;GUST&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;Celsius&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME_h&#39;</span><span class="p">]</span>
+
+<span class="gp">In [38]: </span><span class="n">mean_values</span> <span class="o">=</span> <span class="n">group1</span><span class="p">[</span><span class="n">mean_cols</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="gp">In [39]: </span><span class="n">mean_values</span>
+<span class="gh">Out[39]: </span><span class="go"></span>
+<span class="go">DIR        104.666667</span>
+<span class="go">SPEED        2.533227</span>
+<span class="go">GUST              NaN</span>
+<span class="go">TEMP        58.666667</span>
+<span class="go">Celsius     14.814815</span>
+<span class="go">TIME_h       0.000000</span>
+<span class="go">dtype: float64</span>
+</pre></div>
+</div>
+<p>Nice, now we have averaged our data and e.g. the mean Celsius temperature seems to be about right when comparing to the original values above. Notice that we still have information about the hour but not about the date which is at the moment stored in <code class="docutils literal"><span class="pre">time1</span></code> variable.
+We can insert that datetime-information into our <code class="docutils literal"><span class="pre">mean_values</span></code> Series so that we have the date information also associated with our data.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [40]: </span><span class="n">mean_values</span><span class="p">[</span><span class="s1">&#39;TIME_dh&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time1</span>
+
+<span class="gp">In [41]: </span><span class="n">mean_values</span>
+<span class="gh">Out[41]: </span><span class="go"></span>
+<span class="go">DIR           104.667</span>
+<span class="go">SPEED         2.53323</span>
+<span class="go">GUST              NaN</span>
+<span class="go">TEMP          58.6667</span>
+<span class="go">Celsius       14.8148</span>
+<span class="go">TIME_h              0</span>
+<span class="go">TIME_dh    2017080400</span>
+<span class="go">dtype: object</span>
+</pre></div>
+</div>
+<p>Perfect! Now we have also time information there. The last thing to do is to add these mean values into our DataFrame that we created.
+That can be done with <code class="docutils literal"><span class="pre">append()</span></code> -function in a quite similar manner as with Python lists.
+In Pandas the data insertion is not done <strong>inplace</strong> (as when appending to Python lists) so we need to specify that we are updating the aggr_data (using the <code class="docutils literal"><span class="pre">=</span></code> sign)
+We also need to specify that we ignore the index values of our original DataFrame (i.e. the indices of <code class="docutils literal"><span class="pre">mean_values</span></code>).</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [42]: </span><span class="n">aggr_data</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_values</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="gp">In [43]: </span><span class="n">aggr_data</span>
+<span class="gh">Out[43]: </span><span class="go"></span>
+<span class="go">     Celsius         DIR  GUST     SPEED       TEMP     TIME_dh  TIME_h</span>
+<span class="go">0  14.814815  104.666667   NaN  2.533227  58.666667  2017080400     0.0</span>
+</pre></div>
+</div>
+<p>Now we have a single row in our new DataFrame where we have aggregated the data based on hourly mean values.
+Next we could continue doing and insert the average values from other hours in a similar manner but, of course, that is not
+something that we want to do manually (would require repeating these same steps too many times).
+Luckily, we can actually iterate over all the groups that we have in our data and do these steps using a <code class="docutils literal"><span class="pre">for</span> <span class="pre">-loop</span></code>.</p>
+<p>When iterating over the groups in our <code class="docutils literal"><span class="pre">DataFrameGroupBy</span></code> object
+it is important to understand that a single group in our <code class="docutils literal"><span class="pre">DataFrameGroupBy</span></code> actually contains not only the actual values, but also information about the <code class="docutils literal"><span class="pre">key</span></code> that was used to do the grouping.
+Hence, when iterating over the data we need to assign the <code class="docutils literal"><span class="pre">key</span></code> and the values into separate variables.</p>
+<p>Let&#8217;s see how we can iterate over the groups and print the key and the data from a single group (again using <code class="docutils literal"><span class="pre">break</span></code> to only see what is happening).</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [44]: </span><span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="gp">   ....: </span>    <span class="k">print</span><span class="p">(</span><span class="n">group</span><span class="p">)</span>
+<span class="gp">   ....: </span>    <span class="k">break</span>
+<span class="gp">   ....: </span>
+<span class="go">2017080400</span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN  Celsius      TIME_str  \</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.4444  201708040000   </span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN       15  201708040020   </span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN       15  201708040050   </span>
+
+<span class="go">      TIME_dh  TIME_h  </span>
+<span class="go">0  2017080400       0  </span>
+<span class="go">1  2017080400       0  </span>
+<span class="go">2  2017080400       0  </span>
+</pre></div>
+</div>
+<p>Okey so from here we can see that the <code class="docutils literal"><span class="pre">key</span></code> contains the value <code class="docutils literal"><span class="pre">2017080400</span></code> that is the same
+as the values in <code class="docutils literal"><span class="pre">TIME_dh</span></code> column. Meaning that we, indeed, grouped the values based on that column.</p>
+<p>Let&#8217;s see how we can create a DataFrame where we calculate the mean values for all those weather attributes that we were interested in.
+I will repeate slightly the earlier steps so that you can see and better understand what is happening.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Create an empty DataFrame for the aggregated values</span>
+<span class="n">aggr_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
+
+<span class="c1"># The columns that we want to aggregate</span>
+<span class="n">mean_cols</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;DIR&#39;</span><span class="p">,</span> <span class="s1">&#39;SPEED&#39;</span><span class="p">,</span> <span class="s1">&#39;GUST&#39;</span><span class="p">,</span> <span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="s1">&#39;Celsius&#39;</span><span class="p">,</span> <span class="s1">&#39;TIME_h&#39;</span><span class="p">]</span>
+
+<span class="c1"># Iterate over the groups</span>
+<span class="k">for</span> <span class="n">key</span><span class="p">,</span> <span class="n">group</span> <span class="ow">in</span> <span class="n">grouped</span><span class="p">:</span>
+    <span class="c1"># Aggregate the data</span>
+    <span class="n">mean_values</span> <span class="o">=</span> <span class="n">group</span><span class="p">[</span><span class="n">mean_cols</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+    <span class="c1"># Add the ´key´ (i.e. the date+time information) into the aggregated values</span>
+    <span class="n">mean_values</span><span class="p">[</span><span class="s1">&#39;TIME_dh&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">key</span>
+
+    <span class="c1"># Append the aggregated values into the DataFrame</span>
+    <span class="n">aggr_data</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">mean_values</span><span class="p">,</span> <span class="n">ignore_index</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see what we have now.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [45]: </span><span class="n">aggr_data</span>
+<span class="gh">Out[45]: </span><span class="go"></span>
+<span class="go">      Celsius         DIR      GUST     SPEED       TEMP     TIME_dh  TIME_h</span>
+<span class="go">0   14.814815  104.666667       NaN  2.533227  58.666667  2017080400     0.0</span>
+<span class="go">1   15.370370  111.000000       NaN  3.129280  59.666667  2017080401     1.0</span>
+<span class="go">2   15.000000  119.333333   5.81152  4.321387  59.000000  2017080402     2.0</span>
+<span class="go">3   15.000000   92.666667   5.36448  3.874347  59.000000  2017080403     3.0</span>
+<span class="go">4   14.814815   87.333333   6.70560  4.619413  58.666667  2017080404     4.0</span>
+<span class="go">5   14.814815  403.000000   7.59968  5.364480  58.666667  2017080405     5.0</span>
+<span class="go">6   14.814815  110.333333  10.28192  6.854613  58.666667  2017080406     6.0</span>
+<span class="go">7   14.814815  403.000000   9.83488  6.109547  58.666667  2017080407     7.0</span>
+<span class="go">8   14.814815  405.000000   6.70560  3.874347  58.666667  2017080408     8.0</span>
+<span class="go">9   15.370370  695.666667       NaN  3.129280  59.666667  2017080409     9.0</span>
+<span class="go">10  16.481481  225.000000   5.81152  4.768427  61.666667  2017080410    10.0</span>
+<span class="go">11  17.777778  241.666667   8.49376  5.513493  64.000000  2017080411    11.0</span>
+<span class="go">12  18.888889  228.333333   6.70560  5.960533  66.000000  2017080412    12.0</span>
+<span class="go">13  19.629630  229.666667   8.94080  7.152640  67.333333  2017080413    13.0</span>
+<span class="go">14  20.185185  228.666667  12.96416  8.940800  68.333333  2017080414    14.0</span>
+<span class="go">15  19.074074  218.333333  10.72896  7.450667  66.333333  2017080415    15.0</span>
+<span class="go">16  18.703704  214.666667  10.28192  7.152640  65.666667  2017080416    16.0</span>
+<span class="go">17  17.592593  209.666667   8.94080  7.003627  63.666667  2017080417    17.0</span>
+<span class="go">18  16.851852  211.333333  10.28192  5.662507  62.333333  2017080418    18.0</span>
+<span class="go">19  16.111111  203.000000   5.81152  4.023360  61.000000  2017080419    19.0</span>
+<span class="go">20  15.925926  198.000000   5.36448  4.023360  60.666667  2017080420    20.0</span>
+<span class="go">21  15.925926  186.666667       NaN  3.874347  60.666667  2017080421    21.0</span>
+<span class="go">22  15.555556  189.000000   6.70560  4.619413  60.000000  2017080422    22.0</span>
+<span class="go">23  15.185185  193.333333   4.91744  3.725333  59.333333  2017080423    23.0</span>
+</pre></div>
+</div>
+<p>Great! Now we have aggregated our data based on daily averages and we have a new DataFrame called <code class="docutils literal"><span class="pre">aggr_data</span></code> where all those aggregated values are stored.</p>
+</div>
+<div class="section" id="finding-outliers-from-the-data">
+<h2>Finding outliers from the data<a class="headerlink" href="#finding-outliers-from-the-data" title="Permalink to this headline">¶</a></h2>
+<p>Finally, we are ready to see and find out if there are any outliers in our data suggesting to have a storm (meaning strong winds in this case).
+We define an outlier if the wind speed is 2 times the standard deviation higher than the average wind speed (column <code class="docutils literal"><span class="pre">SPEED</span></code>).</p>
+<p>Let&#8217;s first find out what is the standard deviation and the mean of the Wind speed.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [46]: </span><span class="n">std_wind</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="gp">In [47]: </span><span class="n">avg_wind</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="gp">In [48]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Std:&#39;</span><span class="p">,</span> <span class="n">std_wind</span><span class="p">)</span>
+<span class="go">Std: 1.6405694308360985</span>
+
+<span class="gp">In [49]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Mean:&#39;</span><span class="p">,</span> <span class="n">avg_wind</span><span class="p">)</span>
+<span class="go">                        Mean: 5.153377777777777</span>
+</pre></div>
+</div>
+<p>Okey, so the variance in the windspeed tend to be approximately 1.6 meters per second, and the wind speed is approximately 5.2 m/s.
+Hence, the threshold for a wind speed to be an outlier with our criteria is:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [50]: </span><span class="n">upper_threshold</span> <span class="o">=</span> <span class="n">avg_wind</span> <span class="o">+</span> <span class="p">(</span><span class="n">std_wind</span><span class="o">*</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="gp">In [51]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Upper threshold for outlier:&#39;</span><span class="p">,</span> <span class="n">upper_threshold</span><span class="p">)</span>
+<span class="go">Upper threshold for outlier: 8.434516639449974</span>
+</pre></div>
+</div>
+<p>Let&#8217;s finally create a column called <code class="docutils literal"><span class="pre">Outlier</span></code> which we update with <code class="docutils literal"><span class="pre">True</span></code> value if the windspeed is an outlier and <code class="docutils literal"><span class="pre">False</span></code> if it is not.
+We do this again by iterating over the rows.</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Create an empty column for outlier info</span>
+<span class="n">aggr_data</span><span class="p">[</span><span class="s1">&#39;Outlier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+
+<span class="c1"># Iterate over rows</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">aggr_data</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
+    <span class="c1"># Update the &#39;Outlier&#39; column with True if the wind speed is higher than our threshold value</span>
+    <span class="k">if</span> <span class="n">row</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">upper_threshold</span> <span class="p">:</span>
+        <span class="n">aggr_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;Outlier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">aggr_data</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">idx</span><span class="p">,</span> <span class="s1">&#39;Outlier&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">aggr_data</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Let&#8217;s see what we have now.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [52]: </span><span class="k">print</span><span class="p">(</span><span class="n">aggr_data</span><span class="p">)</span>
+<span class="go">      Celsius         DIR      GUST     SPEED       TEMP     TIME_dh  TIME_h  \</span>
+<span class="go">0   14.814815  104.666667       NaN  2.533227  58.666667  2017080400     0.0   </span>
+<span class="go">1   15.370370  111.000000       NaN  3.129280  59.666667  2017080401     1.0   </span>
+<span class="go">2   15.000000  119.333333   5.81152  4.321387  59.000000  2017080402     2.0   </span>
+<span class="go">3   15.000000   92.666667   5.36448  3.874347  59.000000  2017080403     3.0   </span>
+<span class="go">4   14.814815   87.333333   6.70560  4.619413  58.666667  2017080404     4.0   </span>
+<span class="go">5   14.814815  403.000000   7.59968  5.364480  58.666667  2017080405     5.0   </span>
+<span class="go">6   14.814815  110.333333  10.28192  6.854613  58.666667  2017080406     6.0   </span>
+<span class="go">7   14.814815  403.000000   9.83488  6.109547  58.666667  2017080407     7.0   </span>
+<span class="go">8   14.814815  405.000000   6.70560  3.874347  58.666667  2017080408     8.0   </span>
+<span class="go">9   15.370370  695.666667       NaN  3.129280  59.666667  2017080409     9.0   </span>
+<span class="go">10  16.481481  225.000000   5.81152  4.768427  61.666667  2017080410    10.0   </span>
+<span class="go">11  17.777778  241.666667   8.49376  5.513493  64.000000  2017080411    11.0   </span>
+<span class="go">12  18.888889  228.333333   6.70560  5.960533  66.000000  2017080412    12.0   </span>
+<span class="go">13  19.629630  229.666667   8.94080  7.152640  67.333333  2017080413    13.0   </span>
+<span class="go">14  20.185185  228.666667  12.96416  8.940800  68.333333  2017080414    14.0   </span>
+<span class="go">15  19.074074  218.333333  10.72896  7.450667  66.333333  2017080415    15.0   </span>
+<span class="go">16  18.703704  214.666667  10.28192  7.152640  65.666667  2017080416    16.0   </span>
+<span class="go">17  17.592593  209.666667   8.94080  7.003627  63.666667  2017080417    17.0   </span>
+<span class="go">18  16.851852  211.333333  10.28192  5.662507  62.333333  2017080418    18.0   </span>
+<span class="go">19  16.111111  203.000000   5.81152  4.023360  61.000000  2017080419    19.0   </span>
+<span class="go">20  15.925926  198.000000   5.36448  4.023360  60.666667  2017080420    20.0   </span>
+<span class="go">21  15.925926  186.666667       NaN  3.874347  60.666667  2017080421    21.0   </span>
+<span class="go">22  15.555556  189.000000   6.70560  4.619413  60.000000  2017080422    22.0   </span>
+<span class="go">23  15.185185  193.333333   4.91744  3.725333  59.333333  2017080423    23.0   </span>
+
+<span class="go">   Outlier  </span>
+<span class="go">0    False  </span>
+<span class="go">1    False  </span>
+<span class="go">2    False  </span>
+<span class="go">3    False  </span>
+<span class="go">4    False  </span>
+<span class="go">5    False  </span>
+<span class="go">6    False  </span>
+<span class="go">7    False  </span>
+<span class="go">8    False  </span>
+<span class="go">9    False  </span>
+<span class="go">10   False  </span>
+<span class="go">11   False  </span>
+<span class="go">12   False  </span>
+<span class="go">13   False  </span>
+<span class="go">14    True  </span>
+<span class="go">15   False  </span>
+<span class="go">16   False  </span>
+<span class="go">17   False  </span>
+<span class="go">18   False  </span>
+<span class="go">19   False  </span>
+<span class="go">20   False  </span>
+<span class="go">21   False  </span>
+<span class="go">22   False  </span>
+<span class="go">23   False  </span>
+</pre></div>
+</div>
+<p>Okey now we have at least many False values in our <code class="docutils literal"><span class="pre">Outlier</span></code> -column.
+Let&#8217;s select the rows with potential storm and see if we have any potential storms in our data.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [53]: </span><span class="n">storm</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">aggr_data</span><span class="p">[</span><span class="s1">&#39;Outlier&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="bp">True</span><span class="p">]</span>
+
+<span class="gp">In [54]: </span><span class="k">print</span><span class="p">(</span><span class="n">storm</span><span class="p">)</span>
+<span class="go">      Celsius         DIR      GUST   SPEED       TEMP     TIME_dh  TIME_h  \</span>
+<span class="go">14  20.185185  228.666667  12.96416  8.9408  68.333333  2017080414    14.0   </span>
+
+<span class="go">   Outlier  </span>
+<span class="go">14    True  </span>
+</pre></div>
+</div>
+<p>Okey, so it seems that there was one outlier in our data but the wind during that time wasn&#8217;t that strong as the average speed was only 9 m/s.
+This is not too strange as we were only looking at data from a single day.</p>
+</div>
+<div class="section" id="repeating-the-data-analysis-with-larger-dataset">
+<h2>Repeating the data analysis with larger dataset<a class="headerlink" href="#repeating-the-data-analysis-with-larger-dataset" title="Permalink to this headline">¶</a></h2>
+<p>Let&#8217;s continue by executing the script that we have written this far and use it to explore outlier winds based on whole month of August 2017.
+For this purpose you should change the input file to be <code class="docutils literal"><span class="pre">6591337447542dat_August.txt</span></code> that <a class="reference external" href="../../_static/data/L6/6591337447542dat_August.txt">you can download from here</a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notice that if you haven&#8217;t written your codes into a script, you can take advantage of the <code class="docutils literal"><span class="pre">History</span></code> -tab in Spyder where the history of all your codes should be written from this session (you can copy / paste from there).</p>
+</div>
+<p><strong>Change the input data for your script to be the whole month of August 2017 and run the same codes again</strong>.</p>
+<p>After running the code again with more data, let&#8217;s see what were the mean and std wind speeds of our data.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [55]: </span><span class="n">std_wind</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+
+<span class="gp">In [56]: </span><span class="n">avg_wind</span> <span class="o">=</span> <span class="n">aggr_data</span><span class="p">[</span><span class="s1">&#39;SPEED&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+
+<span class="gp">In [57]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Std:&#39;</span><span class="p">,</span> <span class="n">std_wind</span><span class="p">)</span>
+<span class="go">Std: 2.1405899770297245</span>
+
+<span class="gp">In [58]: </span><span class="k">print</span><span class="p">(</span><span class="s1">&#39;Mean:&#39;</span><span class="p">,</span> <span class="n">avg_wind</span><span class="p">)</span>
+<span class="go">                        Mean: 4.1990832704402505</span>
+</pre></div>
+</div>
+<p>Okey so they are indeed different now as we have more data: e.g. the average wind speed was 5.2 m/s, whereas it is now only 4.2. Let&#8217;s see what we have now in our <code class="docutils literal"><span class="pre">storm</span></code> variable.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [59]: </span><span class="n">storm</span>
+<span class="gh">Out[59]: </span><span class="go"></span>
+<span class="go">       Celsius         DIR      GUST      SPEED       TEMP     TIME_dh  \</span>
+<span class="go">10   22.777778  210.666667  12.51712   9.089813  73.000000  2017080110   </span>
+<span class="go">11   22.777778  212.000000  11.62304   8.940800  73.000000  2017080111   </span>
+<span class="go">12   22.407407  205.666667  12.51712   9.089813  72.333333  2017080112   </span>
+<span class="go">86   20.185185  228.666667  12.96416   8.940800  68.333333  2017080414   </span>
+<span class="go">104  19.814815  204.333333  11.17600   8.791787  67.666667  2017080508   </span>
+<span class="go">132  16.296296  237.666667  13.85824   9.387840  61.333333  2017080612   </span>
+<span class="go">230  21.666667  217.000000  12.51712   8.642773  71.000000  2017081014   </span>
+<span class="go">280  19.074074  700.666667  26.82240   8.791787  66.333333  2017081216   </span>
+<span class="go">301  20.555556  210.000000       NaN   9.611360  69.000000  2017081313   </span>
+<span class="go">302  19.444444  200.000000       NaN   8.493760  67.000000  2017081314   </span>
+<span class="go">444  22.037037  195.666667  10.72896   8.493760  71.666667  2017081914   </span>
+<span class="go">445  20.925926  204.666667  12.51712   8.940800  69.666667  2017081915   </span>
+<span class="go">559  14.814815  328.666667  13.41120   8.493760  58.666667  2017082409   </span>
+<span class="go">560  15.925926  329.333333  13.85824   8.493760  60.666667  2017082410   </span>
+<span class="go">563  16.296296  329.666667  13.41120   9.238827  61.333333  2017082413   </span>
+<span class="go">564  15.185185  550.000000       NaN   8.493760  59.333333  2017082414   </span>
+<span class="go">686  17.222222  214.000000  13.41120   9.089813  63.000000  2017082916   </span>
+<span class="go">687  17.037037  210.666667  11.62304   8.791787  62.666667  2017082917   </span>
+<span class="go">704  18.518519  203.666667   8.04672   8.493760  65.333333  2017083010   </span>
+<span class="go">705  18.888889  218.333333  13.41120   8.940800  66.000000  2017083011   </span>
+<span class="go">706  17.962963  215.666667  14.52880  10.579947  64.333333  2017083012   </span>
+<span class="go">707  17.962963  217.666667  12.07008   9.089813  64.333333  2017083013   </span>
+
+<span class="go">     TIME_h Outlier  </span>
+<span class="go">10     10.0    True  </span>
+<span class="go">11     11.0    True  </span>
+<span class="go">12     12.0    True  </span>
+<span class="go">86     14.0    True  </span>
+<span class="go">104     8.0    True  </span>
+<span class="go">132    12.0    True  </span>
+<span class="go">230    14.0    True  </span>
+<span class="go">280    16.0    True  </span>
+<span class="go">301    13.0    True  </span>
+<span class="go">302    14.0    True  </span>
+<span class="go">444    14.0    True  </span>
+<span class="go">445    15.0    True  </span>
+<span class="go">559     9.0    True  </span>
+<span class="go">560    10.0    True  </span>
+<span class="go">563    13.0    True  </span>
+<span class="go">564    14.0    True  </span>
+<span class="go">686    16.0    True  </span>
+<span class="go">687    17.0    True  </span>
+<span class="go">704    10.0    True  </span>
+<span class="go">705    11.0    True  </span>
+<span class="go">706    12.0    True  </span>
+<span class="go">707    13.0    True  </span>
+</pre></div>
+</div>
+<p>Okey, interesting! Now we can see the the days and hours when it has been stormy in August 2017.
+It seems that the storms have usually been during the day time. Let&#8217;s check if this is the case.
+We can easily count how many stormy observations for different hour of the day there has been by
+using a <code class="docutils literal"><span class="pre">value_counts()</span></code> -function that calculates how many observations per certain value there are
+in a certain column (works best for categorigal data).</p>
+<p>Let&#8217;s see the counts for different hours of the day</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [60]: </span><span class="k">print</span><span class="p">(</span><span class="n">storm</span><span class="p">[</span><span class="s1">&#39;TIME_h&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+<span class="go">14.0    5</span>
+<span class="go">13.0    3</span>
+<span class="go">12.0    3</span>
+<span class="go">10.0    3</span>
+<span class="go">16.0    2</span>
+<span class="go">11.0    2</span>
+<span class="go">17.0    1</span>
+<span class="go">9.0     1</span>
+<span class="go">15.0    1</span>
+<span class="go">8.0     1</span>
+<span class="go">Name: TIME_h, dtype: int64</span>
+</pre></div>
+</div>
+<p>Okey, this is interesting. It seems that most often it has been stormy at 14:00 GMT (i.e. 16:00 at Finnish time).
+Notice, that there haven&#8217;t been any strong winds during the night, which is also interesting. However, as the <strong>The weather guys</strong> explains us, <a class="reference external" href="http://wxguys.ssec.wisc.edu/2013/11/18/why-does-the-wind-diminish-after-sunset/">it is not that surprising actually</a> =).</p>
+<p>The average wind speed may not be the perfect measure to find extreme weather conditions. Gust might usually be a better measure for that purpose.
+Let&#8217;s see what were the strongest gust winds in our dataset by sorting the values.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [61]: </span><span class="n">gust_sort</span> <span class="o">=</span> <span class="n">storm</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s1">&#39;GUST&#39;</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+
+<span class="gp">In [62]: </span><span class="n">gust_sort</span>
+<span class="gh">Out[62]: </span><span class="go"></span>
+<span class="go">       Celsius         DIR      GUST      SPEED       TEMP     TIME_dh  \</span>
+<span class="go">280  19.074074  700.666667  26.82240   8.791787  66.333333  2017081216   </span>
+<span class="go">706  17.962963  215.666667  14.52880  10.579947  64.333333  2017083012   </span>
+<span class="go">132  16.296296  237.666667  13.85824   9.387840  61.333333  2017080612   </span>
+<span class="go">560  15.925926  329.333333  13.85824   8.493760  60.666667  2017082410   </span>
+<span class="go">559  14.814815  328.666667  13.41120   8.493760  58.666667  2017082409   </span>
+<span class="go">705  18.888889  218.333333  13.41120   8.940800  66.000000  2017083011   </span>
+<span class="go">686  17.222222  214.000000  13.41120   9.089813  63.000000  2017082916   </span>
+<span class="go">563  16.296296  329.666667  13.41120   9.238827  61.333333  2017082413   </span>
+<span class="go">86   20.185185  228.666667  12.96416   8.940800  68.333333  2017080414   </span>
+<span class="go">10   22.777778  210.666667  12.51712   9.089813  73.000000  2017080110   </span>
+<span class="go">445  20.925926  204.666667  12.51712   8.940800  69.666667  2017081915   </span>
+<span class="go">230  21.666667  217.000000  12.51712   8.642773  71.000000  2017081014   </span>
+<span class="go">12   22.407407  205.666667  12.51712   9.089813  72.333333  2017080112   </span>
+<span class="go">707  17.962963  217.666667  12.07008   9.089813  64.333333  2017083013   </span>
+<span class="go">11   22.777778  212.000000  11.62304   8.940800  73.000000  2017080111   </span>
+<span class="go">687  17.037037  210.666667  11.62304   8.791787  62.666667  2017082917   </span>
+<span class="go">104  19.814815  204.333333  11.17600   8.791787  67.666667  2017080508   </span>
+<span class="go">444  22.037037  195.666667  10.72896   8.493760  71.666667  2017081914   </span>
+<span class="go">704  18.518519  203.666667   8.04672   8.493760  65.333333  2017083010   </span>
+<span class="go">301  20.555556  210.000000       NaN   9.611360  69.000000  2017081313   </span>
+<span class="go">302  19.444444  200.000000       NaN   8.493760  67.000000  2017081314   </span>
+<span class="go">564  15.185185  550.000000       NaN   8.493760  59.333333  2017082414   </span>
+
+<span class="go">     TIME_h Outlier  </span>
+<span class="go">280    16.0    True  </span>
+<span class="go">706    12.0    True  </span>
+<span class="go">132    12.0    True  </span>
+<span class="go">560    10.0    True  </span>
+<span class="go">559     9.0    True  </span>
+<span class="go">705    11.0    True  </span>
+<span class="go">686    16.0    True  </span>
+<span class="go">563    13.0    True  </span>
+<span class="go">86     14.0    True  </span>
+<span class="go">10     10.0    True  </span>
+<span class="go">445    15.0    True  </span>
+<span class="go">230    14.0    True  </span>
+<span class="go">12     12.0    True  </span>
+<span class="go">707    13.0    True  </span>
+<span class="go">11     11.0    True  </span>
+<span class="go">687    17.0    True  </span>
+<span class="go">104     8.0    True  </span>
+<span class="go">444    14.0    True  </span>
+<span class="go">704    10.0    True  </span>
+<span class="go">301    13.0    True  </span>
+<span class="go">302    14.0    True  </span>
+<span class="go">564    14.0    True  </span>
+</pre></div>
+</div>
+<p>Interesting! There was one hour with quite extraordinary gust wind in our data happening at 12th of August in 2017.
+Indeed, that was a big storm in Helsinki called <a class="reference external" href="https://yle.fi/uutiset/osasto/news/saturday_night_storm_downs_trees_cuts_electricity_in_the_south/9773250">Kiira</a> that caused major damage in different parts of the city.</p>
+<table class="docutils footnote" frame="void" id="f1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label"><a class="fn-backref" href="#id1">[1]</a></td><td>Below you can find information how to use functions in Pandas with an alternative way.</td></tr>
+</tbody>
+</table>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Hint: Using <code class="docutils literal"><span class="pre">iterrows()</span></code> -function is not the most efficient way of using your self-made functions. In Pandas, there is a function called <code class="docutils literal"><span class="pre">apply()</span></code>
+that takes advantage of the power of numpy when looping, and is hence much faster which can give a lot of speed benefit when you have millions of rows to iterate over.
+Below I show how to do the similar thing by using our own function with <code class="docutils literal"><span class="pre">apply()</span></code>.
+I will make a copy of our original DataFrame so this does not affect our original data.
+Before using this approach, we need to modify our function a bit to get things working.
+First, we need to have a parameter called <code class="docutils literal"><span class="pre">row</span></code> that is used to pass the data from row into our function
+(this is something specific to <code class="docutils literal"><span class="pre">apply()</span></code>  -function in Pandas) and then add paramaters for passing the information about the column name that contains the temperatures in Fahrenheit,
+and the column name where the coverted temperatures will be updated (i.e. the Celsius temperatures).
+Hence, in the end, you can see that this is a bit more generic function to use (i.e. the columns to use in the calculation are not &#8220;hard-coded&#8221;).</p>
+<div class="code python highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrToCelsius</span><span class="p">(</span><span class="n">row</span><span class="p">,</span> <span class="n">src_col</span><span class="p">,</span> <span class="n">target_col</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    A generic function to convert Fahrenheit temperature into Celsius.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+
+<span class="sd">    row: pd.Series</span>
+<span class="sd">        Input row containing the data for specific index in the DataFrame</span>
+
+<span class="sd">    src_col : str</span>
+<span class="sd">        Name of the source column for the calculation. I.e. the name of the column where Fahrenheits are stored.</span>
+
+<span class="sd">    target_col : str</span>
+<span class="sd">        Name of the target column where Celsius will be stored.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="c1"># Convert the Fahrenheit into Celsius and update the target column value</span>
+    <span class="n">row</span><span class="p">[</span><span class="n">target_col</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">row</span><span class="p">[</span><span class="n">src_col</span><span class="p">]</span><span class="o">-</span> <span class="mi">32</span><span class="p">)</span> <span class="o">/</span> <span class="mf">1.8</span>
+    <span class="k">return</span> <span class="n">row</span>
+</pre></div>
+</div>
+<p>Take a copy of the data.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [63]: </span><span class="n">data2</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Apply our new function and update the values into a new column called <code class="docutils literal"><span class="pre">Celsius2</span></code></p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [64]: </span><span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fahrToCelsius</span><span class="p">,</span> <span class="n">src_col</span><span class="o">=</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="n">target_col</span><span class="o">=</span><span class="s1">&#39;Celsius2&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>As you can see here, we use the <code class="docutils literal"><span class="pre">apply()</span></code> function and as the first parameter
+we pass the name of the function that we want to use with the <code class="docutils literal"><span class="pre">apply()</span></code>, and then we pass the names of the source column and the target column.
+Lastly, it is important to add as a last parameter <code class="docutils literal"><span class="pre">axis=1</span></code> that tells for the function to apply the calculations vertically (row by row) instead of horizontally (would move from column to another).</p>
+<p>See the results.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [65]: </span><span class="n">data2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[65]: </span><span class="go"></span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN    Celsius  \</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.444444   </span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN  15.000000   </span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN  15.000000   </span>
+<span class="go">3  201708040100  123.0  3.57632   NaN  59.0  NaN  NaN  15.000000   </span>
+<span class="go">4  201708040120  110.0  3.12928   NaN  59.0  NaN  NaN  15.000000   </span>
+
+<span class="go">       TIME_str     TIME_dh  TIME_h   Celsius2  </span>
+<span class="go">0  201708040000  2017080400       0  14.444444  </span>
+<span class="go">1  201708040020  2017080400       0  15.000000  </span>
+<span class="go">2  201708040050  2017080400       0  15.000000  </span>
+<span class="go">3  201708040100  2017080401       1  15.000000  </span>
+<span class="go">4  201708040120  2017080401       1  15.000000  </span>
+</pre></div>
+</div>
+<p>Indeed it seems that our function worked because the values in <code class="docutils literal"><span class="pre">Celsius</span></code> and <code class="docutils literal"><span class="pre">Celsius2</span></code> columns are the same.
+With this approach it is extremely easy to reuse our function and pass the results into another new colum e.g.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [66]: </span><span class="n">data2</span> <span class="o">=</span> <span class="n">data2</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">fahrToCelsius</span><span class="p">,</span> <span class="n">src_col</span><span class="o">=</span><span class="s1">&#39;TEMP&#39;</span><span class="p">,</span> <span class="n">target_col</span><span class="o">=</span><span class="s1">&#39;Celsius3&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="gp">In [67]: </span><span class="n">data2</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[67]: </span><span class="go"></span>
+<span class="go">           TIME    DIR    SPEED  GUST  TEMP  MAX  MIN    Celsius  \</span>
+<span class="go">0  201708040000  114.0  2.68224   NaN  58.0  NaN  NaN  14.444444   </span>
+<span class="go">1  201708040020  100.0  2.68224   NaN  59.0  NaN  NaN  15.000000   </span>
+<span class="go">2  201708040050  100.0  2.23520   NaN  59.0  NaN  NaN  15.000000   </span>
+<span class="go">3  201708040100  123.0  3.57632   NaN  59.0  NaN  NaN  15.000000   </span>
+<span class="go">4  201708040120  110.0  3.12928   NaN  59.0  NaN  NaN  15.000000   </span>
+
+<span class="go">       TIME_str     TIME_dh  TIME_h   Celsius2   Celsius3  </span>
+<span class="go">0  201708040000  2017080400       0  14.444444  14.444444  </span>
+<span class="go">1  201708040020  2017080400       0  15.000000  15.000000  </span>
+<span class="go">2  201708040050  2017080400       0  15.000000  15.000000  </span>
+<span class="go">3  201708040100  2017080401       1  15.000000  15.000000  </span>
+<span class="go">4  201708040120  2017080401       1  15.000000  15.000000  </span>
+</pre></div>
+</div>
+<p class="last">Now we just added another column called <code class="docutils literal"><span class="pre">Celsius3</span></code> just by changing the value of the <code class="docutils literal"><span class="pre">target_col</span></code> -parameter.
+This is a good and efficient approach to use in many cases, and hence highly recommended (although it is a bit harder to understand).</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="using-glob.html" class="btn btn-neutral float-right" title="Reading multiple data files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="overview.html" class="btn btn-neutral" title="Lesson overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
+      Last updated on Oct 11, 2017.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    <p> <br/> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /> </a></p>
+     
+
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../',
+            VERSION:'2017 Autumn',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../_static/doctools.js"></script>
+      <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
