@@ -51,7 +51,7 @@
               href="../../genindex.html"/>
         <link rel="search" title="Search" href="../../search.html"/>
     <link rel="top" title="Geo-Python 2017 Autumn documentation" href="../../index.html"/>
-        <link rel="next" title="Reading multiple data files" href="using-glob.html"/>
+        <link rel="next" title="Dealing with errors" href="interpreting-errors.html"/>
         <link rel="prev" title="Lesson overview" href="overview.html"/>
     <link href="../../_static/geo-python.css" rel="stylesheet" type="text/css">
      
@@ -185,7 +185,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#repeating-the-data-analysis-with-larger-dataset">Repeating the data analysis with larger dataset</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="using-glob.html">Reading multiple data files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="interpreting-errors.html">Dealing with errors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debugging-scripts.html">Debugging Python scripts</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ex-6.html">Exercise 6</a></li>
@@ -255,6 +254,9 @@
             
   <div class="section" id="advanced-data-processing-with-pandas">
 <h1>Advanced data processing with Pandas<a class="headerlink" href="#advanced-data-processing-with-pandas" title="Permalink to this headline">¶</a></h1>
+<p>In this week, we will continue developing our skills using Pandas to analyze climate data. The aim of this lesson
+is to learn different functions to manipulate with the data and do simple analyses. In the end, our goal is
+to detect weather anomalies (stormy winds) in Helsinki, during August 2017.</p>
 <div class="section" id="downloading-and-reading-the-data">
 <h2>Downloading and reading the data<a class="headerlink" href="#downloading-and-reading-the-data" title="Permalink to this headline">¶</a></h2>
 <p>Notice that this time, we will read the <strong>actual</strong> data obtained from NOAA
@@ -1076,6 +1078,10 @@ Let&#8217;s see what were the strongest gust winds in our dataset by sorting the
 </div>
 <p>Interesting! There was one hour with quite extraordinary gust wind in our data happening at 12th of August in 2017.
 Indeed, that was a big storm in Helsinki called <a class="reference external" href="https://yle.fi/uutiset/osasto/news/saturday_night_storm_downs_trees_cuts_electricity_in_the_south/9773250">Kiira</a> that caused major damage in different parts of the city.</p>
+<div class="figure" id="id2">
+<a class="reference internal image-reference" href="../../_images/Kiira-storm.PNG"><img alt="../../_images/Kiira-storm.PNG" src="../../_images/Kiira-storm.PNG" style="width: 300px;" /></a>
+<p class="caption"><span class="caption-text">Source: <a class="reference external" href="https://yle.fi/uutiset/osasto/news/saturday_night_storm_downs_trees_cuts_electricity_in_the_south/9773250">YLE</a> Photo: Markku Sipi</span></p>
+</div>
 <table class="docutils footnote" frame="void" id="f1" rules="none">
 <colgroup><col class="label" /><col /></colgroup>
 <tbody valign="top">
@@ -1180,7 +1186,7 @@ This is a good and efficient approach to use in many cases, and hence highly rec
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="using-glob.html" class="btn btn-neutral float-right" title="Reading multiple data files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="interpreting-errors.html" class="btn btn-neutral float-right" title="Dealing with errors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="overview.html" class="btn btn-neutral" title="Lesson overview" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -1193,7 +1199,7 @@ This is a good and efficient approach to use in many cases, and hence highly rec
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
-      Last updated on Oct 11, 2017.
+      Last updated on Oct 12, 2017.
 
     </p>
   </div>
