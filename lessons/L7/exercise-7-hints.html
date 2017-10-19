@@ -191,7 +191,10 @@
 <li class="toctree-l1"><a class="reference internal" href="using-plotly.html">Connecting Matplotlib with plotly</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pandas-plotting.html">Advanced plotting with Pandas</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ex-7.html">Exercise 7</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Hints for Exercise 7</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Hints for Exercise 7</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#converting-a-column-of-date-strings-into-datetime-format">Converting a column of date-strings into datetime format</a></li>
+</ul>
+</li>
 </ul>
 
             
@@ -257,7 +260,61 @@
             
   <div class="section" id="hints-for-exercise-7">
 <h1>Hints for Exercise 7<a class="headerlink" href="#hints-for-exercise-7" title="Permalink to this headline">¶</a></h1>
-<p>Below are some tips for working on Exercise 7.</p>
+<div class="section" id="converting-a-column-of-date-strings-into-datetime-format">
+<h2>Converting a column of date-strings into datetime format<a class="headerlink" href="#converting-a-column-of-date-strings-into-datetime-format" title="Permalink to this headline">¶</a></h2>
+<p>In some cases Pandas cannot understand and parse automatically the date information from a column when you read the
+data with <code class="docutils literal"><span class="pre">read_csv()</span></code> function. In these cases, you need to parse the date information afterwards.</p>
+<p>Let&#8217;s see an example with following data</p>
+<div class="code highlight-default"><div class="highlight"><pre><span></span><span class="n">DATE</span><span class="p">,</span> <span class="n">Value</span>
+<span class="s2">&quot;201401&quot;</span><span class="p">,</span> <span class="mi">1</span>
+<span class="s2">&quot;201402&quot;</span><span class="p">,</span> <span class="mi">2</span>
+<span class="s2">&quot;201403&quot;</span><span class="p">,</span> <span class="mi">3</span>
+<span class="s2">&quot;201404&quot;</span><span class="p">,</span> <span class="mi">5</span>
+</pre></div>
+</div>
+<p>Let&#8217;s try to read the data and parse the date.</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [1]: </span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">fp</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;DATE&#39;</span><span class="p">])</span>
+
+<span class="gp">In [2]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[2]: </span><span class="go"></span>
+<span class="go">     DATE   Value</span>
+<span class="go">0  201401       1</span>
+<span class="go">1  201402       2</span>
+<span class="go">2  201403       3</span>
+<span class="go">3  201404       5</span>
+
+<span class="gp">In [3]: </span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="go">                                                                                                   Out[3]: </span>
+<span class="go">DATE      object</span>
+<span class="go"> Value     int64</span>
+<span class="go">dtype: object</span>
+</pre></div>
+</div>
+<p>As we can see from above, Pandas was not able to convert the datatype of <code class="docutils literal"><span class="pre">DATE</span></code> into <code class="docutils literal"><span class="pre">datetime</span></code> format.
+This is because the DATE values does not include information about the day of the year but only the year and month.</p>
+<p>There is a way to tell to Pandas to read the <code class="docutils literal"><span class="pre">DATE</span></code> information with a custom format such as the one we have here
+with <code class="docutils literal"><span class="pre">pd.to_timestamp()</span></code> function where we can specify with <code class="docutils literal"><span class="pre">format</span></code> parameter the custom format how the dates
+are represented in the data. Consider following example:</p>
+<div class="highlight-ipython"><div class="highlight"><pre><span></span><span class="gp">In [4]: </span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;datetime&#39;</span><span class="p">]</span> <span class="o">=</span>  <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;DATE&#39;</span><span class="p">],</span> <span class="n">format</span><span class="o">=</span><span class="s1">&#39;%Y%m&#39;</span><span class="p">)</span>
+
+<span class="gp">In [5]: </span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="gh">Out[5]: </span><span class="go"></span>
+<span class="go">     DATE   Value   datetime</span>
+<span class="go">0  201401       1 2014-01-01</span>
+<span class="go">1  201402       2 2014-02-01</span>
+<span class="go">2  201403       3 2014-03-01</span>
+<span class="go">3  201404       5 2014-04-01</span>
+
+<span class="gp">In [6]: </span><span class="n">data</span><span class="o">.</span><span class="n">dtypes</span>
+<span class="go">                                                                                                                                                          Out[6]: </span>
+<span class="go">DATE                object</span>
+<span class="go"> Value               int64</span>
+<span class="go">datetime    datetime64[ns]</span>
+<span class="go">dtype: object</span>
+</pre></div>
+</div>
+<p>Great, now we have the data in <code class="docutils literal"><span class="pre">datetime</span></code> format!</p>
+</div>
 </div>
 
 
@@ -281,7 +338,7 @@
   <div role="contentinfo">
     <p>
         &copy; Copyright 2017 Tenkanen &amp; Whipp, University of Helsinki.
-      Last updated on Oct 18, 2017.
+      Last updated on Oct 19, 2017.
 
     </p>
   </div>
