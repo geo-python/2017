@@ -2,381 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e2a9f4c9-4425-4181-aaeb-ddd8e36bfddf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.buildinfo" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.nojekyll" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Kumpula_temps_June_2016.xlsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/Temperature_seasons_subplot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/10_query_client_IP.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/11_change_client_IP.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/13_copy_access_IP_address.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/15_paste_ip_to_remote_desktop.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/15b_copy-ip-address-connect.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/16_log_into_server.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/16b_fill-in-password.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/17_work_environment.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/1_activation_link.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/2_Accept_classroom_invitation.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/2_activate_certificate_exception.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/3_create_password.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/4_log_in.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/7_log_in.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/8_launch_instance.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/9_go_to_instance_details.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Anaconda-Mac.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Edit-README.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Function_anatomy.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/GeoPython_banner.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/GitHub.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Kiira-storm.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Matplotlib-gallery.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/No_environments_available.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Preview-changes.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Raw-button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/RemoteComputerInstance.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Slack-logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-edit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-editor.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-metadata.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-play-button.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-terminal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-variables.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder-wd.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/Spyder1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/SyntaxError.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/add_join_code.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/answering-thread.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/basic-elements-of-plot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/bill-the-vending-machine.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/choose-file.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/cloud-desktop-mac.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/commit_message.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/conda_shapely_windows.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/connect-to-server.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/create_SSH_keys.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/drag-and-drop.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/enter-server-info.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/google_query_conda.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/history_log.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/install_shapely.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/join_group.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/launch_instance_ready.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/notifying-user.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_plot_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_plot_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_plot_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_plot_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_plot_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_plot_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_save_excel_result_1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_save_file_result_1.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_save_file_result_2.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_subplot_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/pandas_subplot_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/play-changes.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plot-file-types.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plotly-api-key.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plotly-interact.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plotly-site.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plt_temp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plt_temp_annotated.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plt_temp_annotated_w_bars.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/plt_temp_annotated_w_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/read-csv-varying-spaces.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/saving-plot.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/slack-basic-view.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/start-thread.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/temp_converter.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/temp_plot2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/upload_files_button.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/using_function_from_another_script.PNG" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_images/version_control_motivation_comics.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/course-info.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/grading.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/installing-anacondas.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/learning-goals.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/licensing.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/python-vocabulary.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/course-info/resources.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/index.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/A-taste-of-Python.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/activate-pb-account.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/connect-win-rdp.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/course-environment-components.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/destroy-instance.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/exercise-1.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/intro-to-cloud-environment.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/intro-to-github.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/motivation.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L1/slack-usage.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/GitHub-classroom.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/ex-2.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/exercise-2-hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/intro-to-GitHub.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/log-in-GitHub.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/python-basic-elements.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/working-on-assignment.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L2/writing-scripts.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L3/conditional-statements.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L3/ex-3.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L3/exercise-3-hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L3/for-loops.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L3/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L3/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/ex-4.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/exercise-4-hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/functions.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/modules.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L4/spyder.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/ex-5.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/exercise-5-hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/lesson-plan.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/midterm-feedback.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/pandas-basic-operations.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/pandas-basics.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/pandas-overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L5/reading-data-from-file.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/debugging-scripts.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/ex-6.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/exercise-6-hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/interpreting-errors.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/pandas-analysis.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L6/using-glob.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/ex-7.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/exercise-7-hints.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/lesson-plan.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/lesson-video.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/matplotlib.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/overview.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/pandas-plotting.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/plot-anatomy.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/python-plotting.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_sources/lessons/L7/using-plotly.rst.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/01-Computers-and-programs.pdf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/GeoPython_favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/Temp-anomalies.mp4" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/ajax-loader.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/basic.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/comment-bright.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/comment-close.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/comment.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/css/badge_only.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/css/theme.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/data/L5/Kumpula-June-2016-w-metadata.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/data/L6/6591337447542dat_August.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/data/L6/6591337447542dat_sample.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/data/L7/1924927457196dat.txt" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/doctools.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/down-pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/file.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/Inconsolata-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/Inconsolata-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/Lato-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/Lato-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/RobotoSlab-Bold.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/RobotoSlab-Regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/geo-python.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/jquery-3.1.0.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/jquery.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/js/modernizr.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/js/theme.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/logo_hy_geo_135.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/minus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pandas_plot_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pandas_plot_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pandas_plot_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pandas_plot_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pandas_plot_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pandas_plot_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/plt_temp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/plt_temp_annotated.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/plt_temp_annotated_w_bars.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/plt_temp_annotated_w_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/plus.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/pygments.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/searchtools.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/underscore-1.3.1.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/underscore.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/up-pressed.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/_static/websupport.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/course-info.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/grading.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/installing-anacondas.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/learning-goals.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/licensing.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/python-vocabulary.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/course-info/resources.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/course-info.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/grading.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/installing-anacondas.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/learning-goals.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/licensing.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/python-vocabulary.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/course-info/resources.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/environment.pickle" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/index.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/A-taste-of-Python.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/activate-pb-account.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/connect-win-rdp.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/course-environment-components.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/destroy-instance.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/exercise-1.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/intro-to-cloud-environment.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/intro-to-github.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/motivation.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L1/slack-usage.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/GitHub-classroom.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/ex-2.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/exercise-2-hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/intro-to-GitHub.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/log-in-GitHub.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/python-basic-elements.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/working-on-assignment.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L2/writing-scripts.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L3/conditional-statements.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L3/ex-3.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L3/exercise-3-hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L3/for-loops.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L3/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L3/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/ex-4.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/exercise-4-hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/functions.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/modules.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L4/spyder.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/ex-5.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/exercise-5-hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/lesson-plan.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/midterm-feedback.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/pandas-basic-operations.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/pandas-basics.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/pandas-overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L5/reading-data-from-file.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/debugging-scripts.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/ex-6.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/exercise-6-hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/interpreting-errors.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/pandas-analysis.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L6/using-glob.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/ex-7.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/exercise-7-hints.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/lesson-plan.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/lesson-video.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/matplotlib.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/overview.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/pandas-plotting.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/plot-anatomy.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/python-plotting.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/doctrees/lessons/L7/using-plotly.doctree" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/genindex.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/A-taste-of-Python.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/activate-pb-account.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/connect-win-rdp.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/course-environment-components.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/destroy-instance.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/exercise-1.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/intro-to-cloud-environment.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/intro-to-github.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/motivation.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L1/slack-usage.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/GitHub-classroom.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/ex-2.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/exercise-2-hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/intro-to-GitHub.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/log-in-GitHub.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/python-basic-elements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/working-on-assignment.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L2/writing-scripts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L3/conditional-statements.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L3/ex-3.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L3/exercise-3-hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L3/for-loops.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L3/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L3/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/ex-4.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/exercise-4-hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/functions.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/modules.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L4/spyder.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/ex-5.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/exercise-5-hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/lesson-plan.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/midterm-feedback.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/pandas-basic-operations.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/pandas-basics.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/pandas-overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L5/reading-data-from-file.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/debugging-scripts.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/ex-6.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/exercise-6-hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/interpreting-errors.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/pandas-analysis.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L6/using-glob.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/ex-7.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/exercise-7-hints.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/lesson-plan.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/lesson-video.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/matplotlib.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/overview.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/pandas-plotting.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/plot-anatomy.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/python-plotting.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/lessons/L7/using-plotly.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/objects.inv" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pandas_plot_1.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pandas_plot_2.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pandas_plot_3.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pandas_plot_4.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pandas_plot_5.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pandas_plot_6.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plt_temp.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plt_temp_annotated.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plt_temp_annotated_w_bars.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/plt_temp_annotated_w_text.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/search.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/searchindex.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/temp_plot1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L7/pandas_subplot_1.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/L7/pandas_subplot_2.png" afterPath="" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -396,18 +23,7 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="hintData.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/data/L7/hintData.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -1223,7 +839,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27351353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1233,17 +848,29 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3448276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28894174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28894174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32990867" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3448276" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28894174" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27351353" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32972974" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1377,30 +1004,9 @@
     <entry file="file://$PROJECT_DIR$/source/lessons/L7/overview.rst" />
     <entry file="file://$PROJECT_DIR$/source/index.rst" />
     <entry file="file://$PROJECT_DIR$/source/lessons/L7/python-plotting.rst" />
-    <entry file="file://$PROJECT_DIR$/source/lessons/L7/pandas-plotting.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="55" column="79" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="79" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" column="31" lean-forward="false" selection-start-line="6" selection-start-column="31" selection-end-line="6" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/source/lessons/L7/exercise-7-hints.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="175" column="48" lean-forward="false" selection-start-line="175" selection-start-column="48" selection-end-line="175" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/source/lessons/L7/pandas-plotting.rst" />
+    <entry file="file://$PROJECT_DIR$/.gitignore" />
+    <entry file="file://$PROJECT_DIR$/source/lessons/L7/exercise-7-hints.rst" />
     <entry file="file://$PROJECT_DIR$/data/L7/hintData.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
